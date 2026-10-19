@@ -54,7 +54,7 @@
           "icp-builder",
           "outbound-engine-skills",
           "skills/icp-builder",
-          "ICP на 3 тіри з one-liner і анти-ICP."
+          "Документ ICP: межі ринку, анти-ICP чотирма кільцями, «чому покупець, а не конкурент», сигнали ранжують акаунти."
         ],
         [
           "icp-validation",
@@ -63,10 +63,16 @@
           "Перевірка ICP на ваших реальних кейсах і угодах."
         ],
         [
+          "gtm-market-icp-persona",
+          "gtm-strategy-skills",
+          "skills/gtm-market-icp-persona",
+          "Ринок → 3 тіри акаунтів → ОПР і чемпіон з JTBD і процесом покупки."
+        ],
+        [
           "persona-builder",
           "outbound-engine-skills",
           "skills/persona-builder",
-          "ОПР і чемпіон з JTBD на трьох рівнях."
+          "Картка персони під конкретну посаду: що болить, як писати цій ролі."
         ],
         [
           "gtm-buyer-journey",
