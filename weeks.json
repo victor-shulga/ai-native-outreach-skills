@@ -7,10 +7,36 @@
       "title": "Тиждень 1 · Попит та інфраструктура",
       "lessons": "00 Як аутріч відловлює попит · 01 Готовність і капасіті · 02 Інструменти: стек на старт і бюджет",
       "skills": [
-        ["max", "max", "", "Оркестратор: питає, де ви зараз, і веде до потрібного скіла. Почніть з нього."],
-        ["express-gtm-audit", "gtm-strategy-skills", "skills/express-gtm-audit", "Експрес-аудит агенції за 6 блоками GTM-системи з публічних даних (урок 00, домашка)."],
-        ["capacity-plan", "gtm-strategy-skills", "skills/capacity-plan", "Розрахунок від цілі по угодах до скриньок, доменів і LinkedIn-акаунтів (урок 01)."],
-        ["deliverability-audit", "outbound-engine-skills", "skills/deliverability-audit", "Перевірка доменів, SPF, DKIM, DMARC і прогріву до першого листа (урок 01)."]
+        [
+          "max",
+          "max",
+          "",
+          "Оркестратор: питає, де ви зараз, і веде до потрібного скіла. Почніть з нього."
+        ],
+        [
+          "express-gtm-audit",
+          "gtm-strategy-skills",
+          "skills/express-gtm-audit",
+          "Експрес-аудит агенції за 6 блоками GTM-системи з публічних даних (урок 00, домашка)."
+        ],
+        [
+          "capacity-plan",
+          "gtm-strategy-skills",
+          "skills/capacity-plan",
+          "Розрахунок від цілі по угодах до скриньок, доменів і LinkedIn-акаунтів (урок 01)."
+        ],
+        [
+          "deliverability-audit",
+          "outbound-engine-skills",
+          "skills/deliverability-audit",
+          "Перевірка доменів, SPF, DKIM, DMARC і прогріву до першого листа (урок 01)."
+        ],
+        [
+          "profile-audit",
+          "linkedin-strategy-kit",
+          "skills/profile-audit",
+          "Аудит LinkedIn-профілю відправника по URL: вердикт по кожному розділу, переписаний хедлайн і About, бриф банера (урок 01)."
+        ]
       ]
     },
     {
@@ -18,11 +44,36 @@
       "title": "Тиждень 2 · Стратегія проспектингу",
       "lessons": "03 Ринок і ICP · 04 Персони і шлях клієнта",
       "skills": [
-        ["gtm-market-sizing", "gtm-strategy-skills", "skills/gtm-market-sizing", "TAM: скільки компаній на вашому ринку."],
-        ["icp-builder", "outbound-engine-skills", "skills/icp-builder", "ICP на 3 тіри з one-liner і анти-ICP."],
-        ["icp-validation", "outbound-engine-skills", "skills/icp-validation", "Перевірка ICP на ваших реальних кейсах і угодах."],
-        ["persona-builder", "outbound-engine-skills", "skills/persona-builder", "ОПР і чемпіон з JTBD на трьох рівнях."],
-        ["gtm-buyer-journey", "gtm-strategy-skills", "skills/gtm-buyer-journey", "Карта шляху клієнта і точка, де входить аутріч."]
+        [
+          "gtm-market-sizing",
+          "gtm-strategy-skills",
+          "skills/gtm-market-sizing",
+          "TAM: скільки компаній на вашому ринку."
+        ],
+        [
+          "icp-builder",
+          "outbound-engine-skills",
+          "skills/icp-builder",
+          "ICP на 3 тіри з one-liner і анти-ICP."
+        ],
+        [
+          "icp-validation",
+          "outbound-engine-skills",
+          "skills/icp-validation",
+          "Перевірка ICP на ваших реальних кейсах і угодах."
+        ],
+        [
+          "persona-builder",
+          "outbound-engine-skills",
+          "skills/persona-builder",
+          "ОПР і чемпіон з JTBD на трьох рівнях."
+        ],
+        [
+          "gtm-buyer-journey",
+          "gtm-strategy-skills",
+          "skills/gtm-buyer-journey",
+          "Карта шляху клієнта і точка, де входить аутріч."
+        ]
       ]
     },
     {
@@ -30,13 +81,48 @@
       "title": "Тиждень 3 · Підготовка до запуску",
       "lessons": "05 Позиціонування й офери · 06 Докази і контент",
       "skills": [
-        ["gtm-positioning", "gtm-strategy-skills", "skills/gtm-positioning", "Шість слотів позиціонування і таблиця «було і стало»."],
-        ["gtm-value-prop", "gtm-strategy-skills", "skills/gtm-value-prop", "Ціннісна пропозиція під персону."],
-        ["gtm-offers", "gtm-strategy-skills", "skills/gtm-offers", "Офери під сегменти."],
-        ["offer-ladder", "sales-engine-skills", "skills/offer-ladder", "Драбина з чотирьох оферів і перша сходинка для холодного листа."],
-        ["case-study-writer", "account-management-skills", "skills/case-study-writer", "Кейс під офер: проблема з цифрою, хід проєкту, результат."],
-        ["website-copy-reframe", "marketing-engine-skills", "skills/website-copy-reframe", "Перепис головної і сервісної сторінки під ICP."],
-        ["page-builder", "page-builder", "skills/page-builder", "Сторінка під гіпотезу або лід-магніт."]
+        [
+          "gtm-positioning",
+          "gtm-strategy-skills",
+          "skills/gtm-positioning",
+          "Шість слотів позиціонування і таблиця «було і стало»."
+        ],
+        [
+          "gtm-value-prop",
+          "gtm-strategy-skills",
+          "skills/gtm-value-prop",
+          "Ціннісна пропозиція під персону."
+        ],
+        [
+          "gtm-offers",
+          "gtm-strategy-skills",
+          "skills/gtm-offers",
+          "Офери під сегменти."
+        ],
+        [
+          "offer-ladder",
+          "sales-engine-skills",
+          "skills/offer-ladder",
+          "Драбина з чотирьох оферів і перша сходинка для холодного листа."
+        ],
+        [
+          "case-study-writer",
+          "account-management-skills",
+          "skills/case-study-writer",
+          "Кейс під офер: проблема з цифрою, хід проєкту, результат."
+        ],
+        [
+          "website-copy-reframe",
+          "marketing-engine-skills",
+          "skills/website-copy-reframe",
+          "Перепис головної і сервісної сторінки під ICP."
+        ],
+        [
+          "page-builder",
+          "page-builder",
+          "skills/page-builder",
+          "Сторінка під гіпотезу або лід-магніт."
+        ]
       ]
     },
     {
@@ -44,18 +130,78 @@
       "title": "Тиждень 4 · Гіпотези й радари",
       "lessons": "07 Матриця гіпотез · 08 Дата-ресерч і сигнали",
       "skills": [
-        ["hypothesis-builder", "outbound-engine-skills", "skills/hypothesis-builder", "Гіпотеза з десяти полів: проблема × ICP × сигнал × офер."],
-        ["hypo-generator", "gtm-skills", "hypo-generator", "Генерує гіпотези для агенції з сайту або брифу."],
-        ["hypothesis-scoring", "gtm-skills", "hypothesis-scoring", "Скоринг гіпотез і пороги kill / scale до запуску."],
-        ["signal-catalog", "outbound-engine-skills", "skills/signal-catalog", "Каталог сигналів: що ловити під вашу гіпотезу."],
-        ["signal-research", "outbound-engine-skills", "skills/signal-research", "Пошук сигналів на джерелах."],
-        ["agency-signal-sourcer", "gtm-skills", "agency-signal-sourcer", "Радари сигналів для сервісних агенцій."],
-        ["account-sourcing", "outbound-engine-skills", "skills/account-sourcing", "Звідки брати базу компаній."],
-        ["data-research", "outbound-engine-skills", "skills/data-research", "Пошук ОПР і дозбір даних по акаунту."],
-        ["waterfall-enrichment", "outbound-engine-skills", "skills/waterfall-enrichment", "Дозбір контактів з кількох джерел по черзі."],
-        ["prospect-scoring", "outbound-engine-skills", "skills/prospect-scoring", "Скор і тір акаунтів до дозбору."],
-        ["pre-launch-data-check", "outbound-engine-skills", "skills/pre-launch-data-check", "Перевірка бази перед запуском: валідність, дублі, стоп-лист."],
-        ["prospect-profiler", "gtm-skills", "prospect-profiler", "Ресерч акаунта з ШІ перед першим листом."]
+        [
+          "hypothesis-builder",
+          "outbound-engine-skills",
+          "skills/hypothesis-builder",
+          "Гіпотеза з десяти полів: проблема × ICP × сигнал × офер."
+        ],
+        [
+          "hypo-generator",
+          "gtm-skills",
+          "hypo-generator",
+          "Генерує гіпотези для агенції з сайту або брифу."
+        ],
+        [
+          "hypothesis-scoring",
+          "gtm-skills",
+          "hypothesis-scoring",
+          "Скоринг гіпотез і пороги kill / scale до запуску."
+        ],
+        [
+          "signal-catalog",
+          "outbound-engine-skills",
+          "skills/signal-catalog",
+          "Каталог сигналів: що ловити під вашу гіпотезу."
+        ],
+        [
+          "signal-research",
+          "outbound-engine-skills",
+          "skills/signal-research",
+          "Пошук сигналів на джерелах."
+        ],
+        [
+          "agency-signal-sourcer",
+          "gtm-skills",
+          "agency-signal-sourcer",
+          "Радари сигналів для сервісних агенцій."
+        ],
+        [
+          "account-sourcing",
+          "outbound-engine-skills",
+          "skills/account-sourcing",
+          "Звідки брати базу компаній."
+        ],
+        [
+          "data-research",
+          "outbound-engine-skills",
+          "skills/data-research",
+          "Пошук ОПР і дозбір даних по акаунту."
+        ],
+        [
+          "waterfall-enrichment",
+          "outbound-engine-skills",
+          "skills/waterfall-enrichment",
+          "Дозбір контактів з кількох джерел по черзі."
+        ],
+        [
+          "prospect-scoring",
+          "outbound-engine-skills",
+          "skills/prospect-scoring",
+          "Скор і тір акаунтів до дозбору."
+        ],
+        [
+          "pre-launch-data-check",
+          "outbound-engine-skills",
+          "skills/pre-launch-data-check",
+          "Перевірка бази перед запуском: валідність, дублі, стоп-лист."
+        ],
+        [
+          "prospect-profiler",
+          "gtm-skills",
+          "prospect-profiler",
+          "Ресерч акаунта з ШІ перед першим листом."
+        ]
       ]
     },
     {
@@ -63,14 +209,54 @@
       "title": "Тиждень 5 · Запуск кампанії",
       "lessons": "09 Сіквенс · 10 Запуск кампанії",
       "skills": [
-        ["signal-outbound", "outbound-engine-skills", "skills/signal-outbound", "Оркестратор: від сигналу до готового сіквенсу."],
-        ["sequence-writer", "outbound-engine-skills", "skills/sequence-writer", "Сіквенс на 21 день у двох каналах під одну гіпотезу."],
-        ["multi-channel-orchestrator", "outbound-engine-skills", "skills/multi-channel-orchestrator", "Пошта і LinkedIn як один дотик."],
-        ["linkedin-sequence", "outbound-engine-skills", "skills/linkedin-sequence", "Повідомлення в LinkedIn на 150–300 символів."],
-        ["followup-sequence", "outbound-engine-skills", "skills/followup-sequence", "Фолоуапи без повторів."],
-        ["subject-line-generator", "outbound-engine-skills", "skills/subject-line-generator", "Теми листів."],
-        ["cta-interest-based", "outbound-engine-skills", "skills/cta-interest-based", "Заклик до дії питанням, без прохання про дзвінок."],
-        ["anticopywriting-ai", "gtm-skills", "anticopywriting-ai", "Прибирає ознаки ШІ з тексту листа."]
+        [
+          "signal-outbound",
+          "outbound-engine-skills",
+          "skills/signal-outbound",
+          "Оркестратор: від сигналу до готового сіквенсу."
+        ],
+        [
+          "sequence-writer",
+          "outbound-engine-skills",
+          "skills/sequence-writer",
+          "Сіквенс на 21 день у двох каналах під одну гіпотезу."
+        ],
+        [
+          "multi-channel-orchestrator",
+          "outbound-engine-skills",
+          "skills/multi-channel-orchestrator",
+          "Пошта і LinkedIn як один дотик."
+        ],
+        [
+          "linkedin-sequence",
+          "outbound-engine-skills",
+          "skills/linkedin-sequence",
+          "Повідомлення в LinkedIn на 150–300 символів."
+        ],
+        [
+          "followup-sequence",
+          "outbound-engine-skills",
+          "skills/followup-sequence",
+          "Фолоуапи без повторів."
+        ],
+        [
+          "subject-line-generator",
+          "outbound-engine-skills",
+          "skills/subject-line-generator",
+          "Теми листів."
+        ],
+        [
+          "cta-interest-based",
+          "outbound-engine-skills",
+          "skills/cta-interest-based",
+          "Заклик до дії питанням, без прохання про дзвінок."
+        ],
+        [
+          "anticopywriting-ai",
+          "gtm-skills",
+          "anticopywriting-ai",
+          "Прибирає ознаки ШІ з тексту листа."
+        ]
       ]
     },
     {
@@ -78,13 +264,48 @@
       "title": "Тиждень 6 · Відповіді й аналітика",
       "lessons": "11 Робота з відповідями · 12 Аналітика і дашборди",
       "skills": [
-        ["reply-objection-handler", "outbound-engine-skills", "skills/reply-objection-handler", "Відповідь на кожен реплай і заперечення."],
-        ["reply-audit", "outbound-engine-skills", "skills/reply-audit", "Розбір усіх відповідей кампанії за класифікацією."],
-        ["meeting-prep", "sales-engine-skills", "skills/meeting-prep", "Бриф до дзвінка, який дала відповідь."],
-        ["lead-scoring", "outbound-engine-skills", "skills/lead-scoring", "Оцінка лідів після відповіді."],
-        ["weekly-outreach-report", "outbound-engine-skills", "skills/weekly-outreach-report", "Тижневий звіт план і факт з рішенням kill або scale."],
-        ["campaign-report", "outbound-engine-skills", "skills/campaign-report", "Звіт по кампанії."],
-        ["ab-test-analyzer", "outbound-engine-skills", "skills/ab-test-analyzer", "Чи значимий результат A/B-тесту."]
+        [
+          "reply-objection-handler",
+          "outbound-engine-skills",
+          "skills/reply-objection-handler",
+          "Відповідь на кожен реплай і заперечення."
+        ],
+        [
+          "reply-audit",
+          "outbound-engine-skills",
+          "skills/reply-audit",
+          "Розбір усіх відповідей кампанії за класифікацією."
+        ],
+        [
+          "meeting-prep",
+          "sales-engine-skills",
+          "skills/meeting-prep",
+          "Бриф до дзвінка, який дала відповідь."
+        ],
+        [
+          "lead-scoring",
+          "outbound-engine-skills",
+          "skills/lead-scoring",
+          "Оцінка лідів після відповіді."
+        ],
+        [
+          "weekly-outreach-report",
+          "outbound-engine-skills",
+          "skills/weekly-outreach-report",
+          "Тижневий звіт план і факт з рішенням kill або scale."
+        ],
+        [
+          "campaign-report",
+          "outbound-engine-skills",
+          "skills/campaign-report",
+          "Звіт по кампанії."
+        ],
+        [
+          "ab-test-analyzer",
+          "outbound-engine-skills",
+          "skills/ab-test-analyzer",
+          "Чи значимий результат A/B-тесту."
+        ]
       ]
     }
   ]

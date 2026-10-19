@@ -18,5 +18,6 @@ npx skills add victor-shulga/ai-native-outreach-skills/week-1
 | `express-gtm-audit` | Експрес-аудит агенції за 6 блоками GTM-системи з публічних даних (урок 00, домашка). | `npx skills add victor-shulga/gtm-strategy-skills/skills/express-gtm-audit` |
 | `capacity-plan` | Розрахунок від цілі по угодах до скриньок, доменів і LinkedIn-акаунтів (урок 01). | `npx skills add victor-shulga/gtm-strategy-skills/skills/capacity-plan` |
 | `deliverability-audit` | Перевірка доменів, SPF, DKIM, DMARC і прогріву до першого листа (урок 01). | `npx skills add victor-shulga/outbound-engine-skills/skills/deliverability-audit` |
+| `profile-audit` | Аудит LinkedIn-профілю відправника по URL: вердикт по кожному розділу, переписаний хедлайн і About, бриф банера (урок 01). | `npx skills add victor-shulga/linkedin-strategy-kit/skills/profile-audit` |
 
 Копії взято з основних паків. Оновлення приходять туди першими; ця тека синхронізується скриптом `sync.py`.
