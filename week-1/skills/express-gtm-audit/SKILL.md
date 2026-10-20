@@ -54,7 +54,7 @@ Full checklists, tables and sources are in `references/rubric.md`. Read it befor
 
 | # | Block | Criteria |
 |---|---|---|
-| 01 | GTM strategy (foundation) | ICP (3 components) · positioning · offer · delivery process (8-point checklist) · lead magnets · case depth (5 cases × 7 features) |
+| 01 | GTM strategy (foundation) | ICP (3 components) · positioning · offer · delivery process (8-point checklist) · lead magnets · case depth (5 cases × 8 features) |
 | 02 | Team (foundation) | GTM roles · owners of announced markets · `?` sales hiring and development |
 | 03 | Lead generation (pipeline) | SEO · AI visibility · LinkedIn and content · events · outreach infrastructure · inbound capture |
 | 04 | Sales (pipeline) | path to the first meeting · buyer materials · `?` first call and proposal |

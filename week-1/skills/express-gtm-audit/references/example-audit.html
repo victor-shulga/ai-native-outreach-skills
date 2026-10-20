@@ -199,7 +199,7 @@ td.r,th.r{text-align:right}
 .find div{background:var(--card);border-radius:12px;padding:14px 16px;font-size:14px}
 .find b{display:block;font:800 22px/1.1 var(--display);color:var(--ink);margin-bottom:6px}
 .bhead{display:flex;align-items:center;gap:14px;border-bottom:2px solid var(--ink);padding-bottom:10px}
-.bhead .bn{font:800 13px/1 var(--mono);color:#fff;background:var(--ink);border-radius:6px;padding:7px 9px}
+.bhead .bn{font:800 13px/1 var(--mono);color:var(--bg);background:var(--ink);border-radius:6px;padding:7px 9px}
 .bhead h2{flex:1}
 .bhead .bs{font:800 22px/1 var(--display);color:var(--ink)} .bhead .bs small{font-size:12px;color:var(--muted)}
 .ask{border:1px dashed var(--muted);border-radius:12px;padding:14px 18px;display:flex;flex-direction:column;gap:8px}
@@ -468,6 +468,7 @@ td.r,th.r{text-align:right}
             <li>Розділ «How we worked» є у 20 з 32 кейсів, медіана близько 100 слів. У 12 кейсах його немає</li>
             <li>Де розділ є, там здебільшого розподіл відповідальності («клієнт ставить пріоритети, Agency X керує командою») без етапів і тижнів</li>
             <li>Dark Factory, головний AI-кейс: «How we worked» займає два речення. Детально описаний конвеєр з шести AI-агентів, тобто продукт. Як Agency X вела цей проєкт з клієнтом, не видно</li>
+            <li>За обсягом стандарт кейсу (1500–2000 слів) витримує лише legacy-проксі, близько 1 600. Dark Factory близько 1 000, решта три 500–700 слів: за обсягом це картки проєктів, а не кейси</li>
             <li>Найкращі: AI-консалтинг для банку (3 фази, 20+ людей з боку клієнта, 8 тижнів) і модернізація legacy-проксі (1 розробник з Claude Code, 2 QA клієнта, щоденні зустрічі, чесна база вимірювання)</li>
           </ul>
         </div>
@@ -475,22 +476,22 @@ td.r,th.r{text-align:right}
     </div>
 
     <div class="panel">
-      <div class="ptitle"><h3>Анатомія кейсу: 5 кейсів за 7 ознаками</h3>
-        <span class="tip" tabindex="0">i<span class="tt">Покупець читає кейс, щоб уявити свій проєкт. Для цього йому треба побачити проблему з цифрою, як ішла робота, хто був у команді, скільки тривало, модель або бюджет, результат з базою вимірювання і слова клієнта з посадою. ✓ є, ~ частково, ✕ немає.</span></span>
+      <div class="ptitle"><h3>Анатомія кейсу: 5 кейсів за 8 ознаками</h3>
+        <span class="tip" tabindex="0">i<span class="tt">Покупець читає кейс, щоб уявити свій проєкт. Для цього йому треба побачити проблему з цифрою, як ішла робота, хто був у команді, скільки тривало, модель або бюджет, результат з базою вимірювання і слова клієнта з посадою. ✓ є, ~ частково, ✕ немає. Деталізація: стандарт кейсу 1500–2000 слів; 1200–1499 частково; менше 1200 = картка проєкту, а не кейс.</span></span>
       </div>
       <div class="tbl">
         <table>
-          <thead><tr><th>Кейс</th><th>Проблема з цифрою</th><th>Як ішла робота</th><th>Команда</th><th>Строк</th><th>Модель / бюджет</th><th>Результат з базою</th><th>Цитата з посадою</th></tr></thead>
+          <thead><tr><th>Кейс</th><th>Проблема з цифрою</th><th>Як ішла робота</th><th>Команда</th><th>Строк</th><th>Модель / бюджет</th><th>Результат з базою</th><th>Цитата з посадою</th><th>Деталізація</th></tr></thead>
           <tbody>
-            <tr><td><b style="color:var(--ink)">AI consulting for a global bank</b><br><span style="color:var(--muted)">2026</span></td><td class="mid2">~</td><td class="yes">✓ 3 фази, 20+ людей клієнта</td><td class="no2">✕</td><td class="yes">✓ 8 тижнів</td><td class="no2">✕</td><td class="mid2">~ «дорожня карта для правління»</td><td class="no2">✕</td></tr>
-            <tr><td><b style="color:var(--ink)">AI legacy proxy</b><br><span style="color:var(--muted)">2026</span></td><td class="yes">✓</td><td class="yes">✓ щоденні зустрічі, PR-процес</td><td class="yes">✓ 1 dev + Claude Code, 2 QA клієнта</td><td class="mid2">~</td><td class="no2">✕</td><td class="mid2">~ головна метрика «ще не виміряна»</td><td class="no2">✕</td></tr>
-            <tr><td><b style="color:var(--ink)">Wineshipping</b><br><span style="color:var(--muted)">2022</span></td><td class="yes">✓</td><td class="mid2">~ Phase Zero, розподіл ролей</td><td class="mid2">~</td><td class="mid2">~</td><td class="mid2">~ прогноз на рік без суми</td><td class="yes">✓ SLA 70% → 99,9%</td><td class="yes">✓ Chief Experience &amp; Innovation Officer</td></tr>
-            <tr><td><b style="color:var(--ink)">Post-M&amp;A integration</b><br><span style="color:var(--muted)">банк, з 2015</span></td><td class="yes">✓ 500k клієнтів</td><td class="mid2">~ лише розподіл ролей</td><td class="no2">✕</td><td class="yes">✓ 3 місяці</td><td class="mid2">~ dedicated team</td><td class="mid2">~ синергія банку, внесок Agency X не відокремлений</td><td class="no2">✕</td></tr>
-            <tr><td><b style="color:var(--ink)">Dark Factory</b><br><span style="color:var(--muted)">енергетика, з 2020</span></td><td class="mid2">~</td><td class="no2">✕ 2 речення</td><td class="mid2">~ «гібридна команда»</td><td class="yes">✓ 7 днів замість ~3 міс.</td><td class="no2">✕</td><td class="mid2">~ лише швидкість</td><td class="no2">✕</td></tr>
+            <tr><td><b style="color:var(--ink)">AI consulting for a global bank</b><br><span style="color:var(--muted)">2026</span></td><td class="mid2">~</td><td class="yes">✓ 3 фази, 20+ людей клієнта</td><td class="no2">✕</td><td class="yes">✓ 8 тижнів</td><td class="no2">✕</td><td class="mid2">~ «дорожня карта для правління»</td><td class="no2">✕</td><td class="no2">✕ ~700 слів</td></tr>
+            <tr><td><b style="color:var(--ink)">AI legacy proxy</b><br><span style="color:var(--muted)">2026</span></td><td class="yes">✓</td><td class="yes">✓ щоденні зустрічі, PR-процес</td><td class="yes">✓ 1 dev + Claude Code, 2 QA клієнта</td><td class="mid2">~</td><td class="no2">✕</td><td class="mid2">~ головна метрика «ще не виміряна»</td><td class="no2">✕</td><td class="yes">✓ ~1 600 слів</td></tr>
+            <tr><td><b style="color:var(--ink)">Wineshipping</b><br><span style="color:var(--muted)">2022</span></td><td class="yes">✓</td><td class="mid2">~ Phase Zero, розподіл ролей</td><td class="mid2">~</td><td class="mid2">~</td><td class="mid2">~ прогноз на рік без суми</td><td class="yes">✓ SLA 70% → 99,9%</td><td class="yes">✓ Chief Experience &amp; Innovation Officer</td><td class="no2">✕ ~700 слів</td></tr>
+            <tr><td><b style="color:var(--ink)">Post-M&amp;A integration</b><br><span style="color:var(--muted)">банк, з 2015</span></td><td class="yes">✓ 500k клієнтів</td><td class="mid2">~ лише розподіл ролей</td><td class="no2">✕</td><td class="yes">✓ 3 місяці</td><td class="mid2">~ dedicated team</td><td class="mid2">~ синергія банку, внесок Agency X не відокремлений</td><td class="no2">✕</td><td class="no2">✕ ~500 слів</td></tr>
+            <tr><td><b style="color:var(--ink)">Dark Factory</b><br><span style="color:var(--muted)">енергетика, з 2020</span></td><td class="mid2">~</td><td class="no2">✕ 2 речення</td><td class="mid2">~ «гібридна команда»</td><td class="yes">✓ 7 днів замість ~3 міс.</td><td class="no2">✕</td><td class="mid2">~ лише швидкість</td><td class="no2">✕</td><td class="no2">✕ ~1 000 слів</td></tr>
           </tbody>
         </table>
       </div>
-      <p style="font-size:14px"><b style="color:var(--ink)">Що зробити:</b> один шаблон кейсу з блоком «Як ми працювали», де є тижні, ролі з обох боків і точки рішень. Переписати за ним 5–7 кейсів під сегменти аутричу. Головний AI-кейс Dark Factory переписати першим: зараз він доводить, що агенти швидкі, але не показує, як Agency X впровадить їх у чужу команду.</p>
+      <p style="font-size:14px"><b style="color:var(--ink)">Що зробити:</b> один шаблон кейсу з блоком «Як ми працювали», де є тижні, ролі з обох боків і точки рішень. Переписати за ним 5–7 кейсів під сегменти аутричу. Головний AI-кейс Dark Factory переписати першим: зараз він доводить, що агенти швидкі, але не показує, як Agency X впровадить їх у чужу команду. Обсяг до 1500–2000 слів набирати блоком «Як ми працювали»: тижні, ролі з обох боків, точки рішень.</p>
     </div>
 
     <div class="two" style="grid-template-columns:1.1fr 1fr">

@@ -45,9 +45,10 @@ Points → score: 0–1 → 1 · 1,5–3 → 2 · 3,5–5 → 3 · 5,5–7 → 4
 Read the service pages in full; never judge from headings.
 
 **Case anatomy** (mandatory table, 5 cases: the flagship, the newest, one per top segment, the
-best-looking one). Mark ✓ / ~ / ✕ on 7 features: problem with a number · how the work went
+best-looking one). Mark ✓ / ~ / ✕ on 8 features: problem with a number · how the work went
 (phases, weeks, rituals) · team (roles, size, both sides) · timeline · engagement model or budget
-· result with a measurement basis · client quote with job title. Also scan ALL cases for the
+· result with a measurement basis · client quote with job title · detail (body word count:
+1500–2000 words ✓, 1200–1499 ~, under 1200 ✕: a project card, not a case; write the count in the cell). Also scan ALL cases for the
 share with a "how we worked" section. Score 2 if the reader cannot picture how their own project
 would run, even with 30+ cases.
 
