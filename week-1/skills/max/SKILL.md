@@ -246,7 +246,7 @@ competency matrix, which holds three databases: «Компетенції», «Б
 No copy or no connector → say so and stop; never drill from memory or from invented examples.
 
 **1. Find the databases and the person.** Personal mode: take the data source IDs for the client from
-`references/personal-context.md`. Shipped mode: search Notion for «Банк прикладів» and use the three
+the operator-context file (see Operating mode). Shipped mode: search Notion for «Банк прикладів» and use the three
 databases that sit on the same matrix page. Ask who is training (name, as written in «Оцінки команди»
 → «Людина») and their role, unless the conversation already says.
 
