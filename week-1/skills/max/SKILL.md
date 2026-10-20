@@ -255,7 +255,9 @@ One clear match → use it. Several → show the candidates, one line each, and 
 competencies of the person's role and ask.
 
 **3. Pick 10 examples.** Query «Банк прикладів» rows whose «Компетенція» relation contains that page.
-Skip the template row («Шаблон: …»). Prefer rows this person has not drilled yet (their earlier
+Skip the template row («Шаблон: …») and every row whose solution is not confirmed yet: page icon ⏳,
+or the «Рішення» line in the toggle says it is waiting for a decision (a draft is not a reference
+answer). Count those skipped rows and name the number at the start. Prefer rows this person has not drilled yet (their earlier
 «Вправа» records list the rows they used, see step 6); mix difficulties, at least one «Пастка» if the
 bank has one. Fewer than 10 rows → drill all of them and say how many. Zero rows → stop: the bank for
 this competency is empty, it fills from live work (radar leads, reply audits, judged texts).
