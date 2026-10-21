@@ -95,6 +95,29 @@ would run, even with 30+ cases.
 | Forms-to-CRM link | form technology vs CRM tracking script; auto-reply after submit | page source, test submit |
 | `?` Metrics and rhythms | only from inside evidence | call |
 
+## Trust track · «Довіра до сайту» (separate, 0–100)
+
+Would a stranger believe the site enough to book a call? A claim counts only if the reader can check
+it in one click without talking to sales. Scored 1–5 per criterion; trust = Σ(score ÷ 5 × weight),
+rescaled to 100 over scored criteria if any is `?`. Never part of the 24-criteria overall.
+
+| Criterion | Weight | 5 = | 2 = |
+|---|---|---|---|
+| Independent ratings | 15 | rating + count + link to the source (Clutch, G2, DOU, Google, LinkedIn recommendations) above the fold, latest review ≤ 6 months | no third party, or a badge without a link |
+| Verifiable testimonials | 15 | photo + full name + title + company + link to the person or the exact review, concrete result, first person | no names, initials, stock avatars, third-person review summaries |
+| Named cases | 15 | named clients with a case page each, NDA cases labelled honestly, case count visible before the click (a live counter generated from the CMS) | anonymous "a fintech company", logo wall with no cases |
+| Faces | 15 | founder or sales lead with photo and LinkedIn next to the form, leadership page, real photos | no people, stock or AI faces (check image file names) |
+| Consistent numbers | 15 | same number on home, About, meta description, LinkedIn, review platform; some imperfect numbers shown | drift between pages, "0+" counters in HTML, "100% satisfaction"; one drift caps at 2 |
+| Legal entity and reachability | 10 | contracting entity, addresses, phone, email on own domain, NDA option at the form | email only, free-mail address |
+| Certificates and partnerships | 10 | badges relevant to the ICP (HIPAA, SOC 2 or PCI, ISO 27001, ISO 19650), each linked to verification; dated press | generic unlinked badges, awards older than 2 years |
+| Pulse | 5 | dated content ≤ 60 days, history with links | "coming soon" blocks, newest post a year old |
+
+Mandatory in the section: the 8-row table, the formula, a «Шлях перевірки» table (at least the review
+source link, 2–3 testimonial authors' LinkedIn, the founders, every badge, 2 case pages), one
+number-drift line, «Що зробити» with the 3 cheapest fixes, and call questions. Use the same facts as
+block 05 (reviews) and block 01 (case depth). Never link a page that shows a dead brand or a
+competitor's name as proof.
+
 ## Call questions
 
 Each block ends with 2–3 questions for what is `?` or inferred. Questions ask about the last 12

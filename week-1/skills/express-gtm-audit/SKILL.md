@@ -64,6 +64,12 @@ Full checklists, tables and sources are in `references/rubric.md`. Read it befor
 Criteria marked `?` are almost never visible from outside. Keep them in the table, score them
 only when the user supplies inside evidence (answers, exports, call notes).
 
+Plus one **separate track, «Довіра до сайту» (site trust), 0–100**: 8 weighted criteria
+(independent ratings 15 · verifiable testimonials 15 · named cases 15 · faces 15 · consistent numbers 15 ·
+legal entity and reachability 10 · certificates and partnerships 10 · pulse 5), score 1–5 each,
+trust = Σ(score ÷ 5 × weight). It never enters the 24-criteria overall. Rubric, verification path
+and number-drift rule in `references/rubric.md`.
+
 ## Procedure
 
 1. **Collect** (60–90 minutes of agent time for a prospect; 2–3 hours for a founder doing it by
@@ -104,8 +110,12 @@ blank one.
 4. Blocks 01–06. Each block: H2 = its conclusion with a number, criterion rows (score · evidence
    · verdict), the mandatory tables where they belong, a "Що зробити" box, a "Не видно ззовні ·
    питання на дзвінок" box with 2–3 questions.
-5. Next step: one link or one hand-in instruction.
-6. Sources: every URL and record used.
+5. Trust track «Довіра до сайту»: H2 = conclusion with the 0–100 score, table of 8 criteria
+   (weight · score · what is visible), the formula line, a «Шлях перевірки» table (clicked → opened → ✓/✕),
+   a number-drift line, «Що зробити» and call questions. Its card sits 7th on the dashboard, labelled
+   «ОКРЕМИЙ ТРЕК».
+6. Next step: one link or one hand-in instruction.
+7. Sources: every URL and record used.
 
 ## Self-check before delivering
 
@@ -113,6 +123,9 @@ blank one.
 - No block H2 is a bare block name; each carries its conclusion.
 - Headline numbers appear at most twice (thesis and its block).
 - Reviews are counted as reviews, not as clients.
+- Trust track: every repeated number (team, years, projects, clients) checked on home, About,
+  meta description, LinkedIn and review platform; one drift caps «Чесні й узгоджені цифри» at 2.
+- Trust track never changes the overall GTM score.
 - Every "since", "years", "average" has a dated source or is removed.
 - No client names of the author, no em dashes in Ukrainian, decimal comma.
 - The page has `<meta name="viewport">` and does not scroll sideways on a phone.
