@@ -42,7 +42,7 @@
     {
       "dir": "week-2",
       "title": "Тиждень 2 · Стратегія проспектингу",
-      "lessons": "03 Ринок і ICP · 04 Персони і шлях клієнта",
+      "lessons": "03 Ринок, ICP, скоринг і конкуренти · 04 Персони і шлях клієнта",
       "skills": [
         [
           "gtm-market-sizing",
@@ -79,6 +79,36 @@
           "gtm-strategy-skills",
           "skills/gtm-buyer-journey",
           "Карта шляху клієнта і точка, де входить аутріч."
+        ],
+        [
+          "prospect-scoring",
+          "outbound-engine-skills",
+          "skills/prospect-scoring",
+          "Проспект-скоринг до контакту: бали профілю 15/10/5/0, поріг 20 з 30, черга A/B/D за сигналом (відео 03.7)."
+        ],
+        [
+          "lead-scoring",
+          "outbound-engine-skills",
+          "skills/lead-scoring",
+          "Лід-скоринг після контакту: профіль плюс п'ять блоків з розмови, бал → дія (відео 03.8)."
+        ],
+        [
+          "competitor-finder",
+          "gtm-strategy-skills",
+          "skills/competitor-finder",
+          "Карта конкурентів з доказами: з ким вас реально порівнює покупець (відео 03.9)."
+        ],
+        [
+          "gtm-competitor-gap",
+          "gtm-strategy-skills",
+          "skills/gtm-competitor-gap",
+          "Матриця конкурентів і де ви виграєте, на рівних чи програєте: вільне місце для позиціонування (відео 03.10)."
+        ],
+        [
+          "competitor-post-scout",
+          "competitor-post-scout",
+          "skills/competitor-post-scout",
+          "Competitor Hunter: які пости конкурентів у LinkedIn, Instagram і YouTube вистрілили і що з цього взяти собі (відео 03.11)."
         ]
       ]
     },
