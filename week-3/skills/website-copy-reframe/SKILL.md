@@ -24,7 +24,7 @@ chain from capability to feature to benefit, while obeying the company's own bra
 A homepage has done its job when a visitor from the target market can quickly answer five
 questions:
 
-1. Which services does this company sell?
+1. Which services does this company sell, and for whom (company type and role)?
 2. How does working with them run?
 3. What exactly gets delivered?
 4. In what situation would I hire them?

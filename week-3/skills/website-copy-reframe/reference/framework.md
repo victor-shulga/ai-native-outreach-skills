@@ -13,7 +13,7 @@ the commercial terms. HR wants the culture. Each request is reasonable; together
 page that says a little about everything and nothing a buyer can act on.
 
 The fix is a single test. A visitor from the target market should be able to say, quickly:
-1. Which services does this company sell?
+1. Which services does this company sell, and for whom (company type and role)?
 2. How does working with them run?
 3. What exactly gets delivered?
 4. In what situation would I hire them?

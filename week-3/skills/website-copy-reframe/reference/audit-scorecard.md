@@ -7,7 +7,7 @@ the diagnosis that comes before any rewrite.
 
 ### A. The five questions (50 points, 10 each)
 Can a visitor from the target market answer each one easily?
-1. **Which services?** Is the offer readable in five seconds, or buried under a list of industries?
+1. **Which services, for whom?** Are the offer and the buyer (company type and role) readable in five seconds, or buried under a list of industries?
 2. **How does it run?** Is the engagement or process shown, or only implied?
 3. **What gets delivered?** Are concrete deliverables named, or vague "solutions"?
 4. **When would I hire them?** Is the trigger situation clear?
