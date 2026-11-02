@@ -6,7 +6,7 @@
 |---|---|---|---|
 | [week-1](week-1/) | Попит та інфраструктура | 5 | `npx skills add victor-shulga/ai-native-outreach-skills/week-1` |
 | [week-2](week-2/) | Стратегія проспектингу | 6 | `npx skills add victor-shulga/ai-native-outreach-skills/week-2` |
-| [week-3](week-3/) | Підготовка до запуску | 7 | `npx skills add victor-shulga/ai-native-outreach-skills/week-3` |
+| [week-3](week-3/) | Стратегія та інтерфейси | 13 | `npx skills add victor-shulga/ai-native-outreach-skills/week-3` |
 | [week-4](week-4/) | Гіпотези й радари | 12 | `npx skills add victor-shulga/ai-native-outreach-skills/week-4` |
 | [week-5](week-5/) | Запуск кампанії | 8 | `npx skills add victor-shulga/ai-native-outreach-skills/week-5` |
 | [week-6](week-6/) | Відповіді й аналітика | 7 | `npx skills add victor-shulga/ai-native-outreach-skills/week-6` |

@@ -56,6 +56,36 @@ sentiment + реакцію на ціну; ціль ≥70% «розглянули
 - Підсилюй цінність не зниженням ціни, а **proof + guarantee + speed + low-effort** (Grand Slam).
 - Entry-оффер мусить **сам доводити ROI** (на Стадії 0 це двигун перших кейсів).
 
+## Terms and plain-language output
+
+<!-- glossary:start terms=offer-ladder,free-hook,paid-pilot,high-ticket,continuity,grand-slam,dream-outcome,mechanism,risk-reversal,proof,wtp,use-case,validation-plan,cta -->
+Rules for every document a client or their team will read (review, roast, canvas, offer cards, instruction):
+
+1. **Open with «Словник цього документа»**: only the terms that actually appear in it, at most 10, each as «термін: що це простими словами». Like the definitions section of a contract.
+2. **No internal codes or letter scales in the text** (A/B/C, D L T E, BLEND numbers without words, Own/Shared/Generic, Z1.4, GATE 2.5, T1–T6). Write the meaning instead: «є цифра з клієнтом», not «A».
+3. **Use the plain form from the table below.** English stays only for tool names and for copy that ships in English (promises, hooks, subject lines). If the document is in another language, translate the plain form, never the internal term.
+4. **Do not score what cannot exist yet.** A block that depends on work not done (signal catalog, case studies, a previous step) gets «пропущено: спершу потрібно <що саме>», not a score.
+5. **Every section of a review opens with one concrete action** («до наступного дзвінка: …»), then at most five lines of why. No paragraph that only restates the framework.
+
+
+| Internal term (this skill) | Write for the reader | What it means |
+|---|---|---|
+| offer ladder, tiers | драбина оферів | кілька оферів від безкоштовного до найдорожчого, які ведуть того самого клієнта до одного результату; на кожній сходинці він платить і довіряє більше |
+| hook / free offer, lead magnet | безкоштовний вхід | аудит, розрахунок втрат або розбір, що показує проблему і веде до розмови |
+| entry (paid pilot) | платний пілот | невелика робота з фіксованим обсягом, ціною і строком, яка доводить результат до великого договору |
+| high-ticket, core contract | основний дорогий договір | найбільша робота, яку ви робите разом із клієнтом і за нього |
+| continuity | щомісячний супровід | оплата щомісяця за підтримку після основної роботи |
+| Grand Slam offer card | повна картка оферу | офер, де є результат, що входить у роботу, швидкість, гарантія і доказ; цінність піднімаємо доказом і гарантією, а не знижкою |
+| dream outcome | бажаний результат клієнта | як виглядає ситуація клієнта, коли проблему вирішено, його ж словами |
+| mechanism, what's included | як ми це робимо | що саме входить у роботу і чим ваш спосіб відрізняється від інших |
+| risk reversal, guarantee | гарантія, що знімає ризик | що клієнт отримає, якщо результату не буде: повернення грошей, безкоштовне продовження, оплата за етапами |
+| proof, [TODO: need case] | доказ | кейс, цифра або відгук, що підтверджують обіцянку; якщо його немає, пишемо «потрібен кейс», а не вигадуємо |
+| WTP, value metric | скільки готові платити і за що саме | перевіряємо пробними продажами або порівнянням цін, а не питанням «скільки б ви заплатили» |
+| use case | юз кейс | одна ситуація клієнта: хто, що сталося, що болить, що зробили, який результат і який доказ |
+| validation plan | перевірка оферу на людях | показати картку 5–10 людям і поставити 8 питань; мета: від 70% «розглянули б» і 1–2 реальні пілоти |
+| CTA | прохання в кінці листа | конкретний маленький наступний крок: відповісти, подивитися, погодитися на дзвінок |
+<!-- glossary:end -->
+
 ## Вихід (Notion)
 Під-сторінка **«08 · Offers»**: offer ladder (таблиця) · 1-2 offer-картки · use case · validation plan ·
 блок «Джерела / припущення». Українською; назви оферів — мовою ринку (часто EN).

@@ -46,6 +46,29 @@ audience.
 The natural order is **audit, then homepage, then service-page**: diagnose, rewrite the home page,
 then the offer pages. All modes share Steps 1-3 (ingest, proof bank, canvas).
 
+## Terms and plain-language output
+
+<!-- glossary:start terms=homepage-canvas,day-to-day-owner,current-solution,capabilities,proof-bank,vertical-positioning,use-case,above-the-fold,keyword-cluster,social-proof mode=copy -->
+Rules for every text a reader will see (post, email, message, page copy):
+
+1. **No internal codes or letter scales** (A/B/C, D L T E, scores without words, framework codes). Write the meaning.
+2. **Use the plain form from the table below.** English stays only for tool names and for copy that ships in English. A term the reader may not know gets explained in the same sentence or replaced.
+3. **Any review, audit or report this skill produces for the team or the client** follows the document rules: open it with «Словник цього документа» (terms used, at most 10), do not score what depends on unfinished work, and open each section with one concrete action.
+
+| Internal term (this skill) | Write for the reader | What it means |
+|---|---|---|
+| canvas (audience, champion, situation, current way, limitations, problems, capabilities, features, benefits) | канва тексту сайту | таблиця з дев'яти клітинок, з якої виводимо кожен блок сторінки; біля блоку пишемо, з якої клітинки він узявся. |
+| day-to-day owner, champion | той, хто працюватиме з вами щодня | керівник проєкту, BIM-менеджер, керівник розробки; йому важливе інше, ніж ОПР |
+| current solution, limitations | як вирішують зараз і де це ламається | чим клієнт обходиться сьогодні і чому цього вже не вистачає |
+| capabilities, features | що клієнт тепер зможе · що саме це дає | можливість, яку клієнт отримує, і конкретна частина вашої роботи, що її вмикає |
+| proof bank | банк доказів | усі цифри, кейси, відгуки й факти довіри з джерелами; на сайт іде лише те, що в ньому є. |
+| vertical / horizontal positioning | вузька ніша · широкий ринок | говоримо до одного типу компаній чи до всіх; для дорогих послуг вузька ніша продає легше. |
+| use case | юз кейс | одна ситуація клієнта: хто, що сталося, що болить, що зробили, який результат і який доказ |
+| above the fold, hero | перший екран | те, що людина бачить без прокрутки; за кілька секунд вона вирішує, читати далі чи піти. |
+| keyword cluster, SEO map, H1/H2 map | група пошукових запитів і структура заголовків | які запити закриває сторінка і як вони розкладені по заголовках. |
+| social proof | докази від інших | Цифри клієнтів, відгуки, логотипи чи кейси, які підтверджують, що вам можна вірити. |
+<!-- glossary:end -->
+
 ## Output contract
 
 One copy deck titled `<Company> | <Mode> (<page>)`. Every copy block carries a one-line rationale
@@ -121,6 +144,10 @@ reads `what is wrong → what it costs → the fix`, most costly first. Finish b
 next mode and the blocks to fix first.
 
 ## Step 4B: Mode homepage
+
+For the full two-track rewrite (clarity plus trust: named cases next to every promise, real logos
+only, no placeholders, a pre-ship checklist) use the standalone `homepage-rewrite` skill. This mode
+is the short version: blocks from the canvas.
 
 Turn the canvas into blocks (`reference/copy-blocks.md`):
 - **Hero**: top-row message, key capabilities, the service category, and a trust line.

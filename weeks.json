@@ -114,50 +114,86 @@
     },
     {
       "dir": "week-3",
-      "title": "Тиждень 3 · Підготовка до запуску",
-      "lessons": "05 Позиціонування й офери · 06 Докази і контент",
+      "title": "Тиждень 3 · Стратегія та інтерфейси",
+      "lessons": "05 Стратегія: позиціонування, офери, сигнали · 06 Інтерфейси і докази",
       "skills": [
         [
           "gtm-positioning",
           "gtm-strategy-skills",
           "skills/gtm-positioning",
-          "Шість слотів позиціонування і таблиця «було і стало»."
+          "Бажане позиціонування, переваги за VRIN, кут, речення і say-no."
         ],
         [
           "gtm-value-prop",
           "gtm-strategy-skills",
           "skills/gtm-value-prop",
-          "Ціннісна пропозиція під персону."
+          "Канвас ціннісної пропозиції і таблиця «було і стало»."
         ],
         [
           "gtm-offers",
           "gtm-strategy-skills",
           "skills/gtm-offers",
-          "Офери під сегменти."
+          "Картки оферів і скільки оферів тримати на вашій стадії."
         ],
         [
           "offer-ladder",
           "sales-engine-skills",
           "skills/offer-ladder",
-          "Драбина з чотирьох оферів і перша сходинка для холодного листа."
+          "Драбина з чотирьох оферів і вхідний офер для холодного листа."
         ],
         [
           "case-study-writer",
           "account-management-skills",
           "skills/case-study-writer",
-          "Кейс під офер: проблема з цифрою, хід проєкту, результат."
+          "Кейс під офер у 12 розділах."
         ],
         [
           "website-copy-reframe",
           "marketing-engine-skills",
           "skills/website-copy-reframe",
-          "Перепис головної і сервісної сторінки під ICP."
+          "Аудит головної на 100 балів і переписаний текст."
         ],
         [
           "page-builder",
           "page-builder",
           "skills/page-builder",
-          "Сторінка під гіпотезу або лід-магніт."
+          "Сервісна сторінка і сторінка під кожен офер."
+        ],
+        [
+          "offer-factory",
+          "gtm-skills",
+          "offer-factory",
+          "Варіанти вхідного оферу і оцінка за сімома критеріями (відео 05.4)."
+        ],
+        [
+          "signal-catalog",
+          "outbound-engine-skills",
+          "skills/signal-catalog",
+          "Сигнали під вашу нішу з балом з п'яти факторів (відео 05.5)."
+        ],
+        [
+          "homepage-rewrite",
+          "homepage-rewrite",
+          "skills/homepage-rewrite",
+          "Перепис головної сторінки (відео 06.1)."
+        ],
+        [
+          "profile-audit",
+          "linkedin-strategy-kit",
+          "skills/profile-audit",
+          "Самоаудит профілю сендера, банер і хедлайн (відео 06.3)."
+        ],
+        [
+          "lead-magnets",
+          "marketing-engine-skills",
+          "skills/lead-magnets",
+          "Ідея, план і сторінка лід-магніту (відео 06.6)."
+        ],
+        [
+          "free-tools",
+          "marketing-engine-skills",
+          "skills/free-tools",
+          "Калькулятор або міні-тул як лід-магніт (відео 06.6)."
         ]
       ]
     },

@@ -78,6 +78,35 @@ market→проблеми→dream outcome), але **подавай statements �
 - Capabilities = реверсал Limitations; Features «живлять» Capabilities.
 - Customer language звірено з verbatim; category названо.
 
+## Terms and plain-language output
+
+<!-- glossary:start terms=vp-canvas,big-promise,market-insight,jtbd,current-solution,capabilities,benefits-mirror,dream-outcome,why-now,anti-vp,so-what-test,usp,proof -->
+Rules for every document a client or their team will read (review, roast, canvas, offer cards, instruction):
+
+1. **Open with «Словник цього документа»**: only the terms that actually appear in it, at most 10, each as «термін: що це простими словами». Like the definitions section of a contract.
+2. **No internal codes or letter scales in the text** (A/B/C, D L T E, BLEND numbers without words, Own/Shared/Generic, Z1.4, GATE 2.5, T1–T6). Write the meaning instead: «є цифра з клієнтом», not «A».
+3. **Use the plain form from the table below.** English stays only for tool names and for copy that ships in English (promises, hooks, subject lines). If the document is in another language, translate the plain form, never the internal term.
+4. **Do not score what cannot exist yet.** A block that depends on work not done (signal catalog, case studies, a previous step) gets «пропущено: спершу потрібно <що саме>», not a score.
+5. **Every section of a review opens with one concrete action** («до наступного дзвінка: …»), then at most five lines of why. No paragraph that only restates the framework.
+
+
+| Internal term (this skill) | Write for the reader | What it means |
+|---|---|---|
+| VP canvas | канва ціннісної пропозиції | одна сторінка: що змінюється на ринку → проблема клієнта → як вирішують зараз → що даєте ви → чому купити у вас і зараз |
+| big promise, VP statement | головна обіцянка | одне речення про зміну, яку отримає клієнт; будуємо від його бажаного результату |
+| The Market, market insight, high-level problem | що змінюється на ринку | зміна, яку ви бачите, і проблема, що з неї випливає для всього ринку, а не лише для вас |
+| JTBD | задача клієнта | що людина намагається зробити, коли шукає рішення: «коли…, хочу…, щоб…» |
+| current solution, limitations | як вирішують зараз і де це ламається | чим клієнт обходиться сьогодні і чому цього вже не вистачає |
+| capabilities, features | що клієнт тепер зможе · що саме це дає | можливість, яку клієнт отримує, і конкретна частина вашої роботи, що її вмикає |
+| benefits as reversal of problems | вигоди дзеркалять проблеми | кожна вигода закриває проблему з тим самим номером |
+| dream outcome | бажаний результат клієнта | як виглядає ситуація клієнта, коли проблему вирішено, його ж словами |
+| why now, cost of inaction | ціна бездіяльності | що клієнт втрачає щомісяця, поки нічого не змінює |
+| Anti-VP | чим ми не є | три-чотири речі, які ми свідомо не обіцяємо, щоб нас не плутали з іншими |
+| So what? ×5 | перевірка «і що з того?» | до кожної властивості питаємо «і що з того клієнту?», поки не дійдемо до грошей, часу чи ризику; що не доходить, викидаємо |
+| USP, UVP | унікальна цінність | те, що важливо клієнту і є лише у вас; одне без іншого не рахується |
+| proof, [TODO: need case] | доказ | кейс, цифра або відгук, що підтверджують обіцянку; якщо його немає, пишемо «потрібен кейс», а не вигадуємо |
+<!-- glossary:end -->
+
 ## Вихід (Notion)
 Під-сторінка **«07 · Value Proposition»**, порядок: **0·Опис → VP-statements (Big Promise) →
 A·The Market → B-E → F·синтез** + блок «Джерела / припущення» (таблиці для проблем/benefits/

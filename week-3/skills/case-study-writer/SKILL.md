@@ -210,3 +210,23 @@ possible.
 - [ ] Mobile check
 - [ ] Every number sourced or marked `[[уточнити]]` — placeholder list printed at the end
 - [ ] Remove any internal / references section from the public version
+
+## Terms and plain-language output
+
+<!-- glossary:start terms=sme,snapshot,pull-quote,outcome-vs-output,weak-numbers-mode,cta,engagement-model mode=copy -->
+Rules for every text a reader will see (post, email, message, page copy):
+
+1. **No internal codes or letter scales** (A/B/C, D L T E, scores without words, framework codes). Write the meaning.
+2. **Use the plain form from the table below.** English stays only for tool names and for copy that ships in English. A term the reader may not know gets explained in the same sentence or replaced.
+3. **Any review, audit or report this skill produces for the team or the client** follows the document rules: open it with «Словник цього документа» (terms used, at most 10), do not score what depends on unfinished work, and open each section with one concrete action.
+
+| Internal term (this skill) | Write for the reader | What it means |
+|---|---|---|
+| SME, SME interview | інтерв'ю з виконавцем проєкту | розмова з людиною, яка робила проєкт, щоб зібрати факти і цифри для кейсу |
+| at-a-glance snapshot | коротка довідка про проєкт | панель під заголовком: галузь, країна, команда, формат, тривалість, технології, головний результат |
+| pull-quote | виділена цитата клієнта | коротка дослівна цитата великим шрифтом посеред тексту |
+| outcome ≠ output | результат для бізнесу проти зробленої роботи | результат це зміна в цифрах клієнта; зроблене це функції і модулі, їх не змішуємо |
+| Weak-numbers mode | режим без точних цифр | коли цифр немає, пишемо про зміну в роботі або погоджені з клієнтом діапазони |
+| CTA | прохання в кінці листа | конкретний маленький наступний крок: відповісти, подивитися, погодитися на дзвінок |
+| engagement model: dedicated team / embedded (staff augmentation) / project | формат співпраці: виділена команда · фахівці у вашу команду · проєкт | як ви працюєте з клієнтом: окрема команда під нього, ваші люди в його команді або фіксований проєкт |
+<!-- glossary:end -->

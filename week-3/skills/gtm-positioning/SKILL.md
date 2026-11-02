@@ -123,6 +123,38 @@ evidence (цитата з сайту/дискавері), інакше score = �
 - Не порушено §9: «всім», vanilla UVP, копія positioning конкурента.
 - Жодне ключове поле не порожнє: де клієнт мовчав — гіпотеза з впевненістю+підставою.
 
+## Terms and plain-language output
+
+<!-- glossary:start terms=whitespace,enemy,anchor,specialization-axis,table-stakes,differentiator,borrowed-owned,so-what-test,usp,positioning-style,beachhead,say-no-test,maturity,overshoot,checkpoint,hypothesis-confidence -->
+Rules for every document a client or their team will read (review, roast, canvas, offer cards, instruction):
+
+1. **Open with «Словник цього документа»**: only the terms that actually appear in it, at most 10, each as «термін: що це простими словами». Like the definitions section of a contract.
+2. **No internal codes or letter scales in the text** (A/B/C, D L T E, BLEND numbers without words, Own/Shared/Generic, Z1.4, GATE 2.5, T1–T6). Write the meaning instead: «є цифра з клієнтом», not «A».
+3. **Use the plain form from the table below.** English stays only for tool names and for copy that ships in English (promises, hooks, subject lines). If the document is in another language, translate the plain form, never the internal term.
+4. **Do not score what cannot exist yet.** A block that depends on work not done (signal catalog, case studies, a previous step) gets «пропущено: спершу потрібно <що саме>», not a score.
+5. **Every section of a review opens with one concrete action** («до наступного дзвінка: …»), then at most five lines of why. No paragraph that only restates the framework.
+
+
+| Internal term (this skill) | Write for the reader | What it means |
+|---|---|---|
+| whitespace | вільне місце на ринку | те, що важливо клієнтам, але конкуренти цього не кажуть або не роблять |
+| enemy | старий спосіб, який ви замінюєте | не конкурент, а звичка: власна команда, що тоне в переробках, «п'ять фрілансерів»; показує, чому новий спосіб кращий |
+| anchor (Activity / Use-Case / Service-Category / Competitive-Alternative) | з чим вас одразу порівнюють | ярлик, через який клієнт розуміє, хто ви: дія, ситуація, категорія послуги або те, що ви замінюєте |
+| specialization axis | напрям звуження | за чим звужуємося: галузь, тип послуги, стадія клієнта, роль покупця чи платформа |
+| table stakes | обов'язковий мінімум | те, що є в усіх і без чого вас не розглядають; з цього лист не починають |
+| differentiator vs table-stake | відмінність, якої немає в інших | те, чим ви справді різнитеся; усе, що є в усіх, іде в обов'язковий мінімум |
+| borrowed / owned proof | запозичений · власний доказ | запозичений: досвід засновника до компанії, схожі проєкти, метод; власний: кейси з цифрами цієї компанії; запозичений не видаємо за власний |
+| So what? ×5 | перевірка «і що з того?» | до кожної властивості питаємо «і що з того клієнту?», поки не дійдемо до грошей, часу чи ризику; що не доходить, викидаємо |
+| USP, UVP | унікальна цінність | те, що важливо клієнту і є лише у вас; одне без іншого не рахується |
+| Dunford style (Big-Fish-Small-Pond / Head-to-Head / Create-New-Game) | стратегія позиціонування: перші у вузькій ніші · пряме порівняння з лідером · нова категорія | на ранній стадії лише перша: бути найкращими для вузької групи |
+| beachhead | перша вузька ніша | один сегмент, де вас найлегше вибрати; звідти розширюємося |
+| say-no / standards test | перевірка «від чого відмовляємося» | 2–3 типи робіт, які позиціонування змушує не брати; якщо таких немає, позиціонування ще не справжнє |
+| maturity Z1.4, Lvl 0–4 | рівень зрілості позиціонування від 0 до 4 | від «список послуг для всіх» (0) до «власна категорія» (4); у документі пишемо рівень і його опис, код Z1.4 не пишемо |
+| overshoot | заявка сильніша за докази | обіцяти категорію чи преміум, коли ще немає кейсів |
+| GATE 2.5, checkpoint | точка погодження з вами | місце, де зупиняємося і питаємо «підтверджуєте чи міняємо?»; код у документ не пишемо |
+| propose-by-default, hypothesis · confidence low/med/high | наш варіант з рівнем упевненості | там, де ви ще не назвали відповідь, пропонуємо свою і пишемо, наскільки впевнені і на чому вона базується |
+<!-- glossary:end -->
+
 ## Вихід (Notion)
 Під-сторінка **«06 · Positioning»**: stage-gate банер (стадія + що дозволено) · best-customer патерн ·
 alternatives (лінк на 05) · **вісь + анкер + ВОРОГ** (з обґрунтуванням під стадію) · assets→benefits→proof

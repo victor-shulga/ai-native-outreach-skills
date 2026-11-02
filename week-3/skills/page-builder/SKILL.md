@@ -9,8 +9,8 @@ description: >-
   Use whenever someone says: "build a service page", "write the page for [service]", "industry page
   for [vertical]", "make a page for our website", "rewrite this page", "add a page to the site",
   "напиши сторінку послуги", "зроби сторінку під галузь", "сторінка на сайт"; also for auditing an
-  existing page or planning which pages a site needs. NOT for a homepage messaging rewrite from
-  scratch (positioning job) or social posts. Assumes a Site Blueprint exists; if not, it stops and
+  existing page or planning which pages a site needs. NOT for a homepage rewrite (use
+  homepage-rewrite; its proof bank and canvas feed this skill) or social posts. Assumes a Site Blueprint exists; if not, it stops and
   says so.
 ---
 
