@@ -134,3 +134,27 @@ never about budget, authority, need or timing as a checklist.
 - Repetition costs points: each headline number at most in the thesis and its own block.
 - ICP rounding is always questioned: state "у підсумок блоку йде округлене 3".
 - Dark mode: chips with `color:#fff` on `var(--ink)` vanish; use `color:var(--bg)`.
+
+## Розклад на складові (block 01, added 23.10.2026)
+
+Three cards at the top of block 01. Each row: ✓ є = 1 · ~ частково = 0,5 · ✕ немає = 0, one line of evidence.
+
+| Card | Components | What counts as ✓ |
+|---|---|---|
+| Офер (6) | вхідний продукт · ціна · строк · що на руках · зняття ризику · наступний крок | a named first product; a price or range on the site; days or weeks; a list of deliverables; a guarantee or a priced stop point; a visible ladder to the next product |
+| Value Proposition (4) | бажаний результат · докази · час до результату · зусилля клієнта | the buyer's outcome in their words (tender won, approval, revenue), not the vendor's activity; proof the reader can check (named case with a measured result, linked review); a time to first result; what the client must give, kept small |
+| ICP (3) | цільові ринки · тип компанії · персона | same 1–5 scores as the ICP table; ≥4 green, 3 amber, ≤2 red |
+
+Card header: «X з N» coloured by share (≥0,7 green · ≥0,5 amber · below red) and a segmented bar, one segment per component.
+
+## Bowtie dashboard: stage mapping
+
+| Stage | Score = mean of |
+|---|---|
+| Формування попиту | SEO · AI-видимість · LinkedIn і контент · Події |
+| Захоплення попиту | Аутрич · Заявки з сайту |
+| Продажі | block 04 scored criteria |
+| Утримання · Відгуки · Розширення | the three block 05 criteria, one stage each |
+| Foundation tiles | 01 strategy criteria + Value Proposition (points ÷ 4 × 5) · 02 team · 06 processes |
+
+% = score ÷ 5 × 100. Bands: 90–100 норма · 80–89 майже норма · 50–79 увага · below 50 проблема · `?` grey.

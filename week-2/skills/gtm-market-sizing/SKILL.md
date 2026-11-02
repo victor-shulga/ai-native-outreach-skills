@@ -43,6 +43,29 @@ SAM/SOM рахуй **по Tier 1/2/3** (із кроку 3), бо ACV і % obtain
 - **Стадія 2:** + розбивка по розмірних бендах/тірах (модель просунутого шаблону) + кілька джерел (середнє).
 - **Стадія 3-4:** + мульти-гео + 3-5y growth-проєкція (CAGR) + intent-data шар.
 
+## Terms and plain-language output
+
+<!-- glossary:start terms=tam-sam-som,top-down-bottom-up,acv,cagr,account-tiers,intent-data,agency-stage -->
+Rules for every document a client or their team will read (review, roast, canvas, offer cards, instruction):
+
+1. **Open with «Словник цього документа»**: only the terms that actually appear in it, at most 10, each as «термін: що це простими словами». Like the definitions section of a contract.
+2. **No internal codes or letter scales in the text** (A/B/C, D L T E, BLEND numbers without words, Own/Shared/Generic, Z1.4, GATE 2.5, T1–T6). Write the meaning instead: «є цифра з клієнтом», not «A».
+3. **Use the plain form from the table below.** English stays only for tool names and for copy that ships in English (promises, hooks, subject lines). If the document is in another language, translate the plain form, never the internal term.
+4. **Do not score what cannot exist yet.** A block that depends on work not done (signal catalog, case studies, a previous step) gets «пропущено: спершу потрібно <що саме>», not a score.
+5. **Every section of a review opens with one concrete action** («до наступного дзвінка: …»), then at most five lines of why. No paragraph that only restates the framework.
+
+
+| Internal term (this skill) | Write for the reader | What it means |
+|---|---|---|
+| TAM / SAM / SOM | весь ринок · ваша досяжна частина · реальна ціль на 1–3 роки | скільки грошей витрачають на вашу послугу; рахуємо витрати на послугу, розмір галузі клієнтів сюди не входить. |
+| top-down / bottom-up | рахунок зверху вниз · знизу вгору | зверху: від ринкових даних чи цілі; знизу: від кількості компаній чи ваших реальних можливостей; різниця між ними і є головний висновок. |
+| ACV, ARPU, annual contract value | річний чек клієнта | скільки в середньому один клієнт платить за рік. |
+| CAGR | середній річний ріст ринку | на скільки відсотків ринок у середньому росте щороку. |
+| Tier 1 / 2 / 3 (= A / B / C) | групи компаній: великі · середні · малі | ділимо ринок за розміром, бо чек, цикл угоди і хто вирішує в кожній групі різні; літер A/B/C у документі не пишемо. |
+| intent data | дані про намір купувати | сигнали, що компанія зараз шукає таку послугу: пошукові запити, відвідування сторінок, вакансії. |
+| Stage 0–5, стадія агенції | стадія розвитку компанії (0–5) | шість щаблів від «CEO робить усе» до «портфель напрямів»; від стадії залежить, що доречно робити зараз. |
+<!-- glossary:end -->
+
 ## Вихід (Notion)
 Під-сторінка **«04 · Market Sizing (TAM-SAM-SOM)»**: таблиця TAM/SAM/SOM × (top-down | bottom-up) +
 розбивка по тірах + припущення/фільтри з джерелами + висновок «чи ринок достатній + куди фокус».

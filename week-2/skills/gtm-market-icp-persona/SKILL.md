@@ -80,9 +80,40 @@ SMB/mid операторами · чіткий вимірюваний $-біль
 впевненість. Оркестратор покаже користувачу й чекатиме підтвердження/правок. Не починай VP/offers,
 доки ринок+ICP не підтверджено.
 
+## Terms and plain-language output
+
+<!-- glossary:start terms=account-tiers,decision-maker,day-to-day-owner,jtbd,anti-icp,trigger,market-score,beachhead,ecp,buying-committee,awareness-stages,checkpoint,hypothesis-confidence,tam-sam-som,paid-pilot -->
+Rules for every document a client or their team will read (review, roast, canvas, offer cards, instruction):
+
+1. **Open with «Словник цього документа»**: only the terms that actually appear in it, at most 10, each as «термін: що це простими словами». Like the definitions section of a contract.
+2. **No internal codes or letter scales in the text** (A/B/C, D L T E, BLEND numbers without words, Own/Shared/Generic, Z1.4, GATE 2.5, T1–T6). Write the meaning instead: «є цифра з клієнтом», not «A».
+3. **Use the plain form from the table below.** English stays only for tool names and for copy that ships in English (promises, hooks, subject lines). If the document is in another language, translate the plain form, never the internal term.
+4. **Do not score what cannot exist yet.** A block that depends on work not done (signal catalog, case studies, a previous step) gets «пропущено: спершу потрібно <що саме>», not a score.
+5. **Every section of a review opens with one concrete action** («до наступного дзвінка: …»), then at most five lines of why. No paragraph that only restates the framework.
+
+
+| Internal term (this skill) | Write for the reader | What it means |
+|---|---|---|
+| Tier 1 / 2 / 3 (= A / B / C) | групи компаній: великі · середні · малі | ділимо ринок за розміром, бо чек, цикл угоди і хто вирішує в кожній групі різні; літер A/B/C у документі не пишемо. |
+| decision maker | ОПР (особа, що приймає рішення) | той, хто підписує: власник, операційний директор, керівник напряму |
+| day-to-day owner, champion | той, хто працюватиме з вами щодня | керівник проєкту, BIM-менеджер, керівник розробки; йому важливе інше, ніж ОПР |
+| JTBD | задача клієнта | що людина намагається зробити, коли шукає рішення: «коли…, хочу…, щоб…» |
+| Anti-ICP, disqualifiers | кому не продаємо | ознаки компаній, з якими не працюємо, щоб не витрачати на них час. |
+| trigger, business trigger, account trigger, TRIGGER | подія-поштовх | подія в компанії покупця (нове керівництво, великий проєкт, втрата людини), після якої він починає шукати рішення. |
+| Fit · Pain/Demand · Accessibility · Deal $ · Competition · Size | оцінка ринку: збіг із вашою сильною стороною · гострота болю · чи легко дістатися · чек · конкуренція · розмір | шість оцінок від 1 до 5, за сумою обираємо головний ринок. |
+| beachhead | перша вузька ніша | один сегмент, де вас найлегше вибрати; звідти розширюємося |
+| ECP, Early Customer Profile | перші клієнти, яких реально закрити за 1–2 квартали | вужча група за ICP: з неї беремо перші угоди і кейси. |
+| DMU, buying committee, buying process | хто бере участь у рішенні і як воно ухвалюється | люди з боку клієнта, які впливають на покупку, і кроки, через які проходить угода. |
+| Problem unaware → business trigger → problem aware → solution aware → alternatives → objections → consideration → decision → onboarding → expansion | етапи шляху покупця: не бачить проблеми · подія-поштовх · бачить проблему · шукає рішення · порівнює · обирає · перший результат · допродаж | де зараз покупець у голові і що йому потрібно почути саме на цьому етапі. |
+| GATE 2.5, checkpoint | точка погодження з вами | місце, де зупиняємося і питаємо «підтверджуєте чи міняємо?»; код у документ не пишемо |
+| propose-by-default, hypothesis · confidence low/med/high | наш варіант з рівнем упевненості | там, де ви ще не назвали відповідь, пропонуємо свою і пишемо, наскільки впевнені і на чому вона базується |
+| TAM / SAM / SOM | весь ринок · ваша досяжна частина · реальна ціль на 1–3 роки | скільки грошей витрачають на вашу послугу; рахуємо витрати на послугу, розмір галузі клієнтів сюди не входить. |
+| entry (paid pilot) | платний пілот | невелика робота з фіксованим обсягом, ціною і строком, яка доводить результат до великого договору |
+<!-- glossary:end -->
+
 ## Вихід (Notion)
 Під-сторінка **«03 · Market → ICP → Persona»**: Рівень 1 (таблиця 3 ринків зі скорингом 6 критеріїв +
-рекомендація) · Рівень 2 (таблиця Tier 1/2/3 + стартовий) · Рівень 3 (персони за шаблоном) ·
+рекомендація) · Рівень 2 (table of the three company groups named in words: large / mid / small, no Tier numbers or A/B/C letters + стартовий) · Рівень 3 (персони за шаблоном) ·
 Anti-ICP · блок «Джерела / припущення». Українською; titles/verbatim — мовою оригіналу.
 
 ## Definition of Done

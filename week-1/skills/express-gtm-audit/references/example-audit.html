@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="uk">
 <meta charset="utf-8">
-<title>Експрес-аудит GTM-системи · приклад</title>
+<title>Аудит GTM Studio X</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap">
 <style>
@@ -210,10 +210,105 @@ td.r,th.r{text-align:right}
 @media (max-width:760px){.dash,.find{grid-template-columns:1fr}}
 </style>
 
+<style>
+/* v3: numbers first (Viktor 23.10.2026: less text, big coloured numbers) */
+.hl-bad{color:var(--coral-deep)} .hl-good{color:var(--forest)} .hl-mid{color:var(--amber)}
+.hero-nums{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.hn{background:var(--card);border-radius:14px;padding:16px 18px;border-top:4px solid var(--line);display:flex;flex-direction:column;gap:8px;min-width:0}
+.hn b{font:800 46px/1 var(--display);letter-spacing:-.02em}
+.hn span{font-size:14px;line-height:1.35;color:var(--body)}
+.hn.bad{border-top-color:var(--coral-deep)} .hn.bad b{color:var(--coral-deep)}
+.hn.good{border-top-color:var(--forest)} .hn.good b{color:var(--forest)}
+.hn.mid{border-top-color:var(--amber)} .hn.mid b{color:var(--amber)}
+.next{font:700 17px/1.4 var(--display);color:var(--ink)} .next em{font-style:normal;color:var(--coral-deep)}
+@media (max-width:760px){.hero-nums{grid-template-columns:repeat(2,minmax(0,1fr))}.hn b{font-size:36px}}
+</style>
+<style>
+/* v4: component breakdown (Viktor 23.10.2026: show what is missing, with progress and colour) */
+.comp3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.cc{border:1px solid var(--line);border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:12px;min-width:0;background:var(--bg)}
+.cc-h{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.cc-h h3{font-size:15px}
+.cc-h b{font:800 32px/1 var(--display);white-space:nowrap} .cc-h b small{font-size:14px;color:var(--muted);font-weight:700}
+.cc.good .cc-h b{color:var(--forest)} .cc.mid .cc-h b{color:var(--amber)} .cc.bad .cc-h b{color:var(--coral-deep)}
+.seg{display:flex;gap:4px} .seg i{flex:1;height:12px;border-radius:3px;background:var(--line)}
+.seg i.y{background:var(--forest)} .seg i.p{background:var(--amber)} .seg i.n{background:var(--coral-deep)}
+.cl{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:9px}
+.cl li{display:grid;grid-template-columns:24px 1fr;gap:9px;font-size:13px;line-height:1.35;color:var(--body)}
+.cl li .st{width:24px;height:24px;font-size:12px}
+.cl li b{display:block;color:var(--ink);font-size:14px;font-weight:600}
+@media (max-width:860px){.comp3{grid-template-columns:minmax(0,1fr)}}
+</style>
+<style>
+/* v5: diagnosis header, same buckets as the self-assessment tool */
+.overall{min-width:220px;text-align:center}
+.overall .big{font-size:84px;letter-spacing:-.03em}
+.overall .big small{font-size:24px}
+.overall.bad .big{color:var(--coral-deep)} .overall.mid .big{color:var(--amber)} .overall.good .big{color:var(--forest)}
+.bucket{display:inline-block;margin-top:10px;font:700 15px/1 var(--display);padding:8px 14px;border-radius:999px}
+.overall.bad .bucket{background:var(--coral-soft);color:var(--coral-deep)}
+.overall.mid .bucket{background:var(--amber-soft);color:var(--amber)}
+.overall.good .bucket{background:var(--forest-soft);color:var(--forest)}
+.diag{font-size:18px;line-height:1.45;color:var(--ink);max-width:68ch;margin-top:14px}
+.diag b{color:var(--coral-deep)}
+@media (max-width:760px){.overall{text-align:left}.overall .big{font-size:64px}}
+</style>
+<style>
+/* v6: bowtie dashboard (Viktor 23.10.2026) */
+.bt-wrap{display:flex;flex-direction:column;gap:6px}
+.bt-head{display:none}
+.bt{display:grid;grid-template-columns:repeat(3,minmax(0,1fr)) 96px repeat(3,minmax(0,1fr));gap:4px}
+.bt-head span{font:800 15px/1.2 var(--display);color:var(--ink);text-align:center;border-top:2px solid var(--line);padding-top:8px;margin-top:4px}
+.bt-head span i{font-style:normal;color:var(--muted);margin-right:4px}
+.bt{display:none}
+.bt-svg{display:block;width:100%;height:auto;overflow:visible}
+.bt-svg text{font-family:var(--text)}
+.bt-svg .t1{font:700 14px var(--display);fill:var(--ink)}
+.bt-svg .t2{font:500 12px var(--text);fill:var(--muted)}
+.bt-svg .pc{font:800 17px var(--display);fill:var(--ink)}
+.bt-svg .hd{font:800 15px var(--display);fill:var(--ink)}
+.bt-svg .hn{font:700 13px var(--mono);fill:var(--muted)}
+.sg{--a:0%;--b:10%;clip-path:polygon(0 var(--a),100% var(--b),100% calc(100% - var(--b)),0 calc(100% - var(--a)));display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;text-align:center;padding:0 6px;min-width:0}
+.sg b{font:700 14px/1.2 var(--display);color:var(--ink)}
+.sg small{font-size:12px;color:var(--muted);line-height:1.3}
+.sg .txt{display:flex;flex-direction:column;gap:3px}
+.mid-deal{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:4px}
+.mid-deal b{font:800 15px/1.1 var(--display);color:var(--ink)}
+.mid-deal small{font:600 10px/1.3 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.dn{width:62px;height:62px;flex:none}
+.dn text{font:700 13px var(--mono)}
+.z-norm{background:var(--forest-soft)} .z-near{background:var(--forest-soft)} .z-warn{background:var(--amber-soft)} .z-bad{background:var(--coral-soft)} .z-na{background:var(--card)}
+.found{display:grid;grid-template-columns:minmax(0,2.3fr) minmax(0,1fr) minmax(0,1fr);gap:18px;margin-top:18px}
+.fg{display:flex;flex-direction:column;gap:10px;min-width:0}
+.fg-h{display:flex;align-items:center;gap:10px}
+.fg-h .dn{width:48px;height:48px}
+.fg-h h3{font-size:15px}
+.fg-h h3 i{font-style:normal;color:var(--muted);margin-right:4px}
+.tiles{display:flex;flex-wrap:wrap;gap:8px}
+.tl{border-radius:10px;padding:9px 12px;font:600 13px/1.2 var(--display);color:var(--ink);border:1px solid transparent;display:flex;flex-direction:column;gap:3px;min-width:0}
+.tl small{font:600 11px/1 var(--mono);color:var(--muted)}
+.tl.z-norm,.tl.z-near{border-color:var(--forest)} .tl.z-warn{border-color:var(--amber)} .tl.z-bad{border-color:var(--coral-deep)} .tl.z-na{border-color:var(--line);color:var(--muted)}
+.bt-legend{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:13px;color:var(--body);border-top:1px solid var(--line);padding-top:12px;margin-top:14px}
+.bt-legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:0}
+@media (max-width:760px){
+  .bt-head{display:none}
+  .bt-svg{display:none}
+  .bt{display:grid;grid-template-columns:minmax(0,1fr);height:auto;gap:6px}
+  .sg{clip-path:none;flex-direction:row;justify-content:flex-start;text-align:left;padding:10px 12px;border-radius:10px}
+  .sg .txt{display:flex;flex-direction:column}
+  .mid-deal{flex-direction:row;gap:8px;padding:4px 0}
+  .found{grid-template-columns:minmax(0,1fr)}
+}
+</style>
+<style>
+/* v7: verdict tiles (Viktor 23.10.2026: a bare number says nothing, say what it means) */
+.hn.word b{font-size:26px;line-height:1.1;letter-spacing:-.01em}
+@media (max-width:760px){.hn.word b{font-size:22px}}
+</style>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- _shared/mobile-guard.html -->
 <!--
-  mobile-guard — drop-in for every single-file dashboard / landing (own + client).
+  mobile-guard: drop-in for every single-file dashboard / landing (own + client).
   Paste as the LAST <style> in <head>, after the page's own CSS. The page must also have
     <meta name="viewport" content="width=device-width,initial-scale=1">
   Why: a grid track of `1fr` is `minmax(auto,1fr)`, so one nowrap table or wide chart inside a
@@ -263,661 +358,258 @@ td.r,th.r{text-align:right}
     <div class="top">
       <div>
         <div class="brand"><span>Victor</span><span>Shulga<i>.</i></span></div>
-        <div class="label" style="margin-top:18px">Експрес-аудит GTM-системи · 29.09.2026</div>
-        <h1 style="margin-top:10px">Agency X: ринок поки не чує «AI-first»</h1>
+        <div class="label" style="margin-top:18px">Експрес-аудит GTM-системи · 23.10.2026</div>
+        <h1 style="margin-top:10px">Studio X: головна проблема в лідогенерації</h1>
+        <p class="diag">Найслабші блоки: <b>лідогенерація і процеси, по 2,0 з 5</b>. Офер має 6 з 6, продажі 4,5. Покупцям нема як знайти студію самим: весь сайт на одній сторінці, з Google ~0 візитів, 3 з 4 кейсів не відкриваються.</p>
         <div class="meta">
           <span>Підготував: <b>Victor Shulga</b>, Fractional CRO</span>
-          <span>На основі: <b>публічних даних</b> (сайт і 32 кейси, Clutch, SEO, AI-пошук, LinkedIn, DNS)</span>
-          <span>Без доступу до CRM і без інтерв'ю з командою</span>
+          <span>На основі: <b>публічних даних</b> (сайт EN/UA, портфоліо-платформа, LinkedIn, SEO, DNS)</span>
         </div>
       </div>
-      <div class="overall">
-        <div class="label">Середнє по 20 критеріях</div>
-        <div class="big num">2,7<small> / 5</small></div>
+      <div class="overall mid">
+        <div class="label">Середнє по 16 критеріях</div>
+        <div class="big num">3,1<small> / 5</small></div>
+        <span class="bucket">Працює нерівно</span>
       </div>
     </div>
-    <p class="thesis">У Agency X сильне утримання клієнтів, окрема команда лідогенерації і CEO, який пише в LinkedIn 2–3 рази на місяць (33 пости за рік, медіана 40 реакцій). Нове позиціонування «AI-first» ринок поки не чує: AI-асистенти не називають Agency X в жодній відповіді про AI-розробку, AI-трансформацію чи фінанси. Кейсів 32, але з них важко зрозуміти, як саме пройде проєкт покупця. Найнижча оцінка в лідогенерації (2,3), у стратегії й продажах по 2,5. Починати варто зі стратегії: країна продажу вже зрозуміла (27 з 32 кейсів з Північної Америки), а галузь і посада покупця ні, і від цього залежать усі канали.</p>
+    <div class="hero-nums">
+      <div class="hn good word"><b>Офер готовий до продажу</b><span>лоу-тікет вхід: аудит за €650 до 5 днів, PDF і roadmap на руках, обіцянка «тендери й погодження швидше»</span></div>
+      <div class="hn good word"><b>Відгуки можна перевірити</b><span>6 рекомендацій з іменем, посадою і посиланням на LinkedIn</span></div>
+      <div class="hn bad word"><b>Кейси не відкриваються</b><span>3 з 4 кнопок «View case» нікуди не ведуть</span></div>
+      <div class="hn bad word"><b>На сайті заглушки</b><span>[legal name], [registration number] і [source] замість реквізитів і джерела</span></div>
+    </div>
+    <p class="next">Перший крок: <em>прибрати заглушки</em> і дати кожному кейсу сторінку.</p>
   </header>
 
   <section class="sec">
-    <div class="sec-head"><h2>Дашборд: 6 блоків GTM-системи</h2><span class="label">1 = немає або не дає покупців · 3 = є, але не система · 5 = сильно · «?» = не видно ззовні</span></div>
-    <div class="dash">
-      <div class="blk b-mid">
-        <div class="blk-h"><div><span class="no">01 · ОСНОВА</span><h3>GTM-стратегія</h3></div><span class="sc num">2,5<small>/5</small></span></div>
-        <ul class="crit">
-          <li class="c3"><span>ICP</span><span class="mp"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span><span class="v">3</span></li>
-          <li class="c2"><span>Позиціонування</span><span class="mp"><i class="on"></i><i class="on"></i><i></i><i></i><i></i></span><span class="v">2</span></li>
-          <li class="c3"><span>Офер</span><span class="mp"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span><span class="v">3</span></li>
-          <li class="c2"><span>Делівері процес</span><span class="mp"><i class="on"></i><i class="on"></i><i></i><i></i><i></i></span><span class="v">2</span></li>
-          <li class="c3"><span>Лід-магніти</span><span class="mp"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span><span class="v">3</span></li>
-          <li class="c2"><span>Кейси (глибина)</span><span class="mp"><i class="on"></i><i class="on"></i><i></i><i></i><i></i></span><span class="v">2</span></li>
-        </ul>
-      </div>
-      <div class="blk b-mid">
-        <div class="blk-h"><div><span class="no">02 · ОСНОВА</span><h3>Команда</h3></div><span class="sc num">3,0<small>/5</small></span></div>
-        <ul class="crit">
-          <li class="c4"><span>GTM-ролі</span><span class="mp"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span><span class="v">4</span></li>
-          <li class="c2"><span>Власники нових ринків</span><span class="mp"><i class="on"></i><i class="on"></i><i></i><i></i><i></i></span><span class="v">2</span></li>
-          <li class="na"><span>Найм і розвиток продажів</span><span class="mp"><i></i><i></i><i></i><i></i><i></i></span><span class="v">?</span></li>
-        </ul>
-      </div>
-      <div class="blk b-bad">
-        <div class="blk-h"><div><span class="no">03 · ВОРОНКА</span><h3>Лідогенерація</h3></div><span class="sc num">2,3<small>/5</small></span></div>
-        <ul class="crit">
-          <li class="c1"><span>SEO</span><span class="mp"><i class="on"></i><i></i><i></i><i></i><i></i></span><span class="v">1</span></li>
-          <li class="c1"><span>AI-видимість</span><span class="mp"><i class="on"></i><i></i><i></i><i></i><i></i></span><span class="v">1</span></li>
-          <li class="c3"><span>LinkedIn і контент</span><span class="mp"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span><span class="v">3</span></li>
-          <li class="c3"><span>Події</span><span class="mp"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span><span class="v">3</span></li>
-          <li class="c3"><span>Аутрич</span><span class="mp"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span><span class="v">3</span></li>
-          <li class="c3"><span>Заявки з сайту</span><span class="mp"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span><span class="v">3</span></li>
-        </ul>
-      </div>
-      <div class="blk b-mid">
-        <div class="blk-h"><div><span class="no">04 · ВОРОНКА</span><h3>Продажі</h3></div><span class="sc num">2,5<small>/5</small></span></div>
-        <ul class="crit">
-          <li class="c2"><span>Шлях до першої зустрічі</span><span class="mp"><i class="on"></i><i class="on"></i><i></i><i></i><i></i></span><span class="v">2</span></li>
-          <li class="c3"><span>Матеріали для покупця</span><span class="mp"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span><span class="v">3</span></li>
-          <li class="na"><span>Перший дзвінок і пропозиція</span><span class="mp"><i></i><i></i><i></i><i></i><i></i></span><span class="v">?</span></li>
-        </ul>
-      </div>
-      <div class="blk b-good">
-        <div class="blk-h"><div><span class="no">05 · ВОРОНКА</span><h3>Акаунт-менеджмент</h3></div><span class="sc num">3,5<small>/5</small></span></div>
-        <ul class="crit">
-          <li class="c4"><span>Утримання</span><span class="mp"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span><span class="v">4</span></li>
-          <li class="c3"><span>Відгуки й рекомендації</span><span class="mp"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span><span class="v">3</span></li>
-          <li class="na"><span>Розширення акаунтів</span><span class="mp"><i></i><i></i><i></i><i></i><i></i></span><span class="v">?</span></li>
-        </ul>
-      </div>
-      <div class="blk b-mid">
-        <div class="blk-h"><div><span class="no">06 · ОСНОВА</span><h3>Процеси</h3></div><span class="sc num">3,0<small>/5</small></span></div>
-        <ul class="crit">
-          <li class="c4"><span>Трекінг і аналітика</span><span class="mp"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span><span class="v">4</span></li>
-          <li class="c2"><span>Зв'язка форм і CRM</span><span class="mp"><i class="on"></i><i class="on"></i><i></i><i></i><i></i></span><span class="v">2</span></li>
-          <li class="na"><span>Метрики й ритми</span><span class="mp"><i></i><i></i><i></i><i></i><i></i></span><span class="v">?</span></li>
-        </ul>
-      </div>
-      <div class="blk b-mid">
-        <div class="blk-h"><div><span class="no">ОКРЕМИЙ ТРЕК</span><h3>Довіра до сайту</h3></div><span class="sc num">58<small>/100</small></span></div>
-        <ul class="crit">
-          <li class="c3"><span>Незалежні оцінки</span><span class="mp"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span><span class="v">3</span></li>
-          <li class="c3"><span>Відгуки, які можна перевірити</span><span class="mp"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span><span class="v">3</span></li>
-          <li class="c3"><span>Кейси з іменами</span><span class="mp"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span><span class="v">3</span></li>
-          <li class="c3"><span>Обличчя</span><span class="mp"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span><span class="v">3</span></li>
-          <li class="c2"><span>Чесні й узгоджені цифри</span><span class="mp"><i class="on"></i><i class="on"></i><i></i><i></i><i></i></span><span class="v">2</span></li>
-          <li class="c3"><span>Юрособа й досяжність</span><span class="mp"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span><span class="v">3</span></li>
-          <li class="c3"><span>Сертифікати й партнерства</span><span class="mp"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span><span class="v">3</span></li>
-          <li class="c4"><span>Пульс</span><span class="mp"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span><span class="v">4</span></li>
-        </ul>
-      </div>
-    </div>
-    <div class="find">
-      <div><b class="num">0 з 27</b>відповідей ChatGPT, Claude і Perplexity про AI-first розробку, AI-трансформацію і розробку для фінансів називають Agency X</div>
-      <div><b class="num">88%</b>органічного трафіку зі США дає одна стаття про найдорожчі застосунки в App Store. Сторінки послуг майже не мають трафіку</div>
-      <div><b class="num">2 з 5</b>розібраних кейсів показують, як ішла робота з клієнтом: етапи і ритм зустрічей. Решта описує технологію і результат</div>
-    </div>
+    <div class="sec-head"><h2>GTM-система: де губляться клієнти</h2><span class="label">бали 1–5 переведено у %</span></div>
+    <div class="bt-wrap"><svg class="bt-svg" viewBox="0 0 1000 370" role="img" aria-label="Воронка: лідогенерація, продажі, угода, акаунт-менеджмент"><polygon points="0.0,40.0 141.3,62.5 141.3,317.5 0.0,340.0" fill="var(--coral-soft)"/><line x1="0.0" y1="40.0" x2="141.3" y2="62.5" stroke="var(--coral-deep)" stroke-width="4" stroke-linecap="round"/><line x1="0.0" y1="340.0" x2="141.3" y2="317.5" stroke="var(--coral-deep)" stroke-width="4" stroke-linecap="round"/><circle cx="70.7" cy="150.0" r="30" fill="var(--bg)" stroke="var(--line)" stroke-width="9"/><circle cx="70.7" cy="150.0" r="30" fill="none" stroke="var(--coral-deep)" stroke-width="9" stroke-linecap="round" stroke-dasharray="75.4 188.5" transform="rotate(-90 70.7 150.0)"/><text class="pc" x="70.7" y="156.0" text-anchor="middle">40%</text><text class="t1" x="70.7" y="204.0" text-anchor="middle">Формування</text><text class="t1" x="70.7" y="222.0" text-anchor="middle">попиту</text><text class="t2" x="70.7" y="242.0" text-anchor="middle">SEO 1 · LinkedIn 3</text><polygon points="149.3,63.8 290.7,86.2 290.7,293.8 149.3,316.2" fill="var(--coral-soft)"/><line x1="149.3" y1="63.8" x2="290.7" y2="86.2" stroke="var(--coral-deep)" stroke-width="4" stroke-linecap="round"/><line x1="149.3" y1="316.2" x2="290.7" y2="293.8" stroke="var(--coral-deep)" stroke-width="4" stroke-linecap="round"/><circle cx="220.0" cy="150.0" r="30" fill="var(--bg)" stroke="var(--line)" stroke-width="9"/><circle cx="220.0" cy="150.0" r="30" fill="none" stroke="var(--coral-deep)" stroke-width="9" stroke-linecap="round" stroke-dasharray="75.4 188.5" transform="rotate(-90 220.0 150.0)"/><text class="pc" x="220.0" y="156.0" text-anchor="middle">40%</text><text class="t1" x="220.0" y="204.0" text-anchor="middle">Захоплення</text><text class="t1" x="220.0" y="222.0" text-anchor="middle">попиту</text><text class="t2" x="220.0" y="242.0" text-anchor="middle">аутрич 2 · заявки 2</text><polygon points="298.7,87.5 440.0,110.0 440.0,270.0 298.7,292.5" fill="var(--forest-soft)"/><line x1="298.7" y1="87.5" x2="440.0" y2="110.0" stroke="var(--forest)" stroke-width="4" stroke-linecap="round"/><line x1="298.7" y1="292.5" x2="440.0" y2="270.0" stroke="var(--forest)" stroke-width="4" stroke-linecap="round"/><circle cx="369.3" cy="150.0" r="30" fill="var(--bg)" stroke="var(--line)" stroke-width="9"/><circle cx="369.3" cy="150.0" r="30" fill="none" stroke="var(--forest)" stroke-width="9" stroke-linecap="round" stroke-dasharray="169.6 188.5" transform="rotate(-90 369.3 150.0)"/><text class="pc" x="369.3" y="156.0" text-anchor="middle">90%</text><text class="t1" x="369.3" y="204.0" text-anchor="middle">Продажі</text><text class="t2" x="369.3" y="224.0" text-anchor="middle">календар на кожній</text><text class="t2" x="369.3" y="239.0" text-anchor="middle">кнопці</text><polygon points="858.7,62.5 1000.0,40.0 1000.0,340.0 858.7,317.5" fill="var(--card)"/><line x1="858.7" y1="62.5" x2="1000.0" y2="40.0" stroke="var(--muted)" stroke-width="4" stroke-linecap="round"/><line x1="858.7" y1="317.5" x2="1000.0" y2="340.0" stroke="var(--muted)" stroke-width="4" stroke-linecap="round"/><circle cx="929.3" cy="150.0" r="30" fill="var(--bg)" stroke="var(--line)" stroke-width="9"/><text class="pc" x="929.3" y="156.0" text-anchor="middle">?</text><text class="t1" x="929.3" y="204.0" text-anchor="middle">Розширення</text><text class="t2" x="929.3" y="224.0" text-anchor="middle">не видно ззовні</text><polygon points="709.3,86.2 850.7,63.8 850.7,316.2 709.3,293.8" fill="var(--amber-soft)"/><line x1="709.3" y1="86.2" x2="850.7" y2="63.8" stroke="var(--amber)" stroke-width="4" stroke-linecap="round"/><line x1="709.3" y1="293.8" x2="850.7" y2="316.2" stroke="var(--amber)" stroke-width="4" stroke-linecap="round"/><circle cx="780.0" cy="150.0" r="30" fill="var(--bg)" stroke="var(--line)" stroke-width="9"/><circle cx="780.0" cy="150.0" r="30" fill="none" stroke="var(--amber)" stroke-width="9" stroke-linecap="round" stroke-dasharray="113.1 188.5" transform="rotate(-90 780.0 150.0)"/><text class="pc" x="780.0" y="156.0" text-anchor="middle">60%</text><text class="t1" x="780.0" y="204.0" text-anchor="middle">Відгуки</text><text class="t2" x="780.0" y="224.0" text-anchor="middle">6 рекомендацій</text><text class="t2" x="780.0" y="239.0" text-anchor="middle">LinkedIn</text><polygon points="560.0,110.0 701.3,87.5 701.3,292.5 560.0,270.0" fill="var(--forest-soft)"/><line x1="560.0" y1="110.0" x2="701.3" y2="87.5" stroke="var(--forest)" stroke-opacity=".65" stroke-width="4" stroke-linecap="round"/><line x1="560.0" y1="270.0" x2="701.3" y2="292.5" stroke="var(--forest)" stroke-opacity=".65" stroke-width="4" stroke-linecap="round"/><circle cx="630.7" cy="150.0" r="30" fill="var(--bg)" stroke="var(--line)" stroke-width="9"/><circle cx="630.7" cy="150.0" r="30" fill="none" stroke="var(--forest)" stroke-opacity=".65" stroke-width="9" stroke-linecap="round" stroke-dasharray="150.8 188.5" transform="rotate(-90 630.7 150.0)"/><text class="pc" x="630.7" y="156.0" text-anchor="middle">80%</text><text class="t1" x="630.7" y="204.0" text-anchor="middle">Утримання</text><text class="t2" x="630.7" y="224.0" text-anchor="middle">клієнт з LDES кілька</text><text class="t2" x="630.7" y="239.0" text-anchor="middle">років</text><rect x="454" y="128.0" width="92" height="124.0" rx="16" fill="var(--ink)"/><text x="500.0" y="188.0" text-anchor="middle" style="font:800 20px var(--display);fill:var(--bg)">Угода</text><text x="500.0" y="208.0" text-anchor="middle" style="font:600 10px var(--mono);letter-spacing:.08em;fill:var(--bg);opacity:.7">НОВИЙ КЛІЄНТ</text><path d="M0,34 V26 H290.6666666666667 V34" fill="none" stroke="var(--line)" stroke-width="2"/><text x="145.33333333333334" y="16" text-anchor="middle"><tspan class="hn">03 </tspan><tspan class="hd">Лідогенерація</tspan></text><path d="M298.6666666666667,34 V26 H440 V34" fill="none" stroke="var(--line)" stroke-width="2"/><text x="369.33333333333337" y="16" text-anchor="middle"><tspan class="hn">04 </tspan><tspan class="hd">Продажі</tspan></text><path d="M560,34 V26 H1000 V34" fill="none" stroke="var(--line)" stroke-width="2"/><text x="780.0" y="16" text-anchor="middle"><tspan class="hn">05 </tspan><tspan class="hd">Акаунт-менеджмент</tspan></text></svg><div class="bt-head"><span style="grid-column:1/3"><i>03</i>Лідогенерація</span><span style="grid-column:3/4"><i>04</i>Продажі</span><span style="grid-column:5/8"><i>05</i>Акаунт-менеджмент</span></div><div class="bt"><div class="sg z-bad" style="--a:0%;--b:7%"><svg class="dn" viewBox="0 0 64 64" role="img" aria-label="40%"><circle cx="32" cy="32" r="26" fill="var(--bg)" stroke="var(--line)" stroke-width="8"/><circle cx="32" cy="32" r="26" fill="none" stroke="var(--coral-deep)" stroke-width="8" stroke-dasharray="65.3 163.4" transform="rotate(-90 32 32)"/><text x="32" y="37" text-anchor="middle" fill="var(--ink)">40%</text></svg><span class="txt"><b>Формування попиту</b><small>SEO 1 · LinkedIn 3</small></span></div><div class="sg z-bad" style="--a:7%;--b:14%"><svg class="dn" viewBox="0 0 64 64" role="img" aria-label="40%"><circle cx="32" cy="32" r="26" fill="var(--bg)" stroke="var(--line)" stroke-width="8"/><circle cx="32" cy="32" r="26" fill="none" stroke="var(--coral-deep)" stroke-width="8" stroke-dasharray="65.3 163.4" transform="rotate(-90 32 32)"/><text x="32" y="37" text-anchor="middle" fill="var(--ink)">40%</text></svg><span class="txt"><b>Захоплення попиту</b><small>аутрич 2 · заявки 2</small></span></div><div class="sg z-norm" style="--a:14%;--b:21%"><svg class="dn" viewBox="0 0 64 64" role="img" aria-label="90%"><circle cx="32" cy="32" r="26" fill="var(--bg)" stroke="var(--line)" stroke-width="8"/><circle cx="32" cy="32" r="26" fill="none" stroke="var(--forest)" stroke-width="8" stroke-dasharray="147.0 163.4" transform="rotate(-90 32 32)"/><text x="32" y="37" text-anchor="middle" fill="var(--ink)">90%</text></svg><span class="txt"><b>Продажі</b><small>календар на кожній кнопці</small></span></div><div class="mid-deal"><b>Угода</b><small>новий клієнт</small></div><div class="sg z-near" style="--a:21%;--b:14%"><svg class="dn" viewBox="0 0 64 64" role="img" aria-label="80%"><circle cx="32" cy="32" r="26" fill="var(--bg)" stroke="var(--line)" stroke-width="8"/><circle cx="32" cy="32" r="26" fill="none" stroke="var(--forest)" opacity=".65" stroke-width="8" stroke-dasharray="130.7 163.4" transform="rotate(-90 32 32)"/><text x="32" y="37" text-anchor="middle" fill="var(--ink)">80%</text></svg><span class="txt"><b>Утримання</b><small>клієнт з LDES кілька років</small></span></div><div class="sg z-warn" style="--a:14%;--b:7%"><svg class="dn" viewBox="0 0 64 64" role="img" aria-label="60%"><circle cx="32" cy="32" r="26" fill="var(--bg)" stroke="var(--line)" stroke-width="8"/><circle cx="32" cy="32" r="26" fill="none" stroke="var(--amber)" stroke-width="8" stroke-dasharray="98.0 163.4" transform="rotate(-90 32 32)"/><text x="32" y="37" text-anchor="middle" fill="var(--ink)">60%</text></svg><span class="txt"><b>Відгуки</b><small>6 рекомендацій LinkedIn</small></span></div><div class="sg z-na" style="--a:7%;--b:0%"><svg class="dn" viewBox="0 0 64 64" role="img" aria-label="?"><circle cx="32" cy="32" r="26" fill="var(--bg)" stroke="var(--line)" stroke-width="8"/><circle cx="32" cy="32" r="26" fill="none" stroke="var(--muted)" stroke-width="8" stroke-dasharray="0.0 163.4" transform="rotate(-90 32 32)"/><text x="32" y="37" text-anchor="middle" fill="var(--ink)">?</text></svg><span class="txt"><b>Розширення</b><small>не видно ззовні</small></span></div></div></div>
+    <div class="found"><div class="fg"><div class="fg-h"><svg class="dn" viewBox="0 0 64 64" role="img" aria-label="70%"><circle cx="32" cy="32" r="26" fill="var(--bg)" stroke="var(--line)" stroke-width="8"/><circle cx="32" cy="32" r="26" fill="none" stroke="var(--amber)" stroke-width="8" stroke-dasharray="114.4 163.4" transform="rotate(-90 32 32)"/><text x="32" y="37" text-anchor="middle" fill="var(--ink)">70%</text></svg><h3><i>01</i>GTM-стратегія</h3></div><div class="tiles"><div class="tl z-near">ICP<small>4,0 з 5</small></div><div class="tl z-near">Value Proposition<small>3,5 з 4</small></div><div class="tl z-near">Позиціонування<small>4,0 з 5</small></div><div class="tl z-norm">Офер<small>5,0 з 5</small></div><div class="tl z-near">Делівері процес<small>4,0 з 5</small></div><div class="tl z-bad">Лід-магніти<small>2,0 з 5</small></div><div class="tl z-bad">Кейси<small>2,0 з 5</small></div></div></div><div class="fg"><div class="fg-h"><svg class="dn" viewBox="0 0 64 64" role="img" aria-label="60%"><circle cx="32" cy="32" r="26" fill="var(--bg)" stroke="var(--line)" stroke-width="8"/><circle cx="32" cy="32" r="26" fill="none" stroke="var(--amber)" stroke-width="8" stroke-dasharray="98.0 163.4" transform="rotate(-90 32 32)"/><text x="32" y="37" text-anchor="middle" fill="var(--ink)">60%</text></svg><h3><i>02</i>Команда</h3></div><div class="tiles"><div class="tl z-warn">GTM-ролі<small>3,0 з 5</small></div><div class="tl z-na">Власники ринків<small>?</small></div><div class="tl z-na">Найм<small>?</small></div></div></div><div class="fg"><div class="fg-h"><svg class="dn" viewBox="0 0 64 64" role="img" aria-label="40%"><circle cx="32" cy="32" r="26" fill="var(--bg)" stroke="var(--line)" stroke-width="8"/><circle cx="32" cy="32" r="26" fill="none" stroke="var(--coral-deep)" stroke-width="8" stroke-dasharray="65.3 163.4" transform="rotate(-90 32 32)"/><text x="32" y="37" text-anchor="middle" fill="var(--ink)">40%</text></svg><h3><i>06</i>Процеси</h3></div><div class="tiles"><div class="tl z-bad">Трекінг<small>2,0 з 5</small></div><div class="tl z-na">Форми і CRM<small>?</small></div><div class="tl z-na">Метрики<small>?</small></div></div></div></div>
+    <div class="bt-legend"><span><i style="background:var(--forest)"></i>норма: 90–100%</span><span><i style="background:var(--forest);opacity:.65"></i>майже норма: 80–89%</span><span><i style="background:var(--amber)"></i>увага: 50–79%</span><span><i style="background:var(--coral-deep)"></i>проблема: нижче 50%</span><span><i style="background:var(--bg);border:1.5px solid var(--muted)"></i>не видно ззовні</span><span style="color:var(--muted)">% = бал ÷ 5</span></div>
   </section>
 
   <section class="sec">
-    <div class="sec-head"><h2>«AI-first» поки не чутно, а стратегія не каже, кому і як його продавати</h2><span class="label">перед розбором</span></div>
-    <div class="slide">
-      <p class="dek" style="font-size:16px;color:var(--ink)">Канали працюють на тому, що в компанії вже є: ICP, офер, делівері процес і кейси. Якщо там порожньо, кампанія просто швидше це показує: розсилка й реклама посилюють стратегію разом з усіма її прогалинами.</p>
-      <div class="lead">
-        <div class="tasks" style="margin-top:0">
-          <h4 style="margin-top:0">Що входить у GTM-стратегію</h4>
-          <ul>
-            <li><b style="color:var(--ink)">ICP</b>: цільові ринки, тип компанії і персона, плюс кому не писати ніколи</li>
-            <li><b style="color:var(--ink)">Позиціонування</b>: чому ви, а не сусідня львівська компанія з тими самими словами про AI</li>
-            <li><b style="color:var(--ink)">Офер</b>: малий перший крок замість контракту від $75k</li>
-            <li><b style="color:var(--ink)">Делівері процес</b>: як пройде проєкт покупця по фазах, що він отримає після кожної і де може зупинитись</li>
-            <li><b style="color:var(--ink)">Лід-магніти</b>: чим компанія корисна до першого дзвінка</li>
-            <li><b style="color:var(--ink)">Кейси</b>: доказ, що процес уже спрацював у схожого клієнта</li>
-          </ul>
-        </div>
-        <div class="panel" style="gap:10px">
-          <div class="ptitle"><h3>Оцінки 6 блоків Agency X</h3>
-            <span class="tip" tabindex="0">i<span class="tt">Середнє по критеріях кожного блоку зі шкалою 1–5. Стратегію виділено, бо з неї починається виправлення.</span></span>
-          </div>
-          <div class="bars">
-            <div class="bar money"><span class="n">01 GTM-стратегія</span><span class="t"><span class="f" style="width:50%"></span><span class="val num">2,5</span></span></div>
-            <div class="bar"><span class="n">02 Команда</span><span class="t"><span class="f" style="width:60%"></span><span class="val num">3,0</span></span></div>
-            <div class="bar"><span class="n">03 Лідогенерація</span><span class="t"><span class="f" style="width:46%"></span><span class="val num">2,3</span></span></div>
-            <div class="bar"><span class="n">04 Продажі</span><span class="t"><span class="f" style="width:50%"></span><span class="val num">2,5</span></span></div>
-            <div class="bar"><span class="n">05 Акаунт-менеджмент</span><span class="t"><span class="f" style="width:70%"></span><span class="val num">3,5</span></span></div>
-            <div class="bar"><span class="n">06 Процеси</span><span class="t"><span class="f" style="width:60%"></span><span class="val num">3,0</span></span></div>
-          </div>
-          <p style="font-size:12px;color:var(--muted)">Повна ширина смуги = 5. Три блоки з шести нижче 3: стратегія, лідогенерація і продажі.</p>
-        </div>
+    <div class="sec-head"><h2>Оцінки 6 блоків: <span class="hl-bad">2 з 6</span> нижче 3</h2><span class="label">повна ширина смуги = 5</span></div>
+    <div class="panel" style="max-width:640px">
+      <div class="bars">
+        <div class="bar money"><span class="n">01 GTM-стратегія</span><span class="t"><span class="f" style="width:70%"></span><span class="val num">3,5</span></span></div>
+        <div class="bar"><span class="n">02 Команда</span><span class="t"><span class="f" style="width:60%"></span><span class="val num">3,0</span></span></div>
+        <div class="bar"><span class="n">03 Лідогенерація</span><span class="t"><span class="f" style="width:40%;background:var(--coral-deep)"></span><span class="val num">2,0</span></span></div>
+        <div class="bar"><span class="n">04 Продажі</span><span class="t"><span class="f" style="width:90%"></span><span class="val num">4,5</span></span></div>
+        <div class="bar"><span class="n">05 Акаунт-менеджмент</span><span class="t"><span class="f" style="width:70%"></span><span class="val num">3,5</span></span></div>
+        <div class="bar"><span class="n">06 Процеси</span><span class="t"><span class="f" style="width:40%;background:var(--coral-deep)"></span><span class="val num">2,0</span></span></div>
       </div>
-      <div class="goal" style="font-size:15px"><b>У Agency X</b> стратегія має 2,5 з 5, лідогенерація 2,3. Країна продажу зрозуміла, але коли стратегія не каже, якому типу компаній і якій посаді продавати, SEO й AI-пошук не мають на що спертися.</div>
     </div>
+    <div class="goal" style="font-size:15px"><b>Висновок:</b> офер і шлях до дзвінка готові (5 з 5). Покупців до них не приводить ні пошук, ні сайт: лідогенерація 2,0.</div>
   </section>
 
-  <!-- 01 STRATEGY -->
+  <!-- 01 -->
   <section class="sec">
-    <div class="bhead"><span class="bn">01</span><h2>GTM-стратегія: 9 галузей і немає делівері процесу для розробки</h2><span class="bs num">2,5<small> / 5</small></span></div>
-    <p style="font-size:16px;color:var(--ink);max-width:72ch;margin-top:-4px">Галузей забагато, делівері процесу для основної послуги немає, а для AI-послуг він розкиданий по чотирьох схемах, а кейси не показують, як пройде проєкт покупця.</p>
-    <div>
-      <div class="score s-mid">
-        <div class="name">ICP<span>кому продають</span></div>
-        <div><div class="pips"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></div><span class="pill num">3 / 5 · середньо</span></div>
-        <div class="why">
-          <p class="v">Ринок видно з кейсів, тип компанії розмитий на 9 галузей, покупців названо, але без їхнього болю. Середнє трьох складових 2,7, у підсумок блоку йде округлене 3.</p>
-          <div class="tbl">
-            <table style="min-width:0">
-              <thead><tr><th>Складова</th><th>Що каже сайт</th><th>Що показують дані</th><th class="r">Оцінка</th></tr></thead>
-              <tbody>
-                <tr><td><b style="color:var(--ink)">Цільові ринки</b><br><span style="color:var(--muted)">куди продають</span></td><td>США як головний ринок прямо не названі. Окрема сторінка під Саудівську Аравію, регіональний менеджер UK &amp; DACH з 07.2026, плани на Індію</td><td>27 з 32 кейсів з Північної Америки (22 США, 1 Канада, 4 «North America»), 2 з Великої Британії, по 1 з Австралії, Близького Сходу й України. Роудшоу по США двічі за 2026 рік. З DACH і Індії кейсів немає</td><td class="r"><span class="mid2">3</span></td></tr>
-                <tr><td><b style="color:var(--ink)">Тип компанії</b><br><span style="color:var(--muted)">галузь, розмір, стадія</span></td><td>9 галузевих сторінок (від фінансів до нафтогазу), у кейсах 12 фільтрів за галуззю, «for enterprises ready to commit to AI transformation» на головній</td><td>Clutch: IT 30%, фінанси 20%, рітейл 20%, медицина 15%, телеком 15%; mid-market ($10M–1B) 60%. CEO пише про «близько 40 активних клієнтів». Яку частку виручки дає кожна галузь, ззовні не видно</td><td class="r"><span class="no2">2</span></td></tr>
-                <tr><td><b style="color:var(--ink)">Персона</b><br><span style="color:var(--muted)">хто купує</span></td><td>AI Transformation: «partners with CTOs, engineering leaders, and product teams». E-book: «CIOs, CTOs, Heads of AI, Enterprise Architects, AI Product Owners, Procurement &amp; Risk Officers». Для розробки на замовлення покупця не названо</td><td>Посади є, але по три-шість на сторінку і без болю кожної. У відгуках на сторінках послуг купують CTO, VP of Technology, Head of Product, Head of Software</td><td class="r"><span class="mid2">3</span></td></tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-      <div class="score s-bad">
-        <div class="name">Позиціонування<span>чим відрізняються</span></div>
-        <div><div class="pips"><i class="on"></i><i class="on"></i><i></i><i></i><i></i></div><span class="pill num">2 / 5 · слабко</span></div>
-        <div class="why">
-          <p class="v">«AI-first» зараз кажуть майже всі. Сусіди по вулиці кажуть те саме.</p>
-          <ul>
-            <li>Заголовок: «AI-First Software Engineering &amp; AI Transformation Consulting Partner»</li>
-            <li>Leobit пише «AI-first delivery» і «AI-native SDLC». N-iX: «Pragmatic AI Software Engineering»</li>
-            <li>Claude у брендовій відповіді описує Agency X як аутсорс, «який переписав бренд під AI», а ChatGPT радить сприймати AI-first як «гіпотезу, яку треба перевірити»</li>
-            <li>Своя історія з цифрами приросту продуктивності з AI є в дописах CEO в LinkedIn, але на сайті цих цифр немає</li>
-          </ul>
-        </div>
-      </div>
-      <div class="score s-mid">
-        <div class="name">Офер<span>що продають і як</span></div>
-        <div><div class="pips"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></div><span class="pill num">3 / 5 · середньо</span></div>
-        <div class="why">
-          <p class="v">Вхідні продукти вже є. Знайти їх важко, і ціни немає ні в одного.</p>
-          <ul>
-            <li>AI Consulting (2–3 тижні), AI Transformation (3–5 тижнів), AI Lab, AI Accelerator, «30-хвилинна оцінка SDLC» у кейсі Dark Factory</li>
-            <li>~20 послуг у меню з однаковою вагою. Цін і пакетів немає, /pricing і /engagement-models віддають 404. На Clutch мінімальний проєкт $75k+</li>
-          </ul>
-        </div>
-      </div>
-      <div class="score s-bad">
-        <div class="name">Делівері процес<span>як пройде проєкт покупця по фазах і що він отримає</span></div>
-        <div><div class="pips"><i class="on"></i><i class="on"></i><i></i><i></i><i></i></div><span class="pill num">2 / 5 · слабко</span></div>
-        <div class="why">
-          <p class="v">Для розробки на замовлення делівері процесу на сайті немає. Для AI-послуг він частковий: з 8 ознак жодна не закрита повністю.</p>
-          <div class="tbl">
-            <table style="min-width:0">
-              <thead><tr><th>Ознака</th><th>Що є в Agency X</th></tr></thead>
-              <tbody>
-                <tr><td>Одна сторінка для основної послуги</td><td class="no2">✕ для розробки немає; для AI-послуг чотири різні схеми на чотирьох сторінках</td></tr>
-                <tr><td>3–5 фаз зі строками</td><td class="mid2">~ AI Transformation має 4 фази, строк названо лише для прототипу (3–5 тижнів)</td></tr>
-                <tr><td>Що покупець отримує після кожної фази</td><td class="mid2">~ AI Consulting перелічує 6 результатів на весь проєкт, без прив'язки до фаз</td></tr>
-                <tr><td>Точка зупинки з ціною</td><td class="no2">✕ після консалтингу можна перейти до розробки, але ціни першого кроку немає</td></tr>
-                <tr><td>Що потрібно від клієнта</td><td class="no2">✕ лише «залежить від доступності стейкхолдерів»</td></tr>
-                <tr><td>Як видно прогрес</td><td class="no2">✕ на сторінках послуг немає; про релізи раз на два тижні згадує лише відгук клієнта</td></tr>
-                <tr><td>Що буває, коли щось іде не так</td><td class="mid2">~ гарантія повернення грошей у лічильнику, без умов</td></tr>
-                <tr><td>Строки й ціна збігаються з прайсом і між собою</td><td class="no2">✕ цін немає; на сторінці AI Consulting «2–3 тижні до PoC» і в FAQ «2–4 тижні»</td></tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-      <div class="score s-mid">
-        <div class="name">Лід-магніти<span>чим корисні до дзвінка</span></div>
-        <div><div class="pips"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></div><span class="pill num">3 / 5 · середньо</span></div>
-        <div class="why">
-          <p class="v">Три лід-магніти, усі про AI і для CIO. Для інших сегментів і для перших кроків нічого немає.</p>
-          <ul>
-            <li>E-book «Off-the-shelf vs Custom AI Solutions 2026» з цифрами вартості ($0,75M–4,8M на рік), посилання з усіх AI-сторінок і блогу</li>
-            <li>AI Productivity Measurement Framework за формою в статті про AI SDLC. Опитування 2 000 фахівців підхопили Tech.co і Compare the Cloud</li>
-            <li>Немає інструменту, який дає покупцю результат одразу: калькулятора, самооцінки AI-зрілості, прикладу дорожньої карти. Для фінансів, медицини і логістики лід-магнітів немає</li>
-          </ul>
-        </div>
-      </div>
-      <div class="score s-bad">
-        <div class="name">Кейси<span>чи видно, як ішла робота</span></div>
-        <div><div class="pips"><i class="on"></i><i class="on"></i><i></i><i></i><i></i></div><span class="pill num">2 / 5 · слабко</span></div>
-        <div class="why">
-          <p class="v">Кейсів 32, але більшість описує технологію і фінальну цифру. Як ішла робота з клієнтом, видно у двох з п'яти розібраних.</p>
-          <ul>
-            <li>Розділ «How we worked» є у 20 з 32 кейсів, медіана близько 100 слів. У 12 кейсах його немає</li>
-            <li>Де розділ є, там здебільшого розподіл відповідальності («клієнт ставить пріоритети, Agency X керує командою») без етапів і тижнів</li>
-            <li>Dark Factory, головний AI-кейс: «How we worked» займає два речення. Детально описаний конвеєр з шести AI-агентів, тобто продукт. Як Agency X вела цей проєкт з клієнтом, не видно</li>
-            <li>За обсягом стандарт кейсу (1500–2000 слів) витримує лише legacy-проксі, близько 1 600. Dark Factory близько 1 000, решта три 500–700 слів: за обсягом це картки проєктів, а не кейси</li>
-            <li>Найкращі: AI-консалтинг для банку (3 фази, 20+ людей з боку клієнта, 8 тижнів) і модернізація legacy-проксі (1 розробник з Claude Code, 2 QA клієнта, щоденні зустрічі, чесна база вимірювання)</li>
-          </ul>
-        </div>
+    <div class="bhead"><span class="bn">01</span><h2>GTM-стратегія: ціни на 3 формати, 4 кейси на сайті з «40+»</h2><span class="bs num">3,5<small> / 5</small></span></div>
+    <div class="hero-nums">
+      <div class="hn good word"><b>Лоу-тікет вхід</b><span>аудит €650 до 5 днів, зараховується в проєкт</span></div>
+      <div class="hn good word"><b>Ціна відома до старту</b><span>проєкт €3 000–8 000, 2–3 тижні, оплата по етапах</span></div>
+      <div class="hn good word"><b>Вузький ICP</b><span>CleanTech і DeepTech: LDES, BESS, водень, декарбонізація, EPC</span></div>
+      <div class="hn bad word"><b>Доказів мало</b><span>заявлено 40+ кейсів, показано 4, окремих сторінок 0</span></div>
+    </div>
+    <div class="panel"><div class="ptitle"><h3>Розклад на складові: що є і чого бракує</h3><span class="tip" tabindex="0">i<span class="tt">Зелений = є, жовтий = частково, кораловий = немає. Value Proposition за рівнянням цінності: бажаний результат, докази, час до результату, зусилля клієнта. ICP: кожна складова 1–5.</span></span></div><div class="comp3"><div class="cc good"><div class="cc-h"><h3>Офер</h3><b class="num">6<small> з 6</small></b></div><div class="seg"><i class="y"></i><i class="y"></i><i class="y"></i><i class="y"></i><i class="y"></i><i class="y"></i></div><ul class="cl"><li><span class="st ok">✓</span><span><b>Вхідний продукт</b>аудит візуальної комунікації</span></li><li><span class="st ok">✓</span><span><b>Ціна</b>€650 · проєкт €3 000–8 000 · 3D-основа €2 200</span></li><li><span class="st ok">✓</span><span><b>Строк</b>аудит до 5 днів, проєкт 2–3 тижні</span></li><li><span class="st ok">✓</span><span><b>Що на руках</b>PDF 10–15 сторінок, roadmap на 2 квартали, сесія 60 хв</span></li><li><span class="st ok">✓</span><span><b>Зняття ризику</b>стиль-фрейм не підійшов: платите лише €650; €650 зараховуються 30 днів</span></li><li><span class="st ok">✓</span><span><b>Наступний крок</b>аудит → проєкт → підписка від 3 місяців</span></li></ul></div><div class="cc good"><div class="cc-h"><h3>Value Proposition</h3><b class="num">3,5<small> з 4</small></b></div><div class="seg"><i class="y"></i><i class="p"></i><i class="y"></i><i class="y"></i></div><ul class="cl"><li><span class="st ok">✓</span><span><b>Бажаний результат</b>«вигравайте тендери й швидше проходьте погодження»</span></li><li><span class="st part">~</span><span><b>Докази</b>клієнт з LDES: погодження міста й 4 медіа; але 3 з 4 кейсів не відкриваються, «35%» без джерела</span></li><li><span class="st ok">✓</span><span><b>Час до результату</b>перші матеріали за 1–2 тижні</span></li><li><span class="st ok">✓</span><span><b>Зусилля клієнта</b>CAD, дані майданчика й одна людина, що погоджує</span></li></ul></div><div class="cc good"><div class="cc-h"><h3>ICP</h3><b class="num">3,7<small> / 5</small></b></div><div class="seg"><i class="p"></i><i class="y"></i><i class="y"></i></div><ul class="cl"><li><span class="st part">~</span><span><b>Цільові ринки</b>3/5 · Європа і США; половина відгуків від українських IT-компаній</span></li><li><span class="st ok">✓</span><span><b>Тип компанії</b>4/5 · LDES, BESS, водень, декарбонізація, EPC, DeepTech до будівництва</span></li><li><span class="st ok">✓</span><span><b>Персона</b>4/5 · CMO, CEO, Project Development Director перед раундом чи тендером</span></li></ul></div></div></div>
+    <div class="tbl">
+      <table>
+        <thead><tr><th>Критерій</th><th>Бал</th><th>Що видно</th></tr></thead>
+        <tbody>
+          <tr><td><b style="color:var(--ink)">ICP</b></td><td class="yes num">4</td><td>Ринки: Європа і США (3) · тип: CleanTech і DeepTech до будівництва, EPC (4) · персона: CMO, CEO, Project Development Director перед раундом, тендером чи permitting (4). Середнє 3,7, округлено 4. Серед логотипів «Нам довіряють» також дві українські маркетингові агенції, поза ICP</td></tr>
+          <tr><td><b style="color:var(--ink)">Позиціонування</b></td><td class="yes num">4</td><td>«See it before you build it», метод C.A.R.E., «гарна візуалізація дає вау, точна дає погодження». Колег не порівнював</td></tr>
+          <tr><td><b style="color:var(--ink)">Офер</b></td><td class="yes num">5</td><td>Аудит €650 · 3D-основа €2 200 · проєкт €3 000–8 000 · підписка від 3 місяців. Порівняння з наймом: €7–12K на місяць за двох людей</td></tr>
+          <tr><td><b style="color:var(--ink)">Делівері процес</b></td><td class="yes num">4</td><td>6,5 з 8 ознак (таблиця нижче)</td></tr>
+          <tr><td><b style="color:var(--ink)">Лід-магніти</b></td><td class="no2 num">2</td><td>Нічого до дзвінка. Дослідження про «35%» мало б бути магнітом, але посилання на нього веде на «[source]»</td></tr>
+          <tr><td><b style="color:var(--ink)">Кейси</b></td><td class="no2 num">2</td><td>4 картки по ~60–150 слів, 3 з 4 кнопок «View case» нікуди не ведуть, четверта на портфоліо-платформа</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="panel">
+      <div class="ptitle"><h3>Делівері процес: 8 ознак</h3></div>
+      <div class="tbl">
+        <table>
+          <thead><tr><th>Ознака</th><th></th><th>Що є</th></tr></thead>
+          <tbody>
+            <tr><td>Одна сторінка для основної послуги</td><td class="yes">✓</td><td>блок «Процес» на головній</td></tr>
+            <tr><td>3–5 фаз зі строками</td><td class="yes">✓</td><td>аудит до 5 днів · план 2–3 дні · виробництво 1–3 тижні</td></tr>
+            <tr><td>Що покупець отримує після фази</td><td class="yes">✓</td><td>звіт і roadmap · план форматів · погодження після кожного етапу</td></tr>
+            <tr><td>Точка зупинки з ціною</td><td class="yes">✓</td><td>стиль-фрейм не підійшов: платите лише €650</td></tr>
+            <tr><td>Що потрібно від клієнта</td><td class="yes">✓</td><td>CAD, дані майданчика, одна людина, що погоджує</td></tr>
+            <tr><td>Як видно прогрес</td><td class="mid2">~</td><td>погодження етапів, без формату й частоти</td></tr>
+            <tr><td>Що буває, коли щось не так</td><td class="mid2">~</td><td>правки «в межах графіка», про зірваний строк нічого</td></tr>
+            <tr><td>Строки збігаються між собою</td><td class="mid2">~</td><td>виробництво 1–3 тижні · проєкт 2–3 тижні · «перші матеріали за 1–2 тижні» · виробник паливних елементів 3–4 тижні</td></tr>
+          </tbody>
+        </table>
       </div>
     </div>
 
     <div class="panel">
-      <div class="ptitle"><h3>Анатомія кейсу: 5 кейсів за 8 ознаками</h3>
-        <span class="tip" tabindex="0">i<span class="tt">Покупець читає кейс, щоб уявити свій проєкт. Для цього йому треба побачити проблему з цифрою, як ішла робота, хто був у команді, скільки тривало, модель або бюджет, результат з базою вимірювання і слова клієнта з посадою. ✓ є, ~ частково, ✕ немає. Деталізація: стандарт кейсу 1500–2000 слів; 1200–1499 частково; менше 1200 = картка проєкту, а не кейс.</span></span>
+      <div class="ptitle"><h3>Анатомія кейсу: 4 кейси за 8 ознаками</h3>
+        <span class="tip" tabindex="0">i<span class="tt">✓ є, ~ частково, ✕ немає. Деталізація: стандарт кейсу 1500–2000 слів; менше 1200 = картка проєкту. На сайті 4 кейси, тому розібрано 4.</span></span>
       </div>
       <div class="tbl">
         <table>
           <thead><tr><th>Кейс</th><th>Проблема з цифрою</th><th>Як ішла робота</th><th>Команда</th><th>Строк</th><th>Модель / бюджет</th><th>Результат з базою</th><th>Цитата з посадою</th><th>Деталізація</th></tr></thead>
           <tbody>
-            <tr><td><b style="color:var(--ink)">AI consulting for a global bank</b><br><span style="color:var(--muted)">2026</span></td><td class="mid2">~</td><td class="yes">✓ 3 фази, 20+ людей клієнта</td><td class="no2">✕</td><td class="yes">✓ 8 тижнів</td><td class="no2">✕</td><td class="mid2">~ «дорожня карта для правління»</td><td class="no2">✕</td><td class="no2">✕ ~700 слів</td></tr>
-            <tr><td><b style="color:var(--ink)">AI legacy proxy</b><br><span style="color:var(--muted)">2026</span></td><td class="yes">✓</td><td class="yes">✓ щоденні зустрічі, PR-процес</td><td class="yes">✓ 1 dev + Claude Code, 2 QA клієнта</td><td class="mid2">~</td><td class="no2">✕</td><td class="mid2">~ головна метрика «ще не виміряна»</td><td class="no2">✕</td><td class="yes">✓ ~1 600 слів</td></tr>
-            <tr><td><b style="color:var(--ink)">Wineshipping</b><br><span style="color:var(--muted)">2022</span></td><td class="yes">✓</td><td class="mid2">~ Phase Zero, розподіл ролей</td><td class="mid2">~</td><td class="mid2">~</td><td class="mid2">~ прогноз на рік без суми</td><td class="yes">✓ SLA 70% → 99,9%</td><td class="yes">✓ Chief Experience &amp; Innovation Officer</td><td class="no2">✕ ~700 слів</td></tr>
-            <tr><td><b style="color:var(--ink)">Post-M&amp;A integration</b><br><span style="color:var(--muted)">банк, з 2015</span></td><td class="yes">✓ 500k клієнтів</td><td class="mid2">~ лише розподіл ролей</td><td class="no2">✕</td><td class="yes">✓ 3 місяці</td><td class="mid2">~ dedicated team</td><td class="mid2">~ синергія банку, внесок Agency X не відокремлений</td><td class="no2">✕</td><td class="no2">✕ ~500 слів</td></tr>
-            <tr><td><b style="color:var(--ink)">Dark Factory</b><br><span style="color:var(--muted)">енергетика, з 2020</span></td><td class="mid2">~</td><td class="no2">✕ 2 речення</td><td class="mid2">~ «гібридна команда»</td><td class="yes">✓ 7 днів замість ~3 міс.</td><td class="no2">✕</td><td class="mid2">~ лише швидкість</td><td class="no2">✕</td><td class="no2">✕ ~1 000 слів</td></tr>
+            <tr><td><b style="color:var(--ink)">клієнт з LDES · Європа</b></td><td class="no2">✕</td><td class="mid2">~</td><td class="no2">✕</td><td class="yes">✓ 3 тижні</td><td class="no2">✕</td><td class="mid2">~ 4 медіа, погодження міста</td><td class="yes">✓ Global Marketing Director</td><td class="no2">✕ ~150</td></tr>
+            <tr><td><b style="color:var(--ink)">клієнт з LDES · США</b></td><td class="no2">✕</td><td class="mid2">~ GPS, камера, рельєф</td><td class="no2">✕</td><td class="no2">✕</td><td class="no2">✕</td><td class="no2">✕</td><td class="yes">✓</td><td class="no2">✕ ~60</td></tr>
+            <tr><td><b style="color:var(--ink)">виробник паливних елементів</b></td><td class="no2">✕</td><td class="mid2">~</td><td class="no2">✕</td><td class="yes">✓ 3–4 тижні</td><td class="no2">✕</td><td class="no2">✕</td><td class="no2">✕</td><td class="no2">✕ ~50</td></tr>
+            <tr><td><b style="color:var(--ink)">IT-клієнт</b></td><td class="no2">✕</td><td class="yes">✓ AI + CGI, 49 кадрів</td><td class="no2">✕</td><td class="yes">✓ 10 днів</td><td class="no2">✕</td><td class="mid2">~ 80% після 1 ітерації</td><td class="yes">✓ Head of Content</td><td class="no2">✕ ~70</td></tr>
           </tbody>
         </table>
       </div>
-      <p style="font-size:14px"><b style="color:var(--ink)">Що зробити:</b> один шаблон кейсу з блоком «Як ми працювали», де є тижні, ролі з обох боків і точки рішень. Переписати за ним 5–7 кейсів під сегменти аутричу. Головний AI-кейс Dark Factory переписати першим: зараз він доводить, що агенти швидкі, але не показує, як Agency X впровадить їх у чужу команду. Обсяг до 1500–2000 слів набирати блоком «Як ми працювали»: тижні, ролі з обох боків, точки рішень.</p>
     </div>
-
-    <div class="two" style="grid-template-columns:1.1fr 1fr">
-      <div class="panel">
-        <div class="ptitle"><h3>Карта позиціонування</h3>
-          <span class="tip" tabindex="0">i<span class="tt">Моя оцінка за головними сторінками і Clutch, не вимір. По горизонталі: наскільки конкретно описаний клієнт. По вертикалі: обіцяють бізнес-результат чи технологію.</span></span>
-        </div>
-        <div class="tbl" style="overflow-x:auto">
-        <svg viewBox="0 0 520 350" style="width:100%;min-width:420px;height:auto" role="img" aria-label="Карта позиціонування IT-компаній">
-          <rect x="60" y="20" width="440" height="280" fill="none" stroke="var(--line)"></rect>
-          <line x1="280" y1="20" x2="280" y2="300" stroke="var(--line)" stroke-dasharray="3 4"></line>
-          <line x1="60" y1="160" x2="500" y2="160" stroke="var(--line)" stroke-dasharray="3 4"></line>
-          <text x="280" y="324" text-anchor="middle" fill="var(--muted)" style="font:600 11px var(--mono)">СЕГМЕНТ: УСІМ → ОДНОМУ</text>
-          <text x="22" y="160" text-anchor="middle" fill="var(--muted)" transform="rotate(-90 22 160)" style="font:600 11px var(--mono)">ТЕХНОЛОГІЯ → РЕЗУЛЬТАТ</text>
-          <text x="492" y="38" text-anchor="end" fill="var(--muted)" style="font:500 11px var(--text)">продають результат сегменту</text>
-          <text x="68" y="292" fill="var(--muted)" style="font:500 11px var(--text)">продають стек усім</text>
-          <line x1="136" y1="236" x2="292" y2="116" stroke="var(--coral)" stroke-width="1.5" stroke-dasharray="4 4"></line>
-          <polygon points="292,116 280,119 287,128" fill="var(--coral)"></polygon>
-          <text x="226" y="190" fill="var(--coral-deep)" style="font:600 11px var(--text)">куди рухатись</text>
-          <circle cx="150" cy="128" r="6" fill="var(--muted)"></circle><text x="140" y="124" text-anchor="end" fill="var(--body)" style="font:500 12px var(--text)">N-iX</text>
-          <circle cx="175" cy="92" r="6" fill="var(--muted)"></circle><text x="185" y="88" fill="var(--body)" style="font:500 12px var(--text)">ELEKS</text>
-          <circle cx="238" cy="150" r="6" fill="var(--muted)"></circle><text x="248" y="146" fill="var(--body)" style="font:500 12px var(--text)">Intellias</text>
-          <circle cx="372" cy="246" r="6" fill="var(--muted)"></circle><text x="382" y="250" fill="var(--body)" style="font:500 12px var(--text)">Leobit</text>
-          <circle cx="440" cy="110" r="6" fill="var(--muted)"></circle><text x="430" y="100" text-anchor="end" fill="var(--body)" style="font:500 12px var(--text)">Softjourn</text>
-          <circle cx="122" cy="246" r="9" fill="var(--coral)"></circle><text x="136" y="266" fill="var(--ink)" style="font:700 13px var(--display)">Agency X</text>
-        </svg>
-        </div>
-      </div>
-      <div class="panel">
-        <h3>Що взяти в конкурентів</h3>
-        <div class="obj">
-          <div><b>Softjourn: одна ніша.</b> Фінтех, медіа і квитковий бізнес, половина клієнтів з фінансів. Органічного трафіку зі США майже втричі більше, ніж у Agency X (4 396 проти 1 498 візитів).</div>
-          <div><b>N-iX: AI з виміром.</b> «Measuring what AI tools actually deliver on your codebase» і аудит AI-зрілості як вхідний продукт.</div>
-          <div><b>ELEKS: гарантія доставки.</b> «Guaranteed software delivery» в заголовку. У Agency X є свій факт (проєкти вчасно і гарантія повернення грошей), але він стоїть у лічильниках нижче першого екрана.</div>
-        </div>
-      </div>
+    <div class="goal" style="font-size:15px"><b>Що зробити:</b> окрема сторінка для кожного з 4 кейсів (1 500+ слів, строк, команда, бюджетна вилка, результат) · магніт з дослідження «35%» з робочим посиланням.</div>
+    <div class="ask">
+      <h4>Питання на дзвінок</h4>
+      <ul>
+        <li>Скільки з 90+ проєктів в CleanTech, а скільки в IT і маркетингу?</li>
+        <li>Які 3 кейси клієнти дозволять розписати повністю?</li>
+      </ul>
     </div>
+  </section>
 
+  <!-- 02 -->
+  <section class="sec">
+    <div class="bhead"><span class="bn">02</span><h2>Команда: 4 людини на сайті з 9, є керівник продажів</h2><span class="bs num">3,0<small> / 5</small></span></div>
     <div class="tbl">
       <table>
-        <thead><tr><th>Компанія</th><th>Як себе позиціонує</th><th>Для кого</th><th class="r">Команда</th><th class="r">Clutch</th><th class="r">Мін. проєкт</th></tr></thead>
+        <thead><tr><th>Роль</th><th>Хто</th><th></th></tr></thead>
         <tbody>
-          <tr style="background:var(--coral-soft)"><td><b style="color:var(--ink)">Agency X</b></td><td>«AI-First Software Engineering &amp; AI Transformation Consulting Partner»</td><td>9 галузей, mid-market 60%</td><td class="r num">426</td><td class="r num">4,9 · 46</td><td class="r num">$75k</td></tr>
-          <tr><td><b style="color:var(--ink)">N-iX</b></td><td>«Pragmatic AI Software Engineering»</td><td>enterprise 60%, виробництво, рітейл</td><td class="r num">2 400</td><td class="r num">4,8 · 35</td><td class="r num">$100k</td></tr>
-          <tr><td><b style="color:var(--ink)">Intellias</b></td><td>«AI-enabled product engineering»</td><td>enterprise і mid-market, автомобільна вертикаль</td><td class="r num">2 965</td><td class="r num">4,9 · 30</td><td class="r num">$50k</td></tr>
-          <tr><td><b style="color:var(--ink)">ELEKS</b></td><td>«Your trusted partner for guaranteed software delivery»</td><td>enterprise 56%, фінанси, держсектор</td><td class="r num">1 989</td><td class="r num">4,8 · 31</td><td class="r num">$25k</td></tr>
-          <tr><td><b style="color:var(--ink)">Leobit</b></td><td>«.NET, AI and web software development», «AI-native SDLC»</td><td>tech-компанії і стартапи, mid-market 60%</td><td class="r num">269</td><td class="r num">5,0 · 61</td><td class="r num">$25k</td></tr>
-          <tr><td><b style="color:var(--ink)">Softjourn</b></td><td>«You Have Ideas. We Bring Them to Life.»</td><td>фінтех 50%, медіа, квитки</td><td class="r num">250–999</td><td class="r num">4,8 · 6</td><td class="r">н/д</td></tr>
+          <tr><td>Засновник і CEO, веде дзвінки</td><td>засновник</td><td class="yes">✓</td></tr>
+          <tr><td>Продажі й маркетинг</td><td>керівник продажів</td><td class="yes">✓</td></tr>
+          <tr><td>Арт-директор · проєктна менеджерка</td><td>арт-директор · проєктна менеджерка</td><td class="yes">✓</td></tr>
+          <tr><td>Власник ринку США</td><td>не видно</td><td class="no2">?</td></tr>
         </tbody>
       </table>
     </div>
-    <p style="font-size:13px;color:var(--muted)">Команда: кількість співробітників на сторінках компаній у LinkedIn (для Softjourn діапазон з Clutch). Рейтинг, відгуки й мінімальний проєкт: Clutch, вересень 2026.</p>
-
-    <div class="goal" style="font-size:15px"><b>Що зробити:</b> обрати один-два сегменти для аутричу 2027 року; зібрати делівері процес для розробки на замовлення: 3–5 фаз з тижнями, що покупець отримує після кожної, точка зупинки з ціною і що потрібно від клієнта; дати вхідному оферу ціну або діапазон.</div>
-    <div class="ask">
-      <h4>Не видно ззовні · питання на дзвінок</h4>
-      <ul>
-        <li>Нові клієнти за 12 місяців: з якої країни, якого типу компанії і хто за посадою підписав договір?</li>
-        <li>Скільки пайплайну вже дали UK &amp; DACH і Саудівська Аравія проти США?</li>
-        <li>Що покупець отримує за перші 2–4 тижні роботи і скільки це коштує?</li>
-        <li>Хто в компанії відповідає за кейси, і чи є шаблон, за яким їх пишуть?</li>
-      </ul>
-    </div>
+    <div class="ask"><h4>Питання на дзвінок</h4><ul><li>Хто з 9 людей приводить ліди, і скільки годин на тиждень?</li></ul></div>
   </section>
 
-  <!-- 02 TEAM -->
+  <!-- 03 -->
   <section class="sec">
-    <div class="bhead"><span class="bn">02</span><h2>Команда: ролі закриті, нові ринки без власників</h2><span class="bs num">3,0<small> / 5</small></span></div>
-    <p style="font-size:16px;color:var(--ink);max-width:72ch;margin-top:-4px">Ролі закриті, але нові ринки відкриваються швидше, ніж з'являються люди з планом, тож «AI-first» там поки ніхто системно не несе.</p>
-    <div>
-      <div class="score s-good">
-        <div class="name">GTM-ролі<span>хто закриває продажі й маркетинг</span></div>
-        <div><div class="pips"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div><span class="pill num">4 / 5 · сильно</span></div>
-        <div class="why">
-          <p class="v">Ролі закриті на всіх етапах воронки.</p>
-          <ul>
-            <li>CRO, Client Director у Торонто, Senior AE, керівник лідогенерації в Денвері, 4–5 BDR/SDR</li>
-            <li>Маркетинг: web, demand gen, бренд, PR, Salesforce Marketing Cloud. Пресейл: CTO, Head of AI Transformation, AI Lab</li>
-          </ul>
-        </div>
-      </div>
-      <div class="score s-bad">
-        <div class="name">Власники нових ринків<span>UK/DACH, Індія, Близький Схід</span></div>
-        <div><div class="pips"><i class="on"></i><i class="on"></i><i></i><i></i><i></i></div><span class="pill num">2 / 5 · слабко</span></div>
-        <div class="why">
-          <p class="v">Ринків більше, ніж людей, які їх ведуть.</p>
-          <ul>
-            <li>Регіональний менеджер UK &amp; DACH з 07.2026. Хто веде Індію і Саудівську Аравію, публічно не видно</li>
-            <li>Сторінка під Саудівську Аравію тримається на кейсах зі США, без місцевого офісу чи партнера</li>
-            <li>Ціль CTO: зрости в 10 разів за 10 років, зокрема через M&amp;A, і мати доставку в 5–7 країнах</li>
-          </ul>
-        </div>
-      </div>
+    <div class="bhead"><span class="bn">03</span><h2>Лідогенерація: <span class="hl-bad">1</span> сторінка в індексі, <span class="hl-bad">~0</span> візитів з Google, DMARC немає</h2><span class="bs num">2,0<small> / 5</small></span></div>
+    <div class="hero-nums">
+      <div class="hn bad word"><b>Пошуку нема що показати</b><span>весь сайт на одній сторінці, окремих сторінок послуг немає</span></div>
+      <div class="hn bad word"><b>Google не приводить</b><span>~0 візитів зі США, 1 ключове слово</span></div>
+      <div class="hn bad word"><b>Українська версія зламана</b><span>/ua/ віддає 404, хоча hreflang вказує туди</span></div>
+      <div class="hn mid word"><b>портфоліо-платформа замість кейсів</b><span>2 профілі: студії і засновника; повна галерея є лише для 1 кейсу</span></div>
     </div>
-    <div class="goal" style="font-size:15px"><b>Що зробити:</b> закріпити за кожним новим ринком одну людину з планом зустрічей на квартал, а сторінку під Саудівську Аравію показати з місцевим доказом або прибрати.</div>
-    <div class="ask">
-      <h4>Не видно ззовні · питання на дзвінок</h4>
-      <ul>
-        <li>Скільки зустрічей на місяць дає команда BDR і скільки з них доходить до пропозиції?</li>
-        <li>Хто відповідає за план по кожному новому ринку, і який план на 2027?</li>
-        <li>Як ви вводите нових продавців у продукт «AI-first»: є навчання, скрипти, приклади дзвінків?</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- 03 LEAD GEN -->
-  <section class="sec">
-    <div class="bhead"><span class="bn">03</span><h2>Лідогенерація: 88% органіки з однієї статті, в AI-відповідях 0 з 27</h2><span class="bs num">2,3<small> / 5</small></span></div>
-    <p style="font-size:16px;color:var(--ink);max-width:72ch;margin-top:-4px">Аутрич налаштований, але SEO і AI-пошук майже не приводять покупців, і в головних AI-темах Agency X не існує.</p>
-    <h3>3.1 · Формування попиту</h3>
-    <div>
-      <div class="score s-bad">
-        <div class="name">SEO<span>органічний трафік</span></div>
-        <div><div class="pips"><i class="on"></i><i></i><i></i><i></i><i></i></div><span class="pill num">1 / 5 · критично</span></div>
-        <div class="why">
-          <p class="v">Трафік є, але покупців у ньому майже немає.</p>
-          <ul>
-            <li>~1 500 візитів на місяць зі США, 278 ключових слів. Велика Британія: ~33 візити</li>
-            <li>88% трафіку приносить стаття «most expensive apps». Без неї лишається ~185 візитів</li>
-            <li>«generative AI development services» (720 запитів на місяць) на 24 позиції, сторінка послуги приносить ~3 візити</li>
-          </ul>
-        </div>
-      </div>
-      <div class="score s-bad">
-        <div class="name">AI-видимість<span>ChatGPT, Claude, Perplexity</span></div>
-        <div><div class="pips"><i class="on"></i><i></i><i></i><i></i><i></i></div><span class="pill num">1 / 5 · критично</span></div>
-        <div class="why">
-          <p class="v">AI Visibility Score 3,3 зі 100: частка згадок 5,6% з вагою 60% плюс частка посилань 0% з вагою 40%. Моделі знають Agency X за назвою, але не пов'язують з категоріями, які вона продає.</p>
-          <ul>
-            <li>2 згадки з 36 нейтральних відповідей, 0 посилань на agency-x.example Обидві згадки від Perplexity і на запити, де вже описана географія Agency X</li>
-            <li>AI-first, AI-трансформація, фінанси: 0 з 27 відповідей</li>
-            <li>На запит «що ви знаєте про Agency X» відповідають усі 12 з 12, і 11 посилаються на сайт</li>
-          </ul>
-        </div>
-      </div>
-      <div class="score s-mid">
-        <div class="name">LinkedIn і контент<span>голоси компанії</span></div>
-        <div><div class="pips"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></div><span class="pill num">3 / 5 · середньо</span></div>
-        <div class="why">
-          <p class="v">CEO пише регулярно і його читають. Продажі мовчать.</p>
-          <ul>
-            <li>Viktor Chekh: 33 пости за рік, медіана 40 реакцій, пік 155</li>
-            <li>Сторінка компанії: 14 постів з липня по вересень, медіана 21, здебільшого найм і культура</li>
-            <li>Керівник продажів: 6 постів за рік, про свята і роудшоу</li>
-          </ul>
-        </div>
-      </div>
-      <div class="score s-mid">
-        <div class="name">Події<span>роудшоу, конференції</span></div>
-        <div><div class="pips"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></div><span class="pill num">3 / 5 · середньо</span></div>
-        <div class="why">
-          <p class="v">Роудшоу по США двічі за 2026 рік. Результатів публічно не видно.</p>
-          <ul>
-            <li>Січень і травень 2026: Остін, Даллас, Атланта, Х'юстон, запрошення «напишіть мені, щоб зустрітись»</li>
-            <li>CEO виступав на Kyiv IT Outsourcing Forum (2024)</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="two">
-      <div class="panel">
-        <div class="ptitle"><h3>Органіка США проти схожих компаній (візити/міс.)</h3>
-          <span class="tip" tabindex="0">i<span class="tt">Оцінка DataForSEO для ринку США. Для Agency X два стовпці: весь трафік і трафік без статті про найдорожчі застосунки, яка не має стосунку до покупців розробки.</span></span>
-        </div>
-        <div class="bars">
-          <div class="bar"><span class="n">Softjourn</span><span class="t"><span class="f" style="width:88%"></span><span class="val num">4 396</span></span></div>
-          <div class="bar"><span class="n">Agency X, усього</span><span class="t"><span class="f" style="width:30%"></span><span class="val num">1 498</span></span></div>
-          <div class="bar"><span class="n">Leobit</span><span class="t"><span class="f" style="width:19.6%"></span><span class="val num">978</span></span></div>
-          <div class="bar money"><span class="n">Agency X без однієї статті</span><span class="t"><span class="f" style="width:3.7%"></span><span class="val num">~185</span></span></div>
-        </div>
-      </div>
-      <div class="panel">
-        <div class="ptitle"><h3>Кого AI називає замість Agency X</h3>
-          <span class="tip" tabindex="0">i<span class="tt">Скільки нейтральних відповідей (з 9 на тему) назвали компанію. ChatGPT, Claude і Perplexity, 28.09.2026. Gemini в день заміру не відповідав через ліміт провайдера.</span></span>
-        </div>
-        <div class="tbl">
-          <table style="min-width:0">
-            <thead><tr><th>Тема</th><th>Кого називають</th><th class="r">Agency X</th></tr></thead>
-            <tbody>
-              <tr><td>AI-first розробка</td><td>SoftServe, BairesDev, CI&amp;T, Simform, N-iX</td><td class="r num">0</td></tr>
-              <tr><td>AI-трансформація</td><td>RTS Labs (4), Slalom (3), West Monroe, Deloitte</td><td class="r num">0</td></tr>
-              <tr><td>Розробка для фінансів</td><td>Itransition (3), Accenture (3), EPAM, ScienceSoft</td><td class="r num">0</td></tr>
-              <tr><td>Команди в Україні й Колумбії</td><td>N-iX (5), SoftServe (3), KITRUM (2)</td><td class="r num">2</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-
-    <h3>3.2 · Пошук лідів</h3>
-    <div>
-      <div class="score s-mid">
-        <div class="name">Аутрич<span>команда й інфраструктура</span></div>
-        <div><div class="pips"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></div><span class="pill num">3 / 5 · середньо</span></div>
-        <div class="why">
-          <p class="v">Інфраструктура налаштована правильно. Що і кому пишуть, ззовні не видно.</p>
-          <ul>
-            <li>agency-x-soft.example: окремий Google Workspace з DKIM і DMARC, звіти на agency-x.example Основний домен не ризикує через холодні листи<span class="inf">висновок</span></li>
-            <li>agency-x.example: Microsoft 365, DKIM, DMARC <code>p=quarantine</code> на 20% листів. SPF дозволяє відправку ще чотирьом сервісам</li>
-          </ul>
-        </div>
-      </div>
-      <div class="score s-mid">
-        <div class="name">Заявки з сайту<span>як відвідувач стає лідом</span></div>
-        <div><div class="pips"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></div><span class="pill num">3 / 5 · середньо</span></div>
-        <div class="why">
-          <p class="v">Трекінг і лід-магніти є. Компанію відвідувача не визначають.</p>
-          <ul>
-            <li>Трекінг і пікселі для ретаргетингу стоять (деталі в блоці 06)</li>
-            <li>Немає інструменту, що визначає компанію відвідувача, тож трафік на AI Lab і галузеві сторінки не стає списком акаунтів для BDR</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="goal" style="font-size:15px"><b>Що зробити:</b> оновити профіль на Clutch під AI-позиціонування; для сегмента, обраного в блоці 01, зробити сторінку з двома кейсами і цифрами, яка відповідає на запити, де зараз називають Itransition, EPAM і ScienceSoft; сторінки послуг зв'язати з блогом; взяти цифри з дописів CEO в листи BDR.</div>
-    <div class="ask">
-      <h4>Не видно ззовні · питання на дзвінок</h4>
-      <ul>
-        <li>Що зараз пишуть BDR у першому листі і скільки відповідей на 100 контактів?</li>
-        <li>Скільки лідів на місяць приходить із сайту і скільки з них доходить до зустрічі?</li>
-        <li>Що дали роудшоу по США в січні й травні: зустрічі, пропозиції, угоди?</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- 04 SALES -->
-  <section class="sec">
-    <div class="bhead"><span class="bn">04</span><h2>Продажі: п'ять кнопок ведуть в одну форму з відповіддю за 3 робочі дні</h2><span class="bs num">2,5<small> / 5</small></span></div>
-    <p style="font-size:16px;color:var(--ink);max-width:72ch;margin-top:-4px">Покупець, який натиснув «Talk to Our AI Expert», чекає відповіді до 3 робочих днів, хоча саме AI-експертизу Agency X зараз продає.</p>
-    <div>
-      <div class="score s-bad">
-        <div class="name">Шлях до першої зустрічі<span>від кнопки до дзвінка</span></div>
-        <div><div class="pips"><i class="on"></i><i class="on"></i><i></i><i></i><i></i></div><span class="pill num">2 / 5 · слабко</span></div>
-        <div class="why">
-          <p class="v">П'ять різних кнопок ведуть в одну форму. Відповідь обіцяють «протягом 3 робочих днів».</p>
-          <ul>
-            <li>«Book Free Consultation with CTO» обіцяє зустріч, а відкриває форму. Календаря на сайті немає</li>
-            <li>Поруч на сайті обіцяно відповідь за 10–20 хвилин на термінові запити</li>
-          </ul>
-        </div>
-      </div>
-      <div class="score s-mid">
-        <div class="name">Матеріали для покупця<span>що допомагає вирішити без продавця</span></div>
-        <div><div class="pips"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></div><span class="pill num">3 / 5 · середньо</span></div>
-        <div class="why">
-          <p class="v">Є FAQ, сертифікати і відгуки. Розбіжності в цифрах б'ють по довірі.</p>
-          <ul>
-            <li>Плюс: ISO 27001, AWS Select, Microsoft, 21 відгук з Clutch з іменами й посадами, FAQ про моделі співпраці</li>
-            <li>97% і 98% вчасно на одній сторінці. FAQ обіцяє три моделі співпраці і перелічує чотири. Кількість людей 350+ і 400+ на різних сторінках (у LinkedIn 426), NPS 70 і 84</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="panel">
-      <div class="ptitle"><h3>Куди ведуть кнопки</h3>
-        <span class="tip" tabindex="0">i<span class="tt">Усі п'ять кнопок з різними обіцянками відкривають одну модальну форму #cf-in-modal. Перевірено за HTML сторінок.</span></span>
-      </div>
-      <div class="tbl">
-      <svg viewBox="0 0 660 300" style="width:100%;min-width:560px;height:auto" role="img" aria-label="П'ять CTA ведуть в одну форму з відповіддю за 3 робочі дні">
-        <g style="font:500 12px var(--text)">
-          <rect x="8" y="10" width="230" height="42" rx="8" fill="var(--card)" stroke="var(--line)"></rect><text x="20" y="36" fill="var(--ink)" style="font:700 12px var(--display)">Book Free Consultation with CTO</text>
-          <rect x="8" y="66" width="230" height="42" rx="8" fill="var(--card)" stroke="var(--line)"></rect><text x="20" y="92" fill="var(--ink)" style="font:700 12px var(--display)">Talk to Our AI Expert</text>
-          <rect x="8" y="122" width="230" height="42" rx="8" fill="var(--card)" stroke="var(--line)"></rect><text x="20" y="148" fill="var(--ink)" style="font:700 12px var(--display)">Book a Call with our AI Lead</text>
-          <rect x="8" y="178" width="230" height="42" rx="8" fill="var(--card)" stroke="var(--line)"></rect><text x="20" y="204" fill="var(--ink)" style="font:700 12px var(--display)">Book a 30-minute assessment</text>
-          <rect x="8" y="234" width="230" height="42" rx="8" fill="var(--card)" stroke="var(--line)"></rect><text x="20" y="260" fill="var(--ink)" style="font:700 12px var(--display)">Talk to us · Get in Touch</text>
-          <rect x="300" y="116" width="150" height="56" rx="8" fill="var(--bg)" stroke="var(--ink)"></rect><text x="312" y="140" fill="var(--ink)" style="font:700 13px var(--display)">Одна форма</text><text x="312" y="158" fill="var(--muted)">5 полів, без календаря</text>
-          <rect x="500" y="110" width="152" height="68" rx="8" fill="var(--coral-soft)" stroke="var(--coral)"></rect><text x="512" y="134" fill="var(--ink)" style="font:700 13px var(--display)">Відповідь</text><text x="512" y="152" fill="var(--coral-deep)">«протягом 3 робочих</text><text x="512" y="168" fill="var(--coral-deep)">днів»</text>
-        </g>
-        <g stroke="var(--ink)" stroke-width="1.3" fill="none">
-          <line x1="238" y1="31" x2="300" y2="130"></line><line x1="238" y1="87" x2="300" y2="137"></line><line x1="238" y1="143" x2="300" y2="144"></line><line x1="238" y1="199" x2="300" y2="151"></line><line x1="238" y1="255" x2="300" y2="158"></line>
-        </g>
-        <line x1="450" y1="144" x2="500" y2="144" stroke="var(--coral)" stroke-width="1.5" stroke-dasharray="5 4"></line>
-      </svg>
-      </div>
-    </div>
-    <div class="goal" style="font-size:15px"><b>Що зробити:</b> поставити календар на кнопки «Book…», відповідати на заявку в той самий день і вирівняти цифри на сайті (97/98%, 350+/400+, NPS 70/84).</div>
-    <div class="ask">
-      <h4>Не видно ззовні · питання на дзвінок</h4>
-      <ul>
-        <li>Як виглядає ваш перший дзвінок з покупцем, і хто його веде: продавець, CTO чи AI Lead?</li>
-        <li>Скільки часу від першого дзвінка до пропозиції і з якої частки пропозицій виходить угода?</li>
-        <li>На якому етапі найчастіше губите угоди з AI-запитами?</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- 05 AM -->
-  <section class="sec">
-    <div class="bhead"><span class="bn">05</span><h2>Акаунт-менеджмент: клієнти лишаються роками, останній відгук у 2025</h2><span class="bs num">3,5<small> / 5</small></span></div>
-    <p style="font-size:16px;color:var(--ink);max-width:72ch;margin-top:-4px">Клієнти лишаються роками, але публічних свідчень цього майже не додається.</p>
-    <div>
-      <div class="score s-good">
-        <div class="name">Утримання<span>як довго лишаються клієнти</span></div>
-        <div><div class="pips"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div><span class="pill num">4 / 5 · сильно</span></div>
-        <div class="why">
-          <p class="v">Найсильніша зона. Клієнти лишаються роками.</p>
-          <ul>
-            <li>У кейсах: банк працює з Agency X з 2015 року (Post-M&amp;A integration), клієнт з енергетики з 2020 (Dark Factory)</li>
-            <li>У кейсі Dark Factory: «ведемо весь продуктовий ряд клієнта, від інверторів до пристроїв»</li>
-          </ul>
-        </div>
-      </div>
-      <div class="score s-mid">
-        <div class="name">Відгуки й рекомендації<span>що клієнти кажуть публічно</span></div>
-        <div><div class="pips"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></div><span class="pill num">3 / 5 · середньо</span></div>
-        <div class="why">
-          <p class="v">46 відгуків, останній у липні 2025 року.</p>
-          <ul>
-            <li>Clutch 4,9 з 46 відгуків, 44 верифіковані. Останній датований 18.07.2025</li>
-            <li>Нагороди на сайті закінчуються 2025 роком. На Capterra відгуків немає, і Perplexity на це вказує</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="goal" style="font-size:15px"><b>Що зробити:</b> збирати 1–2 відгуки на Clutch щокварталу у клієнтів з AI-проєктами і показувати тривалість співпраці в кожному кейсі.</div>
-    <div class="ask">
-      <h4>Не видно ззовні · питання на дзвінок</h4>
-      <ul>
-        <li>Яка частка виручки приходить від розширення наявних клієнтів, а яка від нових?</li>
-        <li>Хто веде акаунт після запуску і як часто ви обговорюєте з клієнтом наступні проєкти?</li>
-        <li>Чи просите ви клієнтів про відгуки й рекомендації системно, і хто за це відповідає?</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- 06 PROCESSES -->
-  <section class="sec">
-    <div class="bhead"><span class="bn">06</span><h2>Процеси: аналітика є, форми живуть окремо від CRM</h2><span class="bs num">3,0<small> / 5</small></span></div>
-    <p style="font-size:16px;color:var(--ink);max-width:72ch;margin-top:-4px">Аналітика стоїть, але лід з форми і його поведінка на сайті, схоже, живуть у різних системах, тож продавець не бачить, чи читав лід AI-сторінки перед дзвінком.</p>
-    <div>
-      <div class="score s-good">
-        <div class="name">Трекінг і аналітика<span>що вимірюють на сайті</span></div>
-        <div><div class="pips"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div><span class="pill num">4 / 5 · сильно</span></div>
-        <div class="why">
-          <p class="v">Базовий стек аналітики налаштований.</p>
-          <ul>
-            <li>Google Tag Manager з GA4, Google Ads, LinkedIn Insight, HubSpot і Microsoft Clarity</li>
-          </ul>
-        </div>
-      </div>
-      <div class="score s-bad">
-        <div class="name">Зв'язка форм і CRM<span>куди потрапляє лід</span></div>
-        <div><div class="pips"><i class="on"></i><i class="on"></i><i></i><i></i><i></i></div><span class="pill num">2 / 5 · слабко</span></div>
-        <div class="why">
-          <p class="v">Форми працюють окремо від HubSpot.</p>
-          <ul>
-            <li>Форми на Contact Form 7 і Mailchimp, HubSpot стоїть для аналітики. Лід з форми і його поведінка на сайті можуть жити в різних системах<span class="inf">висновок</span></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="goal" style="font-size:15px"><b>Що зробити:</b> перевести форми в HubSpot, щоб продавець бачив у картці ліда, які сторінки той читав до дзвінка.</div>
-    <div class="ask">
-      <h4>Не видно ззовні · питання на дзвінок</h4>
-      <ul>
-        <li>Які 3–5 цифр продажів ви дивитесь щотижня, і хто за них відповідає?</li>
-        <li>У якій CRM живуть угоди, і чи бачить продавець, які сторінки ліда читав до дзвінка?</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- TRUST TRACK -->
-  <section class="sec">
-    <div class="bhead"><span class="bn">+</span><h2>Довіра до сайту: відгуки перевіряються, а цифри розходяться між сторінками</h2><span class="bs num">58<small> / 100</small></span></div>
-    <p style="font-size:16px;color:var(--ink);max-width:72ch;margin-top:-4px">Окремий трек: чи повірить незнайомець сайту настільки, щоб забронювати дзвінок. Рахується тільки те, що читач може перевірити в один клік без розмови з продавцем. У загальний бал GTM-системи не входить.</p>
     <div class="tbl">
       <table>
-        <thead><tr><th>Критерій</th><th>Вага</th><th>Бал</th><th>Що видно ззовні</th></tr></thead>
+        <thead><tr><th>Критерій</th><th>Бал</th><th>Що видно</th></tr></thead>
         <tbody>
-            <tr><td><b style="color:var(--ink)">Незалежні оцінки</b></td><td class="num">15</td><td class="mid2 num">3</td><td>Clutch 4,9 з 46 відгуків, 44 верифіковані. Кожна цитата на головній веде на свій відгук у Clutch. Зведеного рейтингу і кількості на головній немає, останній відгук від 18.07.2025</td></tr>
-            <tr><td><b style="color:var(--ink)">Відгуки, які можна перевірити</b></td><td class="num">15</td><td class="mid2 num">3</td><td>28 цитат на головній, кожна з посиланням на відгук. 10 з 28 без імені, лише посада. Фото ніде, замість них іконки. Більшість цитат написані третьою особою («The client is pleased…»), конкретний результат у 9 з 28</td></tr>
-            <tr><td><b style="color:var(--ink)">Кейси з іменами</b></td><td class="num">15</td><td class="mid2 num">3</td><td>29 логотипів клієнтів. Частина кейсів з іменами (Wineshipping, Cover Whale), частина знеособлена («American Education Nonprofit», «Financial Client»). Як ішла робота, видно у 2 з 5 розібраних кейсів (блок 01)</td></tr>
-            <tr><td><b style="color:var(--ink)">Обличчя</b></td><td class="num">15</td><td class="mid2 num">3</td><td>5 керівників з фото і LinkedIn на сторінці About. Біля форми людей немає: заявку бере «a member of our sales team»</td></tr>
-            <tr><td><b style="color:var(--ink)">Чесні й узгоджені цифри</b></td><td class="num">15</td><td class="no2 num">2</td><td>Команда «400+» на головній і в блоці About, «350+» у мета-описі About і в тексті тієї ж сторінки. Тривалість співпраці «4–8 років» у лічильнику і «4 роки» в тексті About. «98% проєктів вчасно» без джерела</td></tr>
-            <tr><td><b style="color:var(--ink)">Юрособа й досяжність</b></td><td class="num">10</td><td class="mid2 num">3</td><td>На /contacts адреси офісів у США, Канаді, Колумбії, Польщі й Україні та телефон штабу у Львові. Юрособи, яка підписує контракт, немає. Опції NDA біля форми немає. Відповідь за 3 робочі дні</td></tr>
-            <tr><td><b style="color:var(--ink)">Сертифікати й партнерства</b></td><td class="num">10</td><td class="mid2 num">3</td><td>ISO 27001 і ISO 9001:2015 на головній, без посилання на сертифікат. Для фінтеху й енергетики це правильні знаки, але перевірити їх не можна</td></tr>
-            <tr><td><b style="color:var(--ink)">Пульс</b></td><td class="num">5</td><td class="yes num">4</td><td>Матеріали про AI датовані 2026/08 і раніше цього року. Розділ живий</td></tr>
+          <tr><td><b style="color:var(--ink)">SEO</b></td><td class="no2 num">1</td><td>Немає сторінок під послуги й галузі (BESS, водень, verified views). Пошуку нема що ранжувати</td></tr>
+          <tr><td><b style="color:var(--ink)">AI-видимість</b></td><td class="num">?</td><td>Не міряли</td></tr>
+          <tr><td><b style="color:var(--ink)">LinkedIn і контент</b></td><td class="mid2 num">3</td><td>Заголовок засновника під ICP («Helping Cleantech &amp; Deeptech companies»), пости з #cleantech. Частоту не рахував. Сторінки компанії на сайті немає</td></tr>
+          <tr><td><b style="color:var(--ink)">Події</b></td><td class="num">?</td><td>Expo є послугою, власних виступів не видно</td></tr>
+          <tr><td><b style="color:var(--ink)">Аутрич</b></td><td class="no2 num">2</td><td>Пошта на польського хостингу · SPF з <code>ptr</code> · DKIM не знайшов · DMARC немає</td></tr>
+          <tr><td><b style="color:var(--ink)">Заявки з сайту</b></td><td class="no2 num">2</td><td>Лише календар і пошта. Нічого, за що залишити пошту</td></tr>
         </tbody>
       </table>
     </div>
-    <p style="font-size:13px;color:var(--muted)">Формула: сума (бал ÷ 5 × вага) = 9 + 9 + 9 + 9 + 6 + 6 + 6 + 4 = 58 зі 100.</p>
-    <h3 style="font-size:17px;margin:22px 0 10px">Шлях перевірки</h3>
+    <div class="goal" style="font-size:15px"><b>Що зробити:</b> DMARC і DKIM · по сторінці на 6 послуг і 5 галузей · виправити /ua/.</div>
+    <div class="ask"><h4>Питання на дзвінок</h4><ul><li>Звідки прийшли останні 5 клієнтів: LinkedIn, портфоліо-платформа, рекомендація, виставка?</li></ul></div>
+  </section>
+
+  <!-- 04 -->
+  <section class="sec">
+    <div class="bhead"><span class="bn">04</span><h2>Продажі: календар на кожній кнопці, ціни у FAQ</h2><span class="bs num">4,5<small> / 5</small></span></div>
     <div class="tbl">
       <table>
-        <thead><tr><th>Що я відкрив</th><th>Що побачив</th><th></th></tr></thead>
+        <thead><tr><th>Критерій</th><th>Бал</th><th>Що видно</th></tr></thead>
         <tbody>
-            <tr><td>Посилання з цитати на головній</td><td>конкретний відгук у профілі Clutch</td><td class="yes">✓</td></tr>
-            <tr><td>Імена авторів цитат</td><td>18 з 28 підписані іменем, 10 лише посадою і галуззю</td><td class="mid2">~</td></tr>
-            <tr><td>Керівники на About</td><td>5 профілів LinkedIn відкриваються, посади збігаються з сайтом</td><td class="yes">✓</td></tr>
-            <tr><td>Значки ISO на головній</td><td>картинка без посилання на сертифікат чи реєстр</td><td class="no2">✕</td></tr>
-            <tr><td>Розмір команди на трьох місцях</td><td>400+ · 400+ · 350+</td><td class="no2">✕</td></tr>
-            <tr><td>Кейси Wineshipping і Post-M&amp;A</td><td>сторінки відкриваються, у другому клієнт без імені</td><td class="mid2">~</td></tr>
+          <tr><td><b style="color:var(--ink)">Шлях до першої зустрічі</b></td><td class="yes num">5</td><td>Calendly 30 хвилин відкривається на сайті · план дзвінка з 3 пунктів · «діагноз, працюємо ми чи ні»</td></tr>
+          <tr><td><b style="color:var(--ink)">Матеріали для покупця</b></td><td class="yes num">4</td><td>8 питань FAQ з цінами · 3 формати співпраці · «кому ми не підходимо». Мінус: строки розходяться (блок 01)</td></tr>
         </tbody>
       </table>
     </div>
-    <div class="goal" style="font-size:15px"><b>Що зробити:</b> поставити над цитатами рядок «Clutch 4,9 · 46 відгуків» з посиланням на профіль; звести розмір команди до однієї цифри на всіх сторінках; дати значкам ISO посилання на сертифікат і поставити фото керівника продажів біля форми.</div>
-    <div class="ask">
-      <h4>Не видно ззовні · питання на дзвінок</h4>
-      <ul>
-        <li>Скільки людей у команді зараз, і чому на сайті дві різні цифри?</li>
-        <li>Які кейси клієнт дозволить назвати своїм ім'ям, якщо попросити?</li>
-        <li>Хто просить клієнтів про відгуки, і чому останній на Clutch від липня 2025?</li>
-      </ul>
+    <div class="ask"><h4>Питання на дзвінок</h4><ul><li>Яка частка дзвінків закінчується оплатою аудиту за €650?</li></ul></div>
+  </section>
+
+  <!-- 05 -->
+  <section class="sec">
+    <div class="bhead"><span class="bn">05</span><h2>Акаунт-менеджмент: клієнт з LDES кілька років, IT-клієнт 2 проєкти</h2><span class="bs num">3,5<small> / 5</small></span></div>
+    <div class="tbl">
+      <table>
+        <thead><tr><th>Критерій</th><th>Бал</th><th>Що видно</th></tr></thead>
+        <tbody>
+          <tr><td><b style="color:var(--ink)">Утримання</b></td><td class="yes num">4</td><td>клієнт з LDES: «десятки рендерів за кілька років», 2 майданчики · IT-клієнт: 2 проєкти · підписка від 3 місяців</td></tr>
+          <tr><td><b style="color:var(--ink)">Відгуки</b></td><td class="mid2 num">3</td><td>6 рекомендацій у LinkedIn засновника, посилання з кожної. Clutch, G2 чи Google немає, дат немає</td></tr>
+        </tbody>
+      </table>
     </div>
   </section>
 
+  <!-- 06 -->
   <section class="sec">
-    <div class="sec-head"><h2>Що далі: 30 хвилин на розбір цього аудиту</h2><span class="label">наступний крок</span></div>
-    <div class="goal" style="font-size:15px">Цей огляд зроблено ззовні, і 4 з 24 пунктів ззовні не видно (позначені «?» на дашборді). На дзвінку пройдемо ці 4 пункти і три складові ICP, і ви вирішите, чи потрібен <b>GTM-аудит зсередини</b> з інтерв'ю команди, вашими кампаніями і базою.</div>
-    <p style="font-size:16px"><a href="https://tidycal.com/victor-shulga" style="color:var(--coral-deep);font-weight:700">Обрати 30 хвилин на розбір цього аудиту →</a></p>
-    <p style="font-size:14px">Victor Shulga · Fractional CRO · <a href="https://victorshulga.com" style="color:var(--ink);font-weight:700">victorshulga.com</a> · LinkedIn: linkedin.com/in/viktor-shulha</p>
+    <div class="bhead"><span class="bn">06</span><h2>Процеси: Microsoft Clarity без GA4, у політиці його немає</h2><span class="bs num">2,0<small> / 5</small></span></div>
+    <div class="tbl">
+      <table>
+        <thead><tr><th>Критерій</th><th>Бал</th><th>Що видно</th></tr></thead>
+        <tbody>
+          <tr><td><b style="color:var(--ink)">Трекінг</b></td><td class="no2 num">2</td><td>Лише Clarity. Політика каже «більше нічого не збираємо», Clarity в ній не названо. Для компанії з Польщі це питання GDPR</td></tr>
+          <tr><td><b style="color:var(--ink)">Форми і CRM</b></td><td class="num">?</td><td>Куди йдуть бронювання з Calendly, не видно</td></tr>
+        </tbody>
+      </table>
+    </div>
   </section>
 
-  <p class="src">Джерела: agency-x.example (головна, About, послуги, сторінки AI Consulting, AI Transformation, AI Lab, 32 кейси з підрахунком країни клієнта, /contacts, блог, e-book), Clutch (46 відгуків), оцінка органічного трафіку для США і Великої Британії (вересень 2026), 48 відповідей ChatGPT, Claude і Perplexity на запити покупців (США, 28.09.2026), сайти й Clutch-профілі конкурентів, публічні профілі компанії та керівників у LinkedIn, DNS-записи agency-x.example і agency-x-soft.example, публікації LIGA.net, dev.ua, Pulse 2.0, Tech.co, Compare the Cloud. Трафік є оцінкою сервісу. Позначка «висновок» позначає висновок з непрямих даних, який ще треба підтвердити зсередини.</p>
+  <!-- TRUST -->
+  <section class="sec">
+    <div class="bhead"><span class="bn">+</span><h2>Довіра до сайту: <span class="hl-good">6</span> перевірних відгуків і <span class="hl-bad">3</span> заглушки</h2><span class="bs num">57<small> / 100</small></span></div>
+    <div class="tbl">
+      <table>
+        <thead><tr><th>Критерій</th><th>Вага</th><th>Бал</th><th>Що видно</th></tr></thead>
+        <tbody>
+          <tr><td><b style="color:var(--ink)">Незалежні оцінки</b></td><td class="num">15</td><td class="mid2 num">3</td><td>6 рекомендацій LinkedIn з посиланням · рейтингу й дат немає</td></tr>
+          <tr><td><b style="color:var(--ink)">Відгуки, які можна перевірити</b></td><td class="num">15</td><td class="yes num">4</td><td>5 з 6: ім'я, посада, компанія. Цифра є в 1 (IT-клієнт, 80% після першої ітерації)</td></tr>
+          <tr><td><b style="color:var(--ink)">Кейси з іменами</b></td><td class="num">15</td><td class="no2 num">2</td><td>Клієнти названі, але 3 з 4 кейсів не відкриваються</td></tr>
+          <tr><td><b style="color:var(--ink)">Обличчя</b></td><td class="num">15</td><td class="yes num">4</td><td>4 людини з фото, засновник біля календаря з LinkedIn</td></tr>
+          <tr><td><b style="color:var(--ink)">Узгоджені цифри</b></td><td class="num">15</td><td class="no2 num">2</td><td>3 розбіжності (рядок нижче)</td></tr>
+          <tr><td><b style="color:var(--ink)">Юрособа</b></td><td class="num">10</td><td class="no2 num">1</td><td>У політиці «[legal name], [registration number], [registered address]» · телефону немає</td></tr>
+          <tr><td><b style="color:var(--ink)">Преса</b></td><td class="num">10</td><td class="mid2 num">3</td><td>4 міжнародні медіа з посиланнями. Статті про клієнт з LDES, студію в них не названо (перевірив 2 з 4 медіа)</td></tr>
+          <tr><td><b style="color:var(--ink)">Пульс</b></td><td class="num">5</td><td class="yes num">4</td><td>Сайт оновлено 24.09.2026, фото збудованого заводу 2026</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:13px;color:var(--muted)">Формула: Σ(бал ÷ 5 × вага) = 9 + 12 + 6 + 12 + 6 + 2 + 6 + 4 = 57.</p>
+    <div class="tbl">
+      <table>
+        <thead><tr><th>Розбіжність</th><th>Де 1</th><th>Де 2</th></tr></thead>
+        <tbody>
+          <tr><td>Що дає «35%»</td><td>сайт: швидший цикл рішень</td><td>LinkedIn засновника: швидше залучення інвестицій</td></tr>
+          <tr><td>Місто</td><td>політика: одне місто ЄС</td><td>портфоліо-платформа засновника: інше місто ЄС</td></tr>
+          <tr><td>Строк виробництва</td><td>процес: 1–3 тижні</td><td>формат «Проєкт»: 2–3 тижні</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <h3 style="font-size:17px;margin:12px 0 6px">Шлях перевірки</h3>
+    <div class="tbl">
+      <table>
+        <tbody>
+          <tr><td>Посилання «source» біля 35%</td><td>веде на «[source]»</td><td class="no2">✕</td></tr>
+          <tr><td>3 кнопки «View case»</td><td>нічого не відкривають</td><td class="no2">✕</td></tr>
+          <tr><td>4-та кнопка «View case»</td><td>галерея на портфоліо-платформа</td><td class="yes">✓</td></tr>
+          <tr><td>«LinkedIn ↗» під відгуками</td><td>рекомендації в профілі засновника</td><td class="yes">✓</td></tr>
+          <tr><td>2 з 4 медіа</td><td>відкриваються, Studio X не згадано</td><td class="mid2">~</td></tr>
+          <tr><td>/ua/</td><td>404</td><td class="no2">✕</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="goal" style="font-size:15px"><b>Що зробити:</b> вписати юрособу · дати 35% справжнє джерело · увімкнути 3 кейси.</div>
+  </section>
+
+  <section class="sec">
+    <div class="sec-head"><h2>Що далі: 30 хвилин на розбір</h2><span class="label">наступний крок</span></div>
+    <p class="next"><em>8 з 24</em> пунктів ззовні не видно. Пройдемо їх на дзвінку.</p>
+    <p style="font-size:16px"><a href="https://tidycal.com/victor-shulga" style="color:var(--coral-deep);font-weight:700">Обрати 30 хвилин →</a></p>
+    <p style="font-size:14px">Victor Shulga · Fractional CRO · <a href="https://victorshulga.com" style="color:var(--ink);font-weight:700">victorshulga.com</a></p>
+  </section>
+
+  <p class="src">Джерела: studio-x.com (EN і UA версії, політика конфіденційності, sitemap), портфоліо-платформа студії й засновника, публічний профіль засновника в LinkedIn, 2 медіа, оцінка органічного трафіку для США (жовтень 2026), DNS-записи (23.10.2026).</p>
 </div>
+</html>

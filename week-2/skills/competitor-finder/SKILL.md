@@ -104,6 +104,28 @@ An angle is valid only when three things line up: a weakness the buyer has felt 
 
 Also write where you lose. If a rival is cheaper, larger or has a reference you lack, say so, and note the deal situations where you should walk away early.
 
+## Terms and plain-language output
+
+<!-- glossary:start terms=competitor-lanes,jtbd,battlecard,angle,proof,staff-augmentation -->
+Rules for every document a client or their team will read (review, roast, canvas, offer cards, instruction):
+
+1. **Open with «Словник цього документа»**: only the terms that actually appear in it, at most 10, each as «термін: що це простими словами». Like the definitions section of a contract.
+2. **No internal codes or letter scales in the text** (A/B/C, D L T E, BLEND numbers without words, Own/Shared/Generic, Z1.4, GATE 2.5, T1–T6). Write the meaning instead: «є цифра з клієнтом», not «A».
+3. **Use the plain form from the table below.** English stays only for tool names and for copy that ships in English (promises, hooks, subject lines). If the document is in another language, translate the plain form, never the internal term.
+4. **Do not score what cannot exist yet.** A block that depends on work not done (signal catalog, case studies, a previous step) gets «пропущено: спершу потрібно <що саме>», not a score.
+5. **Every section of a review opens with one concrete action** («до наступного дзвінка: …»), then at most five lines of why. No paragraph that only restates the framework.
+
+
+| Internal term (this skill) | Write for the reader | What it means |
+|---|---|---|
+| lanes / clusters: direct, marketplace, adjacent, in-house, platform-native, incumbent, DIY, do nothing | типи альтернатив: прямі конкуренти · фрилансери з маркетплейсів · сусідні послуги · свій найм · платформи · старий постачальник · зробити самим · нічого не робити | з усім цим покупець вас порівнює, тому дивимось ширше за прямих конкурентів. |
+| JTBD | задача клієнта | що людина намагається зробити, коли шукає рішення: «коли…, хочу…, щоб…» |
+| battlecard, battle angle | шпаргалка проти конкурента | коротко: чим конкурент сильний, де слабкий і як говорити з покупцем, який його розглядає. |
+| angle, differentiation angle | кут подачі | одна думка, з якою ви заходите до покупця: його біль, ваш доказ і фраза, яку він повторить. |
+| proof, [TODO: need case] | доказ | кейс, цифра або відгук, що підтверджують обіцянку; якщо його немає, пишемо «потрібен кейс», а не вигадуємо |
+| staff augmentation | надання фахівців у команду клієнта | ваші люди працюють у команді клієнта під його керівництвом, оплата за людино-години. |
+<!-- glossary:end -->
+
 ## Output template
 
 ```

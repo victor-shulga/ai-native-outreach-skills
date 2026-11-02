@@ -56,6 +56,30 @@ business trigger до decision (із реальними тачпоінтами/�
 - **Стадія 2:** повна шлях клієнта + мапа контенту per стадія (inbound вмикається).
 - **Стадія 3-4:** per-segment шлях клієнта + attribution + lifecycle/expansion деталізація.
 
+## Terms and plain-language output
+
+<!-- glossary:start terms=awareness-stages,trigger,touchpoint,jtbd,dream-outcome,competitor-lanes,low-ticket,agency-stage -->
+Rules for every document a client or their team will read (review, roast, canvas, offer cards, instruction):
+
+1. **Open with «Словник цього документа»**: only the terms that actually appear in it, at most 10, each as «термін: що це простими словами». Like the definitions section of a contract.
+2. **No internal codes or letter scales in the text** (A/B/C, D L T E, BLEND numbers without words, Own/Shared/Generic, Z1.4, GATE 2.5, T1–T6). Write the meaning instead: «є цифра з клієнтом», not «A».
+3. **Use the plain form from the table below.** English stays only for tool names and for copy that ships in English (promises, hooks, subject lines). If the document is in another language, translate the plain form, never the internal term.
+4. **Do not score what cannot exist yet.** A block that depends on work not done (signal catalog, case studies, a previous step) gets «пропущено: спершу потрібно <що саме>», not a score.
+5. **Every section of a review opens with one concrete action** («до наступного дзвінка: …»), then at most five lines of why. No paragraph that only restates the framework.
+
+
+| Internal term (this skill) | Write for the reader | What it means |
+|---|---|---|
+| Problem unaware → business trigger → problem aware → solution aware → alternatives → objections → consideration → decision → onboarding → expansion | етапи шляху покупця: не бачить проблеми · подія-поштовх · бачить проблему · шукає рішення · порівнює · обирає · перший результат · допродаж | де зараз покупець у голові і що йому потрібно почути саме на цьому етапі. |
+| trigger, business trigger, account trigger, TRIGGER | подія-поштовх | подія в компанії покупця (нове керівництво, великий проєкт, втрата людини), після якої він починає шукати рішення. |
+| touchpoint | точка контакту | місце чи матеріал, де покупець стикається з вами: лист, сторінка, дзвінок, пост. |
+| JTBD | задача клієнта | що людина намагається зробити, коли шукає рішення: «коли…, хочу…, щоб…» |
+| dream outcome | бажаний результат клієнта | як виглядає ситуація клієнта, коли проблему вирішено, його ж словами |
+| lanes / clusters: direct, marketplace, adjacent, in-house, platform-native, incumbent, DIY, do nothing | типи альтернатив: прямі конкуренти · фрилансери з маркетплейсів · сусідні послуги · свій найм · платформи · старий постачальник · зробити самим · нічого не робити | з усім цим покупець вас порівнює, тому дивимось ширше за прямих конкурентів. |
+| low-ticket | недорогий офер | готові інструкції й шаблони, які клієнт застосовує сам |
+| Stage 0–5, стадія агенції | стадія розвитку компанії (0–5) | шість щаблів від «CEO робить усе» до «портфель напрямів»; від стадії залежить, що доречно робити зараз. |
+<!-- glossary:end -->
+
 ## Вихід (Notion)
 Під-сторінка **«09 · Buyer's Journey»**: таблиця стадій × 6 полів + примітка, що годує 10/11 +
 блок «Джерела / припущення». Українською; customer-language фрази — як є.

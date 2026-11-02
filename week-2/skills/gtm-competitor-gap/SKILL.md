@@ -13,7 +13,7 @@ argument-hint: "(reads market/ICP + sizing from steps 3-4 in Notion)"
 рерайту; за потреби може звузити ринок (03, рідко).
 
 Вхід — 03 (ринок/ICP), 04 (sizing). Прочитай
-`${CLAUDE_PLUGIN_ROOT}/reference/agency-stages.md`.
+`reference/agency-stages.md`.
 
 ## Реюз
 `competitor-finder` (цей пак, якщо встановлений) + `WebSearch` (реальні гравці, ціни, відгуки G2/Clutch). Кожен конкурент — з
@@ -45,6 +45,30 @@ Type · Positioning · Target tier · Pricing model · Strengths · **Weakness /
 - **Стадія 0-1:** 3 direct + кластери непрямих + GAP + **1 whitespace-рекомендація**. Чесно про «red ocean».
 - **Стадія 2:** + battlecards на топ-3 (strengths/weaknesses/how-to-win) + win/loss зачіпки.
 - **Стадія 3-4:** + emerging entrants + adjacent categories + quarterly refresh.
+
+## Terms and plain-language output
+
+<!-- glossary:start terms=competitor-lanes,win-parity-behind,whitespace,battlecard,table-stakes,red-ocean,beachhead,agency-stage -->
+Rules for every document a client or their team will read (review, roast, canvas, offer cards, instruction):
+
+1. **Open with «Словник цього документа»**: only the terms that actually appear in it, at most 10, each as «термін: що це простими словами». Like the definitions section of a contract.
+2. **No internal codes or letter scales in the text** (A/B/C, D L T E, BLEND numbers without words, Own/Shared/Generic, Z1.4, GATE 2.5, T1–T6). Write the meaning instead: «є цифра з клієнтом», not «A».
+3. **Use the plain form from the table below.** English stays only for tool names and for copy that ships in English (promises, hooks, subject lines). If the document is in another language, translate the plain form, never the internal term.
+4. **Do not score what cannot exist yet.** A block that depends on work not done (signal catalog, case studies, a previous step) gets «пропущено: спершу потрібно <що саме>», not a score.
+5. **Every section of a review opens with one concrete action** («до наступного дзвінка: …»), then at most five lines of why. No paragraph that only restates the framework.
+
+
+| Internal term (this skill) | Write for the reader | What it means |
+|---|---|---|
+| lanes / clusters: direct, marketplace, adjacent, in-house, platform-native, incumbent, DIY, do nothing | типи альтернатив: прямі конкуренти · фрилансери з маркетплейсів · сусідні послуги · свій найм · платформи · старий постачальник · зробити самим · нічого не робити | з усім цим покупець вас порівнює, тому дивимось ширше за прямих конкурентів. |
+| Win / Parity / Behind | де ви сильніші · нарівні · відстаєте | порівняння з конкурентами по кожній важливій для покупця речі. |
+| whitespace | вільне місце на ринку | те, що важливо клієнтам, але конкуренти цього не кажуть або не роблять |
+| battlecard, battle angle | шпаргалка проти конкурента | коротко: чим конкурент сильний, де слабкий і як говорити з покупцем, який його розглядає. |
+| table stakes | обов'язковий мінімум | те, що є в усіх і без чого вас не розглядають; з цього лист не починають |
+| red ocean | переповнений ринок | ніша, де всі обіцяють те саме і конкурують ціною. |
+| beachhead | перша вузька ніша | один сегмент, де вас найлегше вибрати; звідти розширюємося |
+| Stage 0–5, стадія агенції | стадія розвитку компанії (0–5) | шість щаблів від «CEO робить усе» до «портфель напрямів»; від стадії залежить, що доречно робити зараз. |
+<!-- glossary:end -->
 
 ## Вихід (Notion)
 Під-сторінка **«05 · Competitor + GAP»**: матриця (таблиця по кластерах) · battle angles · GAP
