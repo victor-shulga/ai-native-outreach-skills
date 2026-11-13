@@ -28,6 +28,18 @@ skill runs both tracks over the same page and returns copy you can paste into th
 
 Answer the user in their language. Write the site copy in the language of the site's audience.
 
+## Required tools
+
+Install these before running the skill. It still runs without the ones marked **Required**, but the result gets noticeably worse: the proof bank misses cases and reviews that sit on inner pages, so the new copy says less and the questions list grows.
+
+| Tool | Used for | Required? | Without it |
+|---|---|---|---|
+| Firecrawl (MCP) | Step 1: pulling the homepage and following the links behind cases and testimonials | Required | you paste the homepage text; proof on inner pages is missed |
+| Web search | finding independent review links (Clutch, G2, LinkedIn recommendations) for the proof bank | Recommended | fewer verified proof items; trust rules score lower |
+| Call recorder transcripts | the champion's own words for the canvas and the hero | Recommended | canvas cells are written in the company's words |
+
+Alternatives: Apify or the built-in web fetch can stand in for Firecrawl.
+
 ## Inputs
 
 - **URL** of the current homepage, or a pasted draft. Ask if neither is given.

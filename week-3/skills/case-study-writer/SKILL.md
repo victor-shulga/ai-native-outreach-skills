@@ -21,6 +21,17 @@ Produces a case study in the **Case Study Kit** structure — the canonical 12-s
 (result-first, scannable in 60 seconds). The case study is a salesperson: it convinces the
 NEXT prospect with numbers and a sequence of decisions, not adjectives.
 
+## Required tools
+
+Install these before running the skill. None of them is strictly required, the skill also runs on pasted input, but without them the result gets noticeably worse: more numbers and quotes end up as `[[уточнити]]` placeholders, and the SME interview has to be run by hand from the questionnaire.
+
+| Tool | Used for | Required? | Without it |
+|---|---|---|---|
+| Call recorder transcripts | extracting SME answers and verbatim quotes from project calls | Recommended | you run the 45-60 min interview and paste the answers |
+| Google Drive connector | project docs, reports, before/after data | Recommended | material is pasted by hand |
+| CRM or project analytics export | before → after metrics with a source | Recommended | results rely on numbers the team recalls; weak-numbers mode more often |
+| Firecrawl (MCP) | self-research of client context (section A) from the client's site | Recommended | About the Client is filled from the intake only |
+
 ## What this skill produces
 
 1. **Website case page** — full 12-section copy with inline visual markers, ready for CMS.

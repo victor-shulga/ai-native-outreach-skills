@@ -9,9 +9,19 @@ Turn an IT-agency client into 5–10 outbound-testable offer-bets, fast. Each be
 
 **Language:** reasoning + commentary in Ukrainian; the offers, promises, and cold hooks in English (outbound usually targets the West). Override if the user says otherwise.
 
-## What you need
-- **Client website URL** (required) — the source of services, verticals, ICP signals, and case studies.
-- Optional: fixed ICPs to build under, constraints ("US only", "no enterprise", "fixed-price only"), or a best-client example.
+## Required tools
+
+Install these before running the skill. It still runs without the ones marked **Required**, but the result gets noticeably worse: offer-bets rest on the services you remember, and proof slots fill with `[TODO]` instead of real cases from the site.
+
+| Tool | Used for | Required? | Without it |
+|---|---|---|---|
+| Firecrawl (MCP) | Phase 1: scraping services, verticals, ICP signals and case studies with numbers | Required | you paste the site text by hand; the proof bank is thin |
+| Google Drive connector | reading client material kept in Google Docs | Recommended | Docs content is pasted by hand (web fetch sees only the Docs page shell) |
+| Google Sheets | Phase 7: writing winners into the «Service – use case – offer» 12-column template (after you confirm) | Recommended | the ranked table and cards stay in chat |
+
+Alternatives: Apify (`rag-web-browser`) or the built-in WebFetch can stand in for Firecrawl.
+
+Inputs: **client website URL** (required) for services, verticals, ICP signals and case studies. Optional: fixed ICPs to build under, constraints ("US only", "no enterprise", "fixed-price only"), or a best-client example.
 
 If the user already gave fixed ICPs, build under those instead of enumerating your own (Phase 2 narrows to them).
 

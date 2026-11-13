@@ -18,6 +18,22 @@ Generates a full 10-hypothesis outreach matrix for an IT agency client, starting
 
 ---
 
+## Required tools
+
+Install these before running the skill. It still runs without the ones marked **Required**, but the result gets noticeably worse: the TAM column becomes a guess instead of a count from a database, and the site read gets shallower.
+
+| Tool | Used for | Required? | Without it |
+|---|---|---|---|
+| Firecrawl (MCP) | Phase 1: reading the homepage and /services, /case-studies, /industries | Required | falls back to built-in web fetch, which misses JS-rendered pages; with neither you need a text brief |
+| AI Ark, Icypeas or MoltSets (MCP) | TAM count per ICP (industry × size × geo) behind each hypothesis | Recommended | TAM is an estimate with a stated source, not a counted number |
+| Sales Navigator | validating TAM and persona counts before handoff | Recommended | the "validate TAM" next step stays manual |
+| Clay | checking how easily each signal is detected, for the "Easy to scrape" factor | Recommended | that factor is scored from the catalog description only |
+
+Alternatives: Apollo can stand in for these databases; Exa (MCP) or built-in web fetch can stand in for Firecrawl.
+
+---
+
+
 ## Required input
 
 One of:

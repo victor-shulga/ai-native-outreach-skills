@@ -13,6 +13,19 @@ argument-hint: "(reads persona + positioning + VP + competitor + offers from ste
 Вхід — 03 (персона/JTBD), 06 (позиціонування), 07 (VP, dream outcome, objections), 05 (alternatives), 08 (offers/ladder).
 Прочитай `reference/agency-stages.md`.
 
+## Required tools
+
+Install these before running the skill. It still runs without the ones marked **Required**, but the result gets noticeably worse: mindsets and objections are written in your words instead of the customer's, because steps 3–8 and real conversations are not in reach.
+
+| Tool | Used for | Required? | Without it |
+|---|---|---|---|
+| Notion (MCP) | reading steps 03, 05, 06, 07, 08 and writing «09 · Buyer's Journey» | Required | you paste persona, VP, alternatives and offers by hand; the result stays in the chat |
+| Call recorder transcripts | customer language per stage: questions, objections, triggers | Recommended | mindset lines are hypotheses |
+| Telegrin | posts where buyers ask about the problem in communities | Recommended | what buyers google and ask is inferred |
+| Firecrawl (MCP) | reading alternatives' sites and content for the touchpoint per stage | Recommended | touchpoints come from step 05 notes only |
+
+Alternatives: Exa (MCP) can stand in for Firecrawl.
+
 ## Реюз
 `deep-company-analyser` (customer language per стадія) · buying-process поля з VP-канвасу (07).
 

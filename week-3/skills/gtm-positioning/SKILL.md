@@ -29,6 +29,17 @@ argument-hint: "(reads competitor/whitespace 05 + market/ICP 03 + stage 02 in No
 Прочитай `reference/agency-stages.md` (стадії §1, SMF §2, overshoot §8) і
 `reference/gtm-frameworks.md` §3 (2×2 matrix), §4 (**Peršolja 8-step**, UVP/USP), §9 (анти-патерни).
 
+## Required tools
+
+Install these before running the skill. It still runs without the ones marked **Required**, but the result gets noticeably worse: the best-customer pattern and the enemy become hypotheses from the site alone instead of being backed by deals and the buyer's own words.
+
+| Tool | Used for | Required? | Without it |
+|---|---|---|---|
+| Notion MCP | reading steps 02, 03 and 05, writing the «06 · Positioning» sub-page | Required | stage, ICP and whitespace are pasted by hand; the result stays in chat |
+| Call recorder transcripts | verbatim buyer language for the enemy, benefits and statement | Recommended | the statement is written in the team's words; more fields carry low confidence |
+| CRM export (Twenty, HubSpot) | finding the 3-5 clients who bought fast, got results and paid well | Recommended | the best-customer pattern rests on what the founder remembers |
+| Firecrawl (MCP) | reading the client's site and case pages for assets and proof | Recommended | assets and proof are pasted by hand; propose-by-default hypotheses get weaker |
+
 ## Реюз
 `competitor-finder` (цей пак) / артефакт 05 (НЕ дублюй — читай) · `persona-insights-analysis` (цей пак) або
 `account-dossier` (account-management-skills) — мова клієнта · `value-prop-lister` (sales-engine-skills) ·

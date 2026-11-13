@@ -14,7 +14,17 @@ Analyze team capacity and plan resource allocation.
 /capacity-plan $ARGUMENTS
 ```
 
-## What I Need From You
+## Required tools
+
+Install these before running the skill. None of them is strictly required, the skill also runs on pasted input, but without them the result gets noticeably worse: utilization is built from hours people remember instead of the tickets and calendars they actually have.
+
+| Tool | Used for | Required? | Without it |
+|---|---|---|---|
+| Project tracker (ClickUp, Jira, Asana via MCP) | current workload, ticket assignments, upcoming sprint or quarter commitments | Recommended | you describe the workload by hand; allocation is an estimate |
+| Calendar (Google Calendar) | PTO, holidays and recurring meeting load per person | Recommended | available hours assume a full week; meeting load is guessed |
+| Google Sheets | importing a team roster or timesheet export | Recommended | paste the table into the chat |
+
+Inputs to provide:
 
 - **Team size and roles**: Who do you have?
 - **Current workload**: What are they working on? (Upload from project tracker or describe)

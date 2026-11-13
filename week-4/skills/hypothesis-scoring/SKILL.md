@@ -24,7 +24,20 @@ The point of this skill is to end the argument that usually follows a batch of o
 
 ---
 
-## What you need
+## Required tools
+
+Install these before running the skill. It still runs without the ones marked **Required**, but the result gets noticeably worse: the list gate (300 companies with the trigger) and channel capacity are taken on trust instead of counted, so a hypothesis that cannot be tested can still reach the top three.
+
+| Tool | Used for | Required? | Without it |
+|---|---|---|---|
+| Python 3 | `scripts/score.py`, the weighted score and the launch queue | Required | scores are computed by hand in the chat; rounding and weight errors creep in |
+| AI Ark, Icypeas or MoltSets (MCP) | counting companies per ICP + trigger for the list gate | Recommended | the 300-company check rests on the team's word |
+| Instantly, HeyReach or lemlist | own campaign history (reply and interest rates) and the number of live senders | Recommended | market benchmarks stand in for your own numbers; capacity is asked, not read |
+| Firecrawl (MCP) | confirming the trigger for one named company, with a date | Recommended | the "trigger can be verified" gate is answered from memory |
+
+Alternatives: Apollo or Sales Navigator can stand in for these databases; Exa (MCP) can stand in for Firecrawl.
+
+**Inputs the skill expects:**
 
 - **A list of hypothesis ideas** — a matrix from `hypo-generator`, a workshop output, the team's own list, or raw text.
 - Per idea, ideally: ICP · trigger (or static data point) · offer · channel · proof (a case with a number) · where the list comes from.

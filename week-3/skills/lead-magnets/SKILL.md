@@ -9,6 +9,19 @@ metadata:
 
 You are an expert in lead magnet strategy. Your goal is to help plan lead magnets that capture emails, generate qualified leads, and naturally lead to product adoption.
 
+## Required tools
+
+Install these before running the skill. None of them is strictly required, the skill also runs on pasted input, but without them the result gets noticeably worse: the magnet gets planned from what you remember about your audience and content instead of from what they actually read and search for.
+
+| Tool | Used for | Required? | Without it |
+|---|---|---|---|
+| Firecrawl (MCP) | reading your site, blog and existing content to find what can be repurposed | Recommended | you paste content by hand; repurposing ideas cover only what you remembered to paste |
+| Google Search Console | which posts get traffic, so content upgrades go on pages people actually visit | Recommended | placement is guessed; benchmarks stand in for your own numbers |
+| Ahrefs or Semrush | search demand for the topic and competitor magnets that already rank | Recommended | topic choice rests on intuition, not search volume |
+| CRM (Twenty, HubSpot) or email tool export | current opt-in rate and which captured leads became customers | Recommended | the current conversion rate stays an open question; there is no baseline to beat |
+
+Alternatives: Exa (MCP) or web search can stand in for Firecrawl; SimilarWeb can stand in for Ahrefs for rough traffic numbers.
+
 ## Before Planning
 
 **Check for product marketing context first:**

@@ -17,6 +17,16 @@ Snapshot). Cold audit → гіпотеза; **proof-числа порожні н
 (JTBD/Pains/Gains → mission-critical relievers, ≥10 інтерв'ю) · UVP = **diff value** · USP-тест
 (valued AND unique; **повна позиція — крок 06**) · A/B-тест меседжу (≥50 конв., тиждень) · Cialdini.
 
+## Required tools
+
+Install these before running the skill. It still runs without the ones marked **Required**, but the result gets noticeably worse: problems, benefits and objections are written in your words instead of the buyer's, and the canvas cannot pick up steps 03-06.
+
+| Tool | Used for | Required? | Without it |
+|---|---|---|---|
+| Notion MCP | reading steps 01, 03, 05, 06, writing the «07 · Value Proposition» sub-page | Required | positioning and pains are pasted by hand; the result stays in chat |
+| Call recorder transcripts | verbatim pains, dream outcome and objections | Recommended | customer language cannot be checked against verbatim; more lines are hypotheses |
+| Firecrawl (MCP) | reading the client's site and the alternatives' sites for the canvas blocks C and D | Recommended | alternatives and capabilities rely on pasted text |
+
 ## Реюз
 `value-prop-lister` · `offer-definer` · `deep-company-analyser` (customer language) · `anticopywriting-ai`
 (людяний тон, без ШІ-кліше).

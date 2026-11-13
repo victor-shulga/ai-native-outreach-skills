@@ -28,6 +28,18 @@ Two rules that carry the whole thing:
    blind judge that did not build the page — blocks it again on quality. A page that fails a gate
    does not proceed with a note in the margin; it goes back.
 
+## Required tools
+
+Install these before running the skill. It still runs without the ones marked **Required**, but the result gets noticeably worse: the architecture gate and the post-launch reviews run without data, so cannibalisation and baseline become guesses.
+
+| Tool | Used for | Required? | Without it |
+|---|---|---|---|
+| Google Search Console | G-A baseline for an existing URL, 30/90-day reviews (impressions, position) | Required | no baseline and no post-launch review; new pages still get built |
+| Ahrefs or Semrush | cannibalisation check and query research before writing | Recommended | cannibalisation is checked only against the site's own page list |
+| Firecrawl (MCP) | reading existing site pages for the blueprint, internal links and proof | Recommended | page inventory and proof are pasted by hand |
+| Lighthouse or PageSpeed Insights | G-T performance and accessibility thresholds | Recommended | the technical gate relies on a manual check |
+| Claude Code | spawning a fresh subagent as the blind judge (G-J) | Recommended | in claude.ai run the judge in a new chat with only the draft and the scorecard |
+
 ---
 
 ## Phase 0 — Intake

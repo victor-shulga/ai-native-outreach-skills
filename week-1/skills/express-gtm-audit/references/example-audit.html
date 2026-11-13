@@ -305,6 +305,18 @@ td.r,th.r{text-align:right}
 .hn.word b{font-size:26px;line-height:1.1;letter-spacing:-.01em}
 @media (max-width:760px){.hn.word b{font-size:22px}}
 </style>
+<style>
+/* v8: main question per block (Viktor 04.11.2026) */
+.qa{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:6px 20px;align-items:start;padding:16px 18px;border-radius:14px;background:var(--card);border-left:4px solid var(--amber)}
+.qa .q{font:700 16px/1.3 var(--display);color:var(--ink)}
+.qa .q small{display:block;font:600 11px/1.4 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.qa .a b{display:block;font:800 24px/1.15 var(--display);color:var(--amber);margin-bottom:6px}
+.qa .a p{margin:0;font-size:14px;line-height:1.45;color:var(--body)}
+.qa.good{border-left-color:var(--forest)} .qa.good .a b{color:var(--forest)}
+.qa.bad{border-left-color:var(--coral-deep)} .qa.bad .a b{color:var(--coral-deep)}
+.qa.na{border-left-color:var(--muted)} .qa.na .a b{color:var(--muted)}
+@media (max-width:760px){.qa{grid-template-columns:minmax(0,1fr)}}
+</style>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- _shared/mobile-guard.html -->
 <!--
@@ -406,10 +418,11 @@ td.r,th.r{text-align:right}
   <!-- 01 -->
   <section class="sec">
     <div class="bhead"><span class="bn">01</span><h2>GTM-стратегія: ціни на 3 формати, 4 кейси на сайті з «40+»</h2><span class="bs num">3,5<small> / 5</small></span></div>
+    <div class="qa "><div class="q"><small>Головне питання</small>Стратегія чітка і допомагає лідогенерації?</div><div class="a"><b>Частково</b><p>Допомагає: чіткий ICP і ціни на 3 формати. Заважає: заявлено 40+ кейсів, показано 4, і немає нічого, за що покупець залишив би пошту до дзвінка.</p></div></div>
     <div class="hero-nums">
       <div class="hn good word"><b>Лоу-тікет вхід</b><span>аудит €650 до 5 днів, зараховується в проєкт</span></div>
       <div class="hn good word"><b>Ціна відома до старту</b><span>проєкт €3 000–8 000, 2–3 тижні, оплата по етапах</span></div>
-      <div class="hn good word"><b>Вузький ICP</b><span>CleanTech і DeepTech: LDES, BESS, водень, декарбонізація, EPC</span></div>
+      <div class="hn good word"><b>Чіткий ICP</b><span>CleanTech і DeepTech: LDES, BESS, водень, декарбонізація, EPC</span></div>
       <div class="hn bad word"><b>Доказів мало</b><span>заявлено 40+ кейсів, показано 4, окремих сторінок 0</span></div>
     </div>
     <div class="panel"><div class="ptitle"><h3>Розклад на складові: що є і чого бракує</h3><span class="tip" tabindex="0">i<span class="tt">Зелений = є, жовтий = частково, кораловий = немає. Value Proposition за рівнянням цінності: бажаний результат, докази, час до результату, зусилля клієнта. ICP: кожна складова 1–5.</span></span></div><div class="comp3"><div class="cc good"><div class="cc-h"><h3>Офер</h3><b class="num">6<small> з 6</small></b></div><div class="seg"><i class="y"></i><i class="y"></i><i class="y"></i><i class="y"></i><i class="y"></i><i class="y"></i></div><ul class="cl"><li><span class="st ok">✓</span><span><b>Вхідний продукт</b>аудит візуальної комунікації</span></li><li><span class="st ok">✓</span><span><b>Ціна</b>€650 · проєкт €3 000–8 000 · 3D-основа €2 200</span></li><li><span class="st ok">✓</span><span><b>Строк</b>аудит до 5 днів, проєкт 2–3 тижні</span></li><li><span class="st ok">✓</span><span><b>Що на руках</b>PDF 10–15 сторінок, roadmap на 2 квартали, сесія 60 хв</span></li><li><span class="st ok">✓</span><span><b>Зняття ризику</b>стиль-фрейм не підійшов: платите лише €650; €650 зараховуються 30 днів</span></li><li><span class="st ok">✓</span><span><b>Наступний крок</b>аудит → проєкт → підписка від 3 місяців</span></li></ul></div><div class="cc good"><div class="cc-h"><h3>Value Proposition</h3><b class="num">3,5<small> з 4</small></b></div><div class="seg"><i class="y"></i><i class="p"></i><i class="y"></i><i class="y"></i></div><ul class="cl"><li><span class="st ok">✓</span><span><b>Бажаний результат</b>«вигравайте тендери й швидше проходьте погодження»</span></li><li><span class="st part">~</span><span><b>Докази</b>клієнт з LDES: погодження міста й 4 медіа; але 3 з 4 кейсів не відкриваються, «35%» без джерела</span></li><li><span class="st ok">✓</span><span><b>Час до результату</b>перші матеріали за 1–2 тижні</span></li><li><span class="st ok">✓</span><span><b>Зусилля клієнта</b>CAD, дані майданчика й одна людина, що погоджує</span></li></ul></div><div class="cc good"><div class="cc-h"><h3>ICP</h3><b class="num">3,7<small> / 5</small></b></div><div class="seg"><i class="p"></i><i class="y"></i><i class="y"></i></div><ul class="cl"><li><span class="st part">~</span><span><b>Цільові ринки</b>3/5 · Європа і США; половина відгуків від українських IT-компаній</span></li><li><span class="st ok">✓</span><span><b>Тип компанії</b>4/5 · LDES, BESS, водень, декарбонізація, EPC, DeepTech до будівництва</span></li><li><span class="st ok">✓</span><span><b>Персона</b>4/5 · CMO, CEO, Project Development Director перед раундом чи тендером</span></li></ul></div></div></div>
@@ -475,6 +488,7 @@ td.r,th.r{text-align:right}
   <!-- 02 -->
   <section class="sec">
     <div class="bhead"><span class="bn">02</span><h2>Команда: 4 людини на сайті з 9, є керівник продажів</h2><span class="bs num">3,0<small> / 5</small></span></div>
+    <div class="qa "><div class="q"><small>Головне питання</small>Чи є кому виконувати план без фаундера?</div><div class="a"><b>Частково</b><p>Керівник продажів є, на сайті 4 людини з 9. Дзвінки веде засновник, власника ринку США не видно.</p></div></div>
     <div class="tbl">
       <table>
         <thead><tr><th>Роль</th><th>Хто</th><th></th></tr></thead>
@@ -492,6 +506,14 @@ td.r,th.r{text-align:right}
   <!-- 03 -->
   <section class="sec">
     <div class="bhead"><span class="bn">03</span><h2>Лідогенерація: <span class="hl-bad">1</span> сторінка в індексі, <span class="hl-bad">~0</span> візитів з Google, DMARC немає</h2><span class="bs num">2,0<small> / 5</small></span></div>
+    <div class="qa "><div class="q"><small>Головне питання</small>Звідки ліди?</div><div class="a"><b>Ймовірно з рекомендацій</b><p>Сліди ведуть до рекомендацій і LinkedIn засновника. З Google ~0 візитів, власних подій і лід-магнітів не видно. Це висновок: точна розбивка лежить у CRM.</p></div></div>
+    <div class="panel">
+      <div class="ptitle"><h3>Звідки ліди: 10 каналів</h3>
+        <span class="tip" tabindex="0">i<span class="tt">Факти з публічних джерел. Колонка «Чи дає ліди» = висновок за слідами: реальної розбивки за джерелом ззовні не видно, вона лежить у CRM.</span></span>
+      </div>
+      <div class="tbl"><table><thead><tr><th>Канал</th><th>Що видно</th><th>Чи дає ліди</th></tr></thead><tbody><tr><td><b style="color:var(--ink)">Рекомендації</b></td><td>6 рекомендацій у LinkedIn засновника · клієнт з LDES кілька років</td><td class="yes">Ймовірно головний</td></tr><tr><td><b style="color:var(--ink)">LinkedIn</b></td><td>Заголовок засновника під ICP, пости з #cleantech, частоту не рахував</td><td class="mid2">Ймовірно другий</td></tr><tr><td><b style="color:var(--ink)">Портфоліо-платформа</b></td><td>2 профілі: студії і засновника</td><td class="mid2">Можливо, заявок не видно</td></tr><tr><td><b style="color:var(--ink)">Конференції</b></td><td>Expo є послугою, власних виступів не видно</td><td class="no2">Слідів немає</td></tr><tr><td><b style="color:var(--ink)">Вебінари</b></td><td>Записів і реєстрацій немає</td><td class="no2">Слідів немає</td></tr><tr><td><b style="color:var(--ink)">Аутрич</b></td><td>DMARC немає, DKIM не знайшов</td><td class="no2">Інфраструктура не готова</td></tr><tr><td><b style="color:var(--ink)">Лід-магніти</b></td><td>Нічого, за що залишити пошту</td><td class="no2">Слідів немає</td></tr><tr><td><b style="color:var(--ink)">AI-асистенти</b></td><td>Не міряли</td><td class="num">?</td></tr><tr><td><b style="color:var(--ink)">Реклама</b></td><td>Тегів рекламних мереж немає</td><td class="no2">Слідів немає</td></tr><tr><td><b style="color:var(--ink)">Google</b></td><td>~0 візитів зі США, 1 ключове слово</td><td class="no2">Ні</td></tr></tbody></table></div>
+    </div>
+    
     <div class="hero-nums">
       <div class="hn bad word"><b>Пошуку нема що показати</b><span>весь сайт на одній сторінці, окремих сторінок послуг немає</span></div>
       <div class="hn bad word"><b>Google не приводить</b><span>~0 візитів зі США, 1 ключове слово</span></div>
@@ -518,6 +540,7 @@ td.r,th.r{text-align:right}
   <!-- 04 -->
   <section class="sec">
     <div class="bhead"><span class="bn">04</span><h2>Продажі: календар на кожній кнопці, ціни у FAQ</h2><span class="bs num">4,5<small> / 5</small></span></div>
+    <div class="qa good"><div class="q"><small>Головне питання</small>Продажі системні?</div><div class="a"><b>Ззовні так</b><p>Календар на кожній кнопці, план дзвінка з 3 пунктів, ціни у FAQ. Етапів воронки й конверсій ззовні не видно.</p></div></div>
     <div class="tbl">
       <table>
         <thead><tr><th>Критерій</th><th>Бал</th><th>Що видно</th></tr></thead>
@@ -533,6 +556,7 @@ td.r,th.r{text-align:right}
   <!-- 05 -->
   <section class="sec">
     <div class="bhead"><span class="bn">05</span><h2>Акаунт-менеджмент: клієнт з LDES кілька років, IT-клієнт 2 проєкти</h2><span class="bs num">3,5<small> / 5</small></span></div>
+    <div class="qa "><div class="q"><small>Головне питання</small>Клієнти лишаються і купують більше?</div><div class="a"><b>Частково</b><p>Клієнт з LDES кілька років, IT-клієнт 2 проєкти, є підписка від 3 місяців. Цифр утримання немає.</p></div></div>
     <div class="tbl">
       <table>
         <thead><tr><th>Критерій</th><th>Бал</th><th>Що видно</th></tr></thead>
@@ -547,6 +571,7 @@ td.r,th.r{text-align:right}
   <!-- 06 -->
   <section class="sec">
     <div class="bhead"><span class="bn">06</span><h2>Процеси: Microsoft Clarity без GA4, у політиці його немає</h2><span class="bs num">2,0<small> / 5</small></span></div>
+    <div class="qa bad"><div class="q"><small>Головне питання</small>Компанія бачить, який канал дає гроші?</div><div class="a"><b>Схоже, ні</b><p>На сайті лише Clarity, GA4 немає. Куди йдуть бронювання з Calendly, не видно.</p></div></div>
     <div class="tbl">
       <table>
         <thead><tr><th>Критерій</th><th>Бал</th><th>Що видно</th></tr></thead>

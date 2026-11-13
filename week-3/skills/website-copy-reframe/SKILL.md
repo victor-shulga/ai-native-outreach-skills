@@ -35,6 +35,19 @@ If most of the target market cannot answer these, broad and clever messaging has
 Answer the user in their language. Copy for the site is written in the language of the site's
 audience.
 
+## Required tools
+
+Install these before running the skill. It still runs without the ones marked **Required**, but the result gets noticeably worse: the audit scores only the text you paste, and the service-page SEO map is a guess instead of terms people search for.
+
+| Tool | Used for | Required? | Without it |
+|---|---|---|---|
+| Firecrawl (MCP) | Step 1: scraping the homepage, service pages and proof (logos, cases, awards) | Required | you paste the copy; proof on inner pages is missed |
+| Google Drive / Google Docs connector | delivering the copy deck as a Google Doc | Recommended | the deck is saved as .docx or markdown |
+| Ahrefs or Semrush | service-page keyword cluster with real search volumes | Recommended | the keyword cluster is written from the ICP's language without volumes |
+| Google Search Console | queries the site already ranks for | Recommended | no baseline; the SEO map ignores existing traffic |
+
+Alternatives: Apify or the built-in web fetch can stand in for Firecrawl.
+
 ## Three modes (pick in Step 0)
 
 | Mode | Input | Output |

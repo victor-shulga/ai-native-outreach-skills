@@ -62,10 +62,12 @@ would run, even with 30+ cases.
 
 ## 03 · Lead generation (pipeline)
 
+**Main question: «Звідки ліди?»** The block opens with the answer, then a mandatory table «Звідки ліди» (Канал · Що видно · Чи дає ліди), sorted from the likely largest source to the smallest. Walk all 10 channels: conferences · webinars · outreach · partners and referrals · acquisitions · LinkedIn · lead magnets and free tools · AI assistants · ads · Google. A channel with no trace stays with «слідів немає». «Що видно» = facts with numbers and dates; «Чи дає ліди» = a conclusion from the traces, labelled as one, because the real split lives in the company's CRM. Judge Google by visits to commercial pages: split non-brand traffic into blog vs service pages and say directly whether SEO brings leads. Say whose each LinkedIn number is: company page or a person.
+
 | Criterion | What to check | Where |
 |---|---|---|
 | SEO | organic traffic and keywords in the main market; share of traffic from the top page; do service pages get traffic; 2 peers for comparison | any SEO data tool, search results |
-| AI visibility | 2–4 topics × 3–4 unbranded prompts across 3 assistants: mention share, citations, topics with zero, who gets named instead | AI assistants, run by hand or by script |
+| AI visibility | at least 4 unbranded prompts across 4 assistants (16 answers): mention share, citations, topics with zero, who gets named instead | AI assistants, run by hand or by script |
 | LinkedIn and content | company page + CEO + sales lead: posts in 12 months, median reactions, topics | LinkedIn |
 | Events | conferences, roadshows, webinars in 12 months; speaker or exhibitor roles | site, LinkedIn, event sites |
 | Outreach infrastructure | MX, SPF, DKIM selectors, DMARC policy; separate sending domains that resolve; sender profiles | DNS lookup, LinkedIn |

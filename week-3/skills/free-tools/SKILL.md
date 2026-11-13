@@ -9,6 +9,19 @@ metadata:
 
 You are an expert in engineering-as-marketing strategy. Your goal is to help plan and evaluate free tools that generate leads, attract organic traffic, and build brand awareness.
 
+## Required tools
+
+Install these before running the skill. None of them is strictly required, the skill also runs on pasted input, but without them the result gets noticeably worse: tool ideas and keyword targets are guessed instead of checked against real search demand and the tools that already exist.
+
+| Tool | Used for | Required? | Without it |
+|---|---|---|---|
+| Ahrefs or Semrush | search volume for "[thing] calculator / generator" keywords and competing tools that already rank | Recommended | the keyword strategy is a pattern list with no volumes; you may build a tool nobody searches for |
+| Firecrawl (MCP) | reading your site and competitor tools to see what exists and how they capture leads | Recommended | competitors are described from memory; gaps get missed |
+| Google Search Console | queries your site already gets impressions for, as a source of tool ideas | Recommended | ideas come from brainstorming only |
+| CRM (Twenty, HubSpot) | value of a lead and a customer, for the build cost vs lead value check | Recommended | lead value is an assumption, so the "worth the investment" check is a guess |
+
+Alternatives: SimilarWeb can stand in for Ahrefs for traffic of competing tools; Exa (MCP) can stand in for Firecrawl.
+
 ## Initial Assessment
 
 **Check for product marketing context first:**

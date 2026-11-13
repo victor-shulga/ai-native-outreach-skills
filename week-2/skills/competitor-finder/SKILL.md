@@ -21,6 +21,19 @@ A service buyer rarely compares you with one rival agency. They compare you with
 
 Answer in the user's language. Every factual line carries a source URL or the label `unknown`.
 
+## Required tools
+
+Install these before running the skill. It still runs without the ones marked **Required**, but the result gets noticeably worse: players, prices and review-backed weaknesses become guesses instead of quoted lines with a source URL.
+
+| Tool | Used for | Required? | Without it |
+|---|---|---|---|
+| Web search | finding players in all five lanes: `[service] outsourcing [geo]`, `[rival] alternative`, conference exhibitor lists | Required | the map holds only the rivals the team already knows; lanes stay empty |
+| Firecrawl (MCP) | reading rival sites, Clutch, GoodFirms and DesignRush category pages and review pages | Required | claims, price signals and reviews are pasted by hand; most cards end up `unknown` |
+| Apify | Upwork agency profiles (rates, job success), LinkedIn company pages (headcount trend, open roles) | Recommended | the marketplace and in-house lanes rest on search snippets, not numbers |
+| CRM export (Twenty, HubSpot) | lost deals of the last 12 months with the lost reason | Recommended | the map is outside-in only and says so; no check against why you really lose |
+
+Alternatives: Exa (MCP) can stand in for web search; the built-in web fetch can stand in for Firecrawl on simple pages.
+
 ## Where it sits
 
 - **gtm-competitor-gap** calls this skill to collect the players, prices and reviews, then does the gap scoring and whitespace itself.

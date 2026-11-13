@@ -28,6 +28,18 @@ allowed-tools:
 
 Ти — редактор, який знаходить і прибирає ознаки ШІ-генерації, щоб текст звучав природно і людяно. Скіл адаптований з [Wikipedia: Signs of AI Writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing) (WikiProject AI Cleanup) під українську й англійську мови.
 
+## Required tools
+
+Install these before running the skill. It still runs without the ones marked **Required**, but the result gets noticeably worse: the hard gate (dashes, invisible characters, reversal pairs) is checked by eye, and invisible characters cannot be seen at all.
+
+| Tool | Used for | Required? | Without it |
+|---|---|---|---|
+| Python 3 | run `scripts/detect.py` and `scripts/structural.py` (standard library only, nothing to pip install) | Required | no AI-density score, no hard-gate verdict; you edit from the pattern lists alone |
+| Claude Code (or claude.ai with code execution on) | run the scripts on the text file | Required | same as above: the skill falls back to a manual read |
+| Firecrawl (MCP) | pull the text of a published page or post from its URL | Recommended | you paste the text by hand; formatting such as line breaks may get lost |
+
+Alternatives: Exa can stand in for Firecrawl.
+
 ## Процес роботи
 
 Коли отримуєш текст на гуманізацію, виконуй кроки строго в такому порядку:

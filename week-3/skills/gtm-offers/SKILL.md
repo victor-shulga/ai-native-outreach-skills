@@ -16,6 +16,18 @@ argument-hint: "(reads market/tiers/persona + positioning + VP + pains from step
 **WTP** (Van Westendorp / Gabor-Granger / presale — не питай «скільки заплатили б») · конкуренти **±10-30%** ·
 **sweet spot: ~70% купують** (ок втратити 20-30%) · 6 моделей · packaging 2-5 тірів · revise кожні 3-6 міс.
 
+## Required tools
+
+Install these before running the skill. It still runs without the ones marked **Required**, but the result gets noticeably worse: price ranges lose their anchor in competitor prices and real deal sizes, and the offers cannot pick up steps 03-07.
+
+| Tool | Used for | Required? | Without it |
+|---|---|---|---|
+| Notion MCP | reading steps 03-07, writing the «08 · Offers» sub-page | Required | market, VP and pains are pasted by hand; the result stays in chat |
+| Firecrawl (MCP) | competitor pricing and package pages, client case pages for proof | Recommended | the ±10-30% price check is skipped; proof fields stay TBD more often |
+| CRM export (Twenty, HubSpot) | real deal sizes and pilot prices | Recommended | price bands are pure ranges marked «валідувати» |
+
+Alternatives: web search or Exa (MCP) can stand in for Firecrawl when you only need public price signals.
+
 ## Реюз
 `offer-factory` (генерація offer-bets ICP×pain×mechanism) · `offer-ladder` (вертикальна драбина) ·
 `offer-definer` (features→outcome). `anticopywriting-ai` — щоб назви/копі не пахли ШІ.

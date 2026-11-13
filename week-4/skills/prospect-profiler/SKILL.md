@@ -28,6 +28,20 @@ point is tagged **[confirmed]** (grounded in a cited signal / source / quote) or
 hypothesis from firmographics). Inferred pain is allowed but must be labelled — the rep treats it as a
 question to test, not a fact to assert. If you can't ground or honestly infer it, leave it out.
 
+## Required tools
+
+Install these before running the skill. None of them is strictly required, the skill also runs on pasted input, but without them the result gets noticeably worse: more cards come out with data_quality LOW and pain tagged [inferred], because nothing is checked against a live source.
+
+| Tool | Used for | Required? | Without it |
+|---|---|---|---|
+| MoltSets (MCP) | filling a missing role, title or LinkedIn profile for the contact on the card | Recommended | a wrong or missing contact goes to notes as "verify" |
+| Apify | the contact's recent LinkedIn posts, the evidence for comm_style | Recommended | comm_style defaults to direct |
+| Firecrawl (MCP) | opening the signal source URL to confirm it is live and quote it | Recommended | the signal is carried over unchecked; fewer pains reach [confirmed] |
+| Google Sheets or CRM (Twenty, HubSpot) | reading the scored list and writing cards back next to each account | Recommended | you paste the list in and copy the cards out by hand |
+
+Alternatives: AI Ark or Icypeas (MCP) can stand in for MoltSets; Exa (MCP) can stand in for Firecrawl.
+
+
 ---
 
 ## When to use / inputs

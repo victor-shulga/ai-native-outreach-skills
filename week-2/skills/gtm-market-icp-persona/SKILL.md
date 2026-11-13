@@ -18,6 +18,19 @@ Cold audit → це гіпотеза з offer + мови клієнта + тех
 Формат полів персон — за ICP-шаблоном Viktor'а (Ideal Company / DM / User / Anti-ICP).
 (Окремого кроку для персон немає: персони — рівень 3 тут.)
 
+## Required tools
+
+Install these before running the skill. It still runs without the ones marked **Required**, but the result gets noticeably worse: market Size and Accessibility scores and tier sizes are guesses, and personas are not tied to the client's own words.
+
+| Tool | Used for | Required? | Without it |
+|---|---|---|---|
+| Notion (MCP) | reading Snapshot (01) and Stage (02), writing «03 · Market → ICP → Persona» | Required | you paste the previous steps by hand; the result stays in the chat |
+| AI Ark, Icypeas or MoltSets (MCP) | counting accounts per market and per tier (employees, geography) | Recommended | Size and Accessibility scores are estimates |
+| Web search or Firecrawl (MCP) | pain and demand evidence per market, competitor saturation | Recommended | Pain/Demand and Competition scores rest on general knowledge |
+| Call recorder transcripts | verbatim pains and triggers for the decision-maker and champion | Recommended | personas stay hypotheses marked «уточнити на discovery» |
+
+Alternatives: Apollo or Sales Navigator can stand in for these databases.
+
 ## Реюз
 - `icp-builder` (outbound-engine-skills) / `account-dossier` (account-management-skills) для синтезу;
   `market-research-edp` (цей пак) / `niche-data-finder` (outbound-engine-skills) — для оцінки ринків і розміру.

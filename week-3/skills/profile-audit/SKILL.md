@@ -14,6 +14,17 @@ Standalone-тул. Аудитує поточний профіль проти м�
 **Вхід:** `$ARGUMENTS` — LinkedIn-профіль людини (+ клієнт). Каденс: раз на старті +
 після ребрендів/зміни позиціонування.
 
+## Required tools
+
+Install these before running the skill. It still runs without the ones marked **Required**, but the result gets noticeably worse: the audit works from a pasted profile and has no strategy to check the profile against.
+
+| Tool | Used for | Required? | Without it |
+|---|---|---|---|
+| Apify | `apimaestro/linkedin-profile-detail` and `apimaestro/linkedin-profile-posts`: headline, About, experience, banner, skills, topics | Required | you paste the profile sections by hand; topics from posts are missed |
+| Notion (MCP) | reading the client's strategy page and writing the «Profile Audit» page | Required | no strategy check, assumptions marked; the audit is returned in the chat |
+| Firecrawl (MCP) | reading the site when there is no strategy page | Recommended | positioning is taken from the profile only |
+| Figma or Canva | turning the banner brief into a banner | Recommended | the brief is handed to a designer as text |
+
 ## Що тягнемо
 
 1. **Поточний профіль (Apify):** `apimaestro/linkedin-profile-detail` — хедлайн, About, досвід,

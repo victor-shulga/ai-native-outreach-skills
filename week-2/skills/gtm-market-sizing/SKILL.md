@@ -13,6 +13,20 @@ argument-hint: "(reads the recommended market + tiers from the step-3 Notion pag
 Прочитай `reference/agency-stages.md` (TAM розділ). Вхід — крок 03 (ринок + тіри +
 ICP) з Notion.
 
+## Required tools
+
+Install these before running the skill. It still runs without the ones marked **Required**, but the result gets noticeably worse: the bottom-up count of target firms becomes a guess instead of a number from a database, and SOM is built on it.
+
+| Tool | Used for | Required? | Without it |
+|---|---|---|---|
+| AI Ark, Icypeas or MoltSets (MCP) | counting target accounts per tier for the bottom-up method | Required | company counts are estimates marked «оцінка, перевірити» |
+| Web search | market reports, number of firms, ARPU, CAGR, each with a link | Required | top-down has no sources |
+| Notion (MCP) | reading the step 3 page (market, tiers, ICP) and writing «04 · Market Sizing» | Required | you paste step 3 by hand; the result stays in the chat |
+| Firecrawl (MCP) | reading full report pages and pricing pages for annual spend | Recommended | only search snippets are used |
+| Google Sheets | filling a copy of the TAM-SAM-SOM template on request | Recommended | the table stays on the Notion page |
+
+Alternatives: Apollo or Sales Navigator can stand in for these databases.
+
 ## ⚠️ Головне правило
 **TAM = спенд на ПОСЛУГУ агенції** (напр. на AI-автоматизацію/voice), **а НЕ розмір кінцевого ринку
 клієнтів.** Помилка: брати «$600B home services» як TAM. Правильно: `# target firms × річний спенд на

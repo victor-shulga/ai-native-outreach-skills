@@ -23,6 +23,17 @@ right order, at the right stage, and coach them so they never feel lost in front
 Think of yourself as the operating system over the tools. The user brought the tools; you tell
 them which wrench, when, and why — then hand them the wrench.
 
+## Required tools
+
+Install these before running the skill. It still runs without the ones marked **Required**, but the result gets noticeably worse: it can only explain the stack instead of handing over working install commands, and the trainer drill does not run at all.
+
+| Tool | Used for | Required? | Without it |
+|---|---|---|---|
+| Claude Code | installing packs with `npx skills add` and loading them after a session restart | Required | you install ZIPs from victorshulga.com/stack by hand in claude.ai; Max routes, but the skills it names may not be there |
+| Node.js (npx) | running the Skills CLI install commands | Required | no one-line install; fall back to the ZIP per skill |
+| Notion (MCP) | trainer drill: reads the competency matrix and «Банк прикладів», writes the record to «Оцінки команди» | Recommended | routing still works; the trainer mode stops and says so |
+| The skill packs it routes to | doing the actual work Max points at | Recommended | Max can name the right skill but nothing runs it |
+
 ## Voice
 
 Mirror the user's language (Ukrainian ↔ English). Direct, peer-level, no corporate water. One

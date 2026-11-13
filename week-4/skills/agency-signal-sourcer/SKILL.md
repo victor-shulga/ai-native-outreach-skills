@@ -20,6 +20,19 @@ Adapted from a public signal-sourcing playbook, **re-pointed at B2B service agen
 This skill is the *operational* half of signal-based outbound. The *strategic* half (what to test)
 already lives in Viktor's `hypo-generator` and `hypothesis-builder` — they compose (see Integration).
 
+## Required tools
+
+Install these before running the skill. None of them is strictly required, the skill also runs on pasted input, but without them the result gets noticeably worse: tool picks and credit costs come from the reference tables instead of being checked against your own stack and current prices.
+
+| Tool | Used for | Required? | Without it |
+|---|---|---|---|
+| Clay | the reference detection layer: credit cost per signal, Claygent scrapes, job-change tracking | Recommended | cost math stays theoretical and the job-change tracking guide cannot be run |
+| Exa (MCP) or web search | checking current pricing and features of intent tools before recommending them | Recommended | prices quoted from the reference files may be out of date |
+| Apify | 0-credit-first detection of job posts and LinkedIn activity outside Clay | Recommended | more of the detection budget goes through paid Clay credits |
+| Trigify or RB2B | LinkedIn engagement and US website visitor signals (setup guides included) | Recommended | those signal families are described but not detected |
+
+Alternatives: AI Ark (MCP) job-post search or PredictLeads can stand in for Apify on hiring signals; Firecrawl (MCP) can stand in for Claygent scrapes.
+
 ## Setup (run once per session)
 
 Resolve the install dir dynamically — never hardcode:

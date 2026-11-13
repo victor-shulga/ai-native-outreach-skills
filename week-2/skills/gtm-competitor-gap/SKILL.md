@@ -15,6 +15,18 @@ argument-hint: "(reads market/ICP + sizing from steps 3-4 in Notion)"
 Вхід — 03 (ринок/ICP), 04 (sizing). Прочитай
 `reference/agency-stages.md`.
 
+## Required tools
+
+Install these before running the skill. It still runs without the ones marked **Required**, but the result gets noticeably worse: the matrix, prices and weaknesses lose their sources, and the step cannot read market sizing or write the 05 page.
+
+| Tool | Used for | Required? | Without it |
+|---|---|---|---|
+| Notion MCP | reading steps 03 and 04, writing the «05 · Competitor + GAP» sub-page | Required | inputs are pasted by hand and the result stays in chat, outside the GTM flow |
+| Web search | real players, prices, G2 and Clutch reviews | Required | competitors come from memory; the «Джерела» block stays empty |
+| Firecrawl (MCP) | reading rival sites, pricing pages and review pages in full | Recommended | positioning and price fields rely on search snippets |
+
+Alternatives: Exa (MCP) can stand in for web search.
+
 ## Реюз
 `competitor-finder` (цей пак, якщо встановлений) + `WebSearch` (реальні гравці, ціни, відгуки G2/Clutch). Кожен конкурент — з
 посиланням/джерелом.
