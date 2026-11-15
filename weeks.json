@@ -328,6 +328,12 @@
           "gtm-skills",
           "anticopywriting-ai",
           "Прибирає ознаки ШІ з тексту листа."
+        ],
+        [
+          "outreach-text-gate",
+          "outbound-engine-skills",
+          "skills/outreach-text-gate",
+          "Стоп-фільтр тексту: перевіряє три поля перед запуском."
         ]
       ]
     },

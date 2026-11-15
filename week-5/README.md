@@ -22,5 +22,6 @@ npx skills add victor-shulga/ai-native-outreach-skills/week-5
 | `subject-line-generator` | Теми листів. | `npx skills add victor-shulga/outbound-engine-skills/skills/subject-line-generator` |
 | `cta-interest-based` | Заклик до дії питанням, без прохання про дзвінок. | `npx skills add victor-shulga/outbound-engine-skills/skills/cta-interest-based` |
 | `anticopywriting-ai` | Прибирає ознаки ШІ з тексту листа. | `npx skills add victor-shulga/gtm-skills/anticopywriting-ai` |
+| `outreach-text-gate` | Стоп-фільтр тексту: перевіряє три поля перед запуском. | `npx skills add victor-shulga/outbound-engine-skills/skills/outreach-text-gate` |
 
 Копії взято з основних паків. Оновлення приходять туди першими; ця тека синхронізується скриптом `sync.py`.
